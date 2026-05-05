@@ -32,7 +32,7 @@
       <div class="header__top">
         <ul class="header__links list-reset">
           <li><a href="#">Стать дилером</a></li>
-          <li><a class="is-active" href="#">Интернет-магазин</a></li>
+          <li><a href="#">Интернет-магазин</a></li>
           <li><a href="#">Где купить?</a></li>
           <li><a href="#">Академия</a></li>
         </ul>
@@ -41,7 +41,12 @@
         </a>
         <div class="header__actions">
           <div class="header__contacts">
-            <a class="header__phone" href="tel:88005005442">8 (800) 500-54-42</a>
+            <a class="header__phone" href="tel:88005005442">
+              <span class="header__phone-text">8 (800) 500-54-42</span>
+              <svg class="header__phone-icon icon" width="24" height="24" aria-hidden="true">
+                <use href="img/sprite.svg#phone"></use>
+              </svg>
+            </a>
             <span>Звонок по России бесплатный</span>
           </div>
           <ul class="header__social list-reset">
@@ -90,8 +95,7 @@
             <input id="header-search-input" class="header-search__input input-reset" type="search" name="q" placeholder="Поиск по сайту" autocomplete="off" data-header-search-input>
             <button class="header-search__submit btn-reset" type="submit">Найти</button>
             <button class="header-search__close btn-reset" type="button" aria-label="Закрыть поиск" data-header-search-close>
-              <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
-                <circle cx="11" cy="11" r="9.5" fill="none" stroke="rgb(88 88 88 / 60%)" stroke-width="0.81"/>
+              <svg width="25" height="25" viewBox="0 0 22 22" aria-hidden="true">
                 <path fill="none" stroke="rgb(88 88 88 / 60%)" stroke-width="0.81" stroke-linecap="round" d="m8 8 6 6m0-6-6 6"/>
               </svg>
             </button>
@@ -106,7 +110,7 @@
         <div class="header__bottom header__bottom--desktop">
           <nav class="menu" data-menu>
             <ul class="menu__list list-reset">
-              <li><a class="is-active" data-menu-item href="#">Решения для бани</a></li>
+              <li><a data-menu-item href="#">Решения для бани</a></li>
               <li><a data-menu-item href="#">Отопительные системы для дома</a></li>
               <li><a data-menu-item href="#">Дымоходы</a></li>
               <li><a data-menu-item href="#">Грили</a></li>
@@ -125,7 +129,10 @@
           <div class="menu__panel-desktop">
             <div class="menu__mega">
               <div class="menu__column">
-                <p class="menu__column-title">Заголовок</p>
+                <p class="menu__column-title">
+                  <img src="img/home/product-bath-stove.png" width="36" height="30" alt="">
+                  <span>Заголовок</span>
+                </p>
                 <ul class="menu__sublist list-reset">
                   <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
                   <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
@@ -133,7 +140,10 @@
                 </ul>
               </div>
               <div class="menu__column">
-                <p class="menu__column-title">Заголовок</p>
+                <p class="menu__column-title">
+                  <img src="img/home/product-bath-stove.png" width="36" height="30" alt="">
+                  <span>Заголовок</span>
+                </p>
                 <ul class="menu__sublist list-reset">
                   <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
                   <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
@@ -141,15 +151,10 @@
                 </ul>
               </div>
               <div class="menu__column">
-                <p class="menu__column-title">Заголовок</p>
-                <ul class="menu__sublist list-reset">
-                  <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
-                  <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
-                  <li><a class="is-active" href="#" data-menu-item>Отопительные печи для дома</a></li>
-                </ul>
-              </div>
-              <div class="menu__column">
-                <p class="menu__column-title">Заголовок</p>
+                <p class="menu__column-title">
+                  <img src="img/home/product-bath-stove.png" width="36" height="30" alt="">
+                  <span>Заголовок</span>
+                </p>
                 <ul class="menu__sublist list-reset">
                   <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
                   <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
@@ -157,7 +162,21 @@
                 </ul>
               </div>
               <div class="menu__column">
-                <p class="menu__column-title">Заголовок</p>
+                <p class="menu__column-title">
+                  <img src="img/home/product-bath-stove.png" width="36" height="30" alt="">
+                  <span>Заголовок</span>
+                </p>
+                <ul class="menu__sublist list-reset">
+                  <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
+                  <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
+                  <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
+                </ul>
+              </div>
+              <div class="menu__column">
+                <p class="menu__column-title">
+                  <img src="img/home/product-bath-stove.png" width="36" height="30" alt="">
+                  <span>Заголовок</span>
+                </p>
                 <ul class="menu__sublist list-reset">
                   <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
                   <li><a href="#" data-menu-item>Отопительные печи для дома</a></li>
@@ -175,8 +194,7 @@
                       <span class="menu-drawer__title">Меню</span>
                     </div>
                     <button class="menu-drawer__close btn-reset" type="button" aria-label="Закрыть меню" data-menu-close>
-                      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
-                        <circle cx="20" cy="20" r="9.5" fill="none" stroke="rgb(37 47 65 / 40%)" stroke-width="1.67"/>
+                      <svg width="60" height="60" viewBox="0 0 40 40" aria-hidden="true">
                         <path fill="none" stroke="rgb(37 47 65 / 40%)" stroke-width="1.67" stroke-linecap="round" d="m15 15 10 10m0-10-10 10"/>
                       </svg>
                     </button>
@@ -192,7 +210,7 @@
                     <p class="menu-drawer__section-title">Продукция</p>
                     <ul class="menu-drawer__list list-reset">
                       <li class="menu-drawer__item">
-                        <button class="menu-drawer__list-drill btn-reset is-active" type="button" data-menu-drill aria-expanded="false">
+                        <button class="menu-drawer__list-drill btn-reset" type="button" data-menu-drill aria-expanded="false">
                           Решения для бани
                         </button>
                         <template>
@@ -203,7 +221,7 @@
                             <li><a href="#" data-menu-item>Аксессуары для бани</a></li>
                             <li><a href="#" data-menu-item>Дымоходы для бани</a></li>
                             <li><a href="#" data-menu-item>Баки и теплообменники</a></li>
-                            <li><a class="is-active" href="#" data-menu-item>Готовые решения</a></li>
+                            <li><a href="#" data-menu-item>Готовые решения</a></li>
                             <li><a href="#" data-menu-item>Камни для печей</a></li>
                             <li><a href="#" data-menu-item>Электрокаменки</a></li>
                           </ul>
@@ -287,8 +305,7 @@
                       <span class="menu-drawer__title" data-menu-drill-title></span>
                     </div>
                     <button class="menu-drawer__close btn-reset" type="button" aria-label="Закрыть меню" data-menu-close>
-                      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
-                        <circle cx="20" cy="20" r="9.5" fill="none" stroke="rgb(37 47 65 / 40%)" stroke-width="1.67"/>
+                      <svg width="60" height="60" viewBox="0 0 35 35" aria-hidden="true">
                         <path fill="none" stroke="rgb(37 47 65 / 40%)" stroke-width="1.67" stroke-linecap="round" d="m15 15 10 10m0-10-10 10"/>
                       </svg>
                     </button>
@@ -462,7 +479,7 @@
         </a>
       </li>
       <li class="products__cell">
-        <a class="products__item products__item--active" href="#">
+        <a class="products__item" href="#">
           <picture><source srcset="img/home/product-chimney.webp" type="image/webp"><img src="img/home/product-chimney.png" width="120" height="100" alt=""></picture>
           <span>Дымоходы</span>
         </a>
@@ -582,6 +599,7 @@
             <source srcset="img/home/academy-video-preview.webp" type="image/webp">
             <img src="img/home/academy-video-preview.png" width="788" height="500" alt="">
           </picture>
+          <span class="academy-video__play" aria-hidden="true"></span>
         </button>
         <div class="academy-video__meta">
           <h3>Название видео</h3>
