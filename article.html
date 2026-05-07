@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 
-@include('partials/head.html')
+@include('partials/head-article.html')
 
 <body class="page__body">
   <div class="site-container">
     <div class="container">
-      <div class="top-shell">
+      <div class="top-shell top-shell--article">
         @include('partials/header.html')
-        @include('partials/sections/hero.html')
       </div>
+      @include('partials/sections/article-masthead.html')
     </div>
-    <main class="main">
-      @include('partials/sections/systems.html')
-      @include('partials/sections/products.html')
-      @include('partials/sections/production.html')
-      @include('partials/sections/academy.html')
+    <main class="main main--article">
+      @include('partials/sections/article-body.html')
+      @include('partials/sections/article-strip.html')
+      @include('partials/sections/article-opt.html')
+      @include('partials/sections/article-read-more.html')
+      @include('partials/sections/article-showcase.html')
+      @include('partials/sections/article-tags.html')
+      @include('partials/sections/article-contacts.html')
+      @include('partials/sections/article-branches.html')
     </main>
     @include('partials/footer.html')
     <div class="graph-modal" aria-hidden="true">
@@ -27,6 +31,7 @@
           <div class="video-modal" data-video-container></div>
         </div>
       </div>
+
     </div>
   </div>
 </body>
