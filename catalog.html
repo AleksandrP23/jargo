@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>MaxGraph New Site</title>
+  <title>Дымоходы — каталог — ЖарGo</title>
   <link rel="preload" href="fonts/GolosTextRegular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/GolosTextMedium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/GolosTextSemiBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -25,7 +25,7 @@
 <body class="page__body">
   <div class="site-container">
     <div class="container">
-      <div class="top-shell">
+      <div class="top-shell top-shell--article">
         <header class="header">
   <div class="container">
     <div class="header__inner">
@@ -395,299 +395,648 @@
   </div>
 </header>
 
-        <section class="hero">
+      </div>
+      <section class="article-masthead article-masthead--catalog">
   <div class="container">
-    <div class="hero__inner">
-      <div class="hero__content">
-        <h1 class="hero__title">Инженерные решения для бани, дома и огня</h1>
-        <p class="hero__subtitle">Печи, дымоходы и системы вентиляции</p>
-        <button class="hero__cta btn-reset" type="button" data-quiz-open data-graph-path="quiz">
-          Подобрать печь для бани
-        </button>
-      </div>
-      <div class="hero__media" aria-hidden="true">
-        <picture>
-          <source srcset="img/home/hero-main.webp" type="image/webp">
-          <img src="img/home/hero-main.png" width="526" height="441" alt="">
-        </picture>
-      </div>
+    <nav class="article-masthead__breadcrumb" aria-label="Навигация по разделам">
+      <a class="article-masthead__crumb" href="index.html">Главная</a>
+      <span class="article-masthead__sep" aria-hidden="true">/</span>
+      <span class="article-masthead__current">Дымоходы</span>
+    </nav>
+    <div class="article-masthead__cover">
+      <h1 class="article-masthead__title">Дымоходы</h1>
     </div>
   </div>
 </section>
 
-      </div>
     </div>
-    <main class="main">
-      <section class="systems">
+    <main class="main main--catalog">
+      <section class="catalog-subcats" aria-label="Подкатегории">
   <div class="container">
-    <div class="section-head">
-      <span class="section-head__line section-head__line--left"></span>
-      <h2 class="section-head__title">РЕШЕНИЯ</h2>
-      <span class="section-head__line section-head__line--right"></span>
-    </div>
-    <div class="systems__cards">
-      <a class="systems-card systems-card--bath" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">СИСТЕМА ДЛЯ БАНИ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">
-          Печь Air+, дымоход, вентиляция и «Живое дыхание» — единый комплекс для стабильного пара и правильного микроклимата.
-        </p>
-      </a>
-      <a class="systems-card systems-card--home" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">СИСТЕМА ДЛЯ ДОМА</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">
-          Трёхконтурный дымоход и теплообменник — надёжный отвод дыма и обогрев смежных помещений без затрат на электричество.
-        </p>
-      </a>
-      <a class="systems-card systems-card--chimney" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">ДЫМОХОДНЫЕ СИСТЕМЫ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">
-          Три системы — чтобы подобрать дымоход точно под тип оборудования, режим работы и условия монтажа.
-        </p>
-      </a>
-      <a class="systems-card systems-card--grill" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">МАНГАЛЫ И ГРИЛИ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">Единая кухня на огне — выбирай модули и собирай систему под себя</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-      <section class="products">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-head__line section-head__line--left"></span>
-      <h2 class="section-head__title">Продукция</h2>
-      <span class="section-head__line section-head__line--right"></span>
-    </div>
-    <ul class="products__list list-reset">
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-bath-stove.webp" type="image/webp"><img src="img/home/product-bath-stove.png" width="120" height="100" alt=""></picture>
-          <span>Печи для бани</span>
+    <ul class="catalog-subcats__list list-reset">
+      <li>
+        <a class="catalog-subcats__item" href="#">
+          <span class="catalog-subcats__thumb" aria-hidden="true"></span>
+          <span class="catalog-subcats__label">Подкатегория</span>
         </a>
       </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-chimney.webp" type="image/webp"><img src="img/home/product-chimney.png" width="120" height="100" alt=""></picture>
-          <span>Дымоходы</span>
+      <li>
+        <a class="catalog-subcats__item" href="#">
+          <span class="catalog-subcats__thumb" aria-hidden="true"></span>
+          <span class="catalog-subcats__label">Подкатегория</span>
         </a>
       </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-bath-ventilation.webp" type="image/webp"><img src="img/home/product-bath-ventilation.png" width="120" height="100" alt=""></picture>
-          <span>Вентиляция для бани</span>
+      <li>
+        <a class="catalog-subcats__item" href="#">
+          <span class="catalog-subcats__thumb" aria-hidden="true"></span>
+          <span class="catalog-subcats__label">Подкатегория</span>
         </a>
       </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-pouring-device.webp" type="image/webp"><img src="img/home/product-pouring-device.png" width="120" height="100" alt=""></picture>
-          <span>Обливное устройство</span>
-        </a>
-      </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-home-stove.webp" type="image/webp"><img src="img/home/product-home-stove.png" width="120" height="100" alt=""></picture>
-          <span>Печи для дома</span>
-        </a>
-      </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-tanks.webp" type="image/webp"><img src="img/home/product-tanks.png" width="120" height="100" alt=""></picture>
-          <span>Баки</span>
-        </a>
-      </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-grills.webp" type="image/webp"><img src="img/home/product-grills.png" width="120" height="100" alt=""></picture>
-          <span>Грили, мангалы</span>
-        </a>
-      </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-accessories.webp" type="image/webp"><img src="img/home/product-accessories.png" width="120" height="100" alt=""></picture>
-          <span>Аксессуары</span>
+      <li>
+        <a class="catalog-subcats__item" href="#">
+          <span class="catalog-subcats__thumb" aria-hidden="true"></span>
+          <span class="catalog-subcats__label">Подкатегория</span>
         </a>
       </li>
     </ul>
   </div>
 </section>
 
-      <section class="production">
+      <section class="catalog-listing" aria-label="Каталог товаров">
   <div class="container">
-    <div class="production__inner">
-      <div class="production__content">
-        <h2 class="production__title">современное производство</h2>
-        <div class="production-tabs tabs" data-tabs="production-tabs">
-          <div class="tabs__content">
-            <div class="tabs__panel">
-              <p class="production__text">
-                Производитель печей, дымоходов и комплексных решений для бани и дома. Компания ведёт полный цикл разработки и
-                производства, контролируя качество на каждом этапе — от инженерных расчётов до готового изделия. Основной фокус —
-                надёжность, безопасность и развитие устойчивой дилерской сети.
-              </p>
-            </div>
-            <div class="tabs__panel">
-              <p class="production__text">
-                Мы развиваем инженерный подход к каждому изделию: продумываем конструкцию, ресурсы и удобство эксплуатации, чтобы
-                клиент получал не просто оборудование, а готовое решение с прогнозируемым результатом.
-              </p>
-            </div>
-            <div class="tabs__panel">
-              <p class="production__text">
-                Производственный цикл включает проектирование, проверку узлов, сборку и контроль качества на каждом этапе. Это
-                позволяет стабильно выпускать надёжные печи и дымоходные системы под реальные задачи клиентов.
-              </p>
-            </div>
-            <div class="tabs__panel">
-              <p class="production__text">
-                Компания работает официально и открыто: вся юридическая информация, реквизиты и документация доступны партнёрам и
-                клиентам. Это упрощает взаимодействие и повышает доверие к бренду.
-              </p>
-            </div>
+    <div class="catalog-listing__layout">
+      <aside class="catalog-filter" aria-label="Фильтр подбора">
+        <div class="catalog-filter__head">
+          <h2 class="catalog-filter__heading">Фильтр</h2>
+        </div>
+
+        <div class="catalog-filter__group">
+          <h3 class="catalog-filter__subtitle">Объем парильного помещения</h3>
+          <div class="catalog-filter__range">
+            <label class="catalog-filter__range-field">
+              <span class="catalog-filter__range-prefix">min</span>
+              <input class="catalog-filter__range-input input-reset" type="number" value="0">
+              <span class="catalog-filter__range-unit">м2</span>
+            </label>
+            <span class="catalog-filter__range-dash" aria-hidden="true">—</span>
+            <label class="catalog-filter__range-field">
+              <span class="catalog-filter__range-prefix">max</span>
+              <input class="catalog-filter__range-input input-reset" type="number" value="0">
+              <span class="catalog-filter__range-unit">м2</span>
+            </label>
           </div>
-          <ul class="tabs__nav production__links list-reset">
-            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">от основателя</button></li>
-            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">философия</button></li>
-            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">производство</button></li>
-            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">реквизиты</button></li>
+        </div>
+
+        <div class="catalog-filter__group">
+          <h3 class="catalog-filter__subtitle">Рекомендуемый режим бани</h3>
+          <ul class="catalog-filter__options list-reset">
+            <li class="catalog-filter__row">
+              <input id="cf-mode-1" class="catalog-filter__checkbox visually-hidden" type="radio" name="filter-mode" checked>
+              <label class="catalog-filter__label" for="cf-mode-1">
+                <span class="catalog-filter__box">
+                  <span class="catalog-filter__control" aria-hidden="true"></span>
+                  <span class="catalog-filter__text">Русская</span>
+                </span>
+              </label>
+            </li>
+            <li class="catalog-filter__row">
+              <input id="cf-mode-2" class="catalog-filter__checkbox visually-hidden" type="radio" name="filter-mode">
+              <label class="catalog-filter__label" for="cf-mode-2">
+                <span class="catalog-filter__box">
+                  <span class="catalog-filter__control" aria-hidden="true"></span>
+                  <span class="catalog-filter__text">Финская</span>
+                </span>
+              </label>
+            </li>
           </ul>
         </div>
-      </div>
-      <div class="production__gallery" aria-hidden="true">
-        <picture>
-          <source srcset="img/production/production-1.webp" type="image/webp">
-          <img src="img/production/production-1.png" width="200" height="279" alt="">
-        </picture>
+
+        <div class="catalog-filter__group">
+          <h3 class="catalog-filter__subtitle">Тип каменки</h3>
+          <ul class="catalog-filter__options list-reset">
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox" checked><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Закрытая</span></label></li>
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox"><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Открытая</span></label></li>
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox"><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Закрытая / Открытая</span></label></li>
+          </ul>
+        </div>
+
+        <div class="catalog-filter__group">
+          <div class="catalog-filter__title-row">
+            <h3 class="catalog-filter__subtitle">Тип топки</h3>
+            <button class="catalog-filter__title-toggle btn-reset" type="button" aria-label="Свернуть блок"></button>
+          </div>
+          <ul class="catalog-filter__options list-reset">
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox" checked><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Выносная</span></label></li>
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox"><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Короткая</span></label></li>
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox"><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Короткая</span></label></li>
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox"><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Короткая</span></label></li>
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox"><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Короткая</span></label></li>
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox"><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Короткая</span></label></li>
+          </ul>
+          <button class="catalog-filter__show-more btn-reset" type="button">Показать еще</button>
+        </div>
+
+        <div class="catalog-filter__group">
+          <h3 class="catalog-filter__subtitle">Тип дверцы</h3>
+          <ul class="catalog-filter__options list-reset">
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox" checked><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Со стеклом</span></label></li>
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox"><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Без стекла</span></label></li>
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox"><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Панорама</span></label></li>
+          </ul>
+        </div>
+
+        <div class="catalog-filter__group">
+          <h3 class="catalog-filter__subtitle">Материал</h3>
+          <ul class="catalog-filter__options list-reset">
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox" checked><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Конструкционная сталь</span></label></li>
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox"><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Чугун</span></label></li>
+            <li class="catalog-filter__row"><label class="catalog-filter__check"><input class="catalog-filter__tick visually-hidden" type="checkbox"><span class="catalog-filter__check-icon"></span><span class="catalog-filter__check-text">Нержавейка</span></label></li>
+          </ul>
+        </div>
+
+        <button class="catalog-filter__reset btn-reset" type="button">Сбросить все параметры</button>
+      </aside>
+
+      <div class="catalog-listing__main">
+        <div class="catalog-toolbar">
+          <div class="catalog-sort" data-catalog-sort aria-label="Сортировка товаров">
+            <span class="catalog-sort__label" id="catalog-sort-label">Сортировать:</span>
+            <div class="catalog-sort__control">
+              <button
+                class="catalog-sort__toggle btn-reset"
+                type="button"
+                id="catalog-sort-toggle"
+                aria-labelledby="catalog-sort-label catalog-sort-value"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-controls="catalog-sort-dropdown"
+                data-catalog-sort-toggle
+              >
+                <span class="catalog-sort__value" id="catalog-sort-value" data-catalog-sort-value>По умолчанию</span>
+              </button>
+              <div
+                class="catalog-sort__dropdown"
+                id="catalog-sort-dropdown"
+                role="listbox"
+                aria-labelledby="catalog-sort-label"
+                aria-hidden="true"
+                data-catalog-sort-dropdown
+              >
+                <button class="catalog-sort__option catalog-sort__option--active btn-reset" type="button" role="option" data-catalog-sort-option>По умолчанию</button>
+                <button class="catalog-sort__option btn-reset" type="button" role="option" data-catalog-sort-option>По алфавиту от А до Я</button>
+                <button class="catalog-sort__option btn-reset" type="button" role="option" data-catalog-sort-option>По алфавиту от Я до А</button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-view" data-catalog-view aria-label="Вид каталога">
+            <button
+              class="catalog-view__btn catalog-view__btn--grid catalog-view__btn--active btn-reset"
+              type="button"
+              aria-label="Сетка"
+              aria-pressed="true"
+              data-catalog-view="grid"
+            ></button>
+            <button
+              class="catalog-view__btn catalog-view__btn--list btn-reset"
+              type="button"
+              aria-label="Список"
+              aria-pressed="false"
+              data-catalog-view="list"
+            ></button>
+          </div>
+        </div>
+
+        <ul class="catalog-grid list-reset" data-catalog-grid>
+          <li class="catalog-grid__cell">
+            <article class="catalog-card">
+              <a class="catalog-card__media" href="#">
+                <picture>
+                  <source srcset="img/home/product-chimney.webp" type="image/webp">
+                  <img src="img/home/product-chimney.png" width="280" height="200" loading="lazy" alt="">
+                </picture>
+              </a>
+              <div class="catalog-card__content">
+                <h3 class="catalog-card__title"><a class="catalog-card__title-link" href="#">Сэндвич-дымоход Ø115</a></h3>
+                <p class="catalog-card__desc">Основные характеристики тоже может быить в 2 или 3 строки</p>
+              </div>
+              <img class="catalog-card__chevron" src="img/svg/arrow.svg" width="12" height="12" alt="" aria-hidden="true">
+            </article>
+          </li>
+          <li class="catalog-grid__cell">
+            <article class="catalog-card">
+              <a class="catalog-card__media" href="#">
+                <picture>
+                  <source srcset="img/home/product-chimney.webp" type="image/webp">
+                  <img src="img/home/product-chimney.png" width="280" height="200" loading="lazy" alt="">
+                </picture>
+              </a>
+              <div class="catalog-card__content">
+              <h3 class="catalog-card__title"><a class="catalog-card__title-link" href="#">Сэндвич-дымоход Ø130</a></h3>
+              <p class="catalog-card__desc">Основные характеристики тоже может быить в 2 или 3 строки</p>
+              </div>
+              <img class="catalog-card__chevron" src="img/svg/arrow.svg" width="12" height="12" alt="" aria-hidden="true">
+            </article>
+          </li>
+          <li class="catalog-grid__cell">
+            <article class="catalog-card">
+              <a class="catalog-card__media" href="#">
+                <picture>
+                  <source srcset="img/home/product-chimney.webp" type="image/webp">
+                  <img src="img/home/product-chimney.png" width="280" height="200" loading="lazy" alt="">
+                </picture>
+              </a>
+              <div class="catalog-card__content">
+              <h3 class="catalog-card__title"><a class="catalog-card__title-link" href="#">Комплект прохода кровли</a></h3>
+              <p class="catalog-card__desc">Основные характеристики тоже может быить в 2 или 3 строки</p>
+              </div>
+              <img class="catalog-card__chevron" src="img/svg/arrow.svg" width="12" height="12" alt="" aria-hidden="true">
+            </article>
+          </li>
+          <li class="catalog-grid__cell">
+            <article class="catalog-card">
+              <a class="catalog-card__media" href="#">
+                <picture>
+                  <source srcset="img/home/product-chimney.webp" type="image/webp">
+                  <img src="img/home/product-chimney.png" width="280" height="200" loading="lazy" alt="">
+                </picture>
+              </a>
+              <div class="catalog-card__content">
+              <h3 class="catalog-card__title"><a class="catalog-card__title-link" href="#">Флюгерная насадка</a></h3>
+              <p class="catalog-card__desc">Основные характеристики тоже может быить в 2 или 3 строки</p>
+              </div>
+              <img class="catalog-card__chevron" src="img/svg/arrow.svg" width="12" height="12" alt="" aria-hidden="true">
+            </article>
+          </li>
+          <li class="catalog-grid__cell">
+            <article class="catalog-card">
+              <a class="catalog-card__media" href="#">
+                <picture>
+                  <source srcset="img/home/product-chimney.webp" type="image/webp">
+                  <img src="img/home/product-chimney.png" width="280" height="200" loading="lazy" alt="">
+                </picture>
+              </a>
+              <div class="catalog-card__content">
+              <h3 class="catalog-card__title"><a class="catalog-card__title-link" href="#">Тройник 45°</a></h3>
+              <p class="catalog-card__desc">Основные характеристики тоже может быить в 2 или 3 строки</p>
+              </div>
+              <img class="catalog-card__chevron" src="img/svg/arrow.svg" width="12" height="12" alt="" aria-hidden="true">
+            </article>
+          </li>
+          <li class="catalog-grid__cell">
+            <article class="catalog-card">
+              <a class="catalog-card__media" href="#">
+                <picture>
+                  <source srcset="img/home/product-chimney.webp" type="image/webp">
+                  <img src="img/home/product-chimney.png" width="280" height="200" loading="lazy" alt="">
+                </picture>
+              </a>
+              <div class="catalog-card__content">
+              <h3 class="catalog-card__title"><a class="catalog-card__title-link" href="#">Заглушка верхняя</a></h3>
+              <p class="catalog-card__desc">Основные характеристики тоже может быить в 2 или 3 строки</p>
+              </div>
+              <img class="catalog-card__chevron" src="img/svg/arrow.svg" width="12" height="12" alt="" aria-hidden="true">
+            </article>
+          </li>
+          <li class="catalog-grid__cell">
+            <article class="catalog-card">
+              <a class="catalog-card__media" href="#">
+                <picture><source srcset="img/home/product-chimney.webp" type="image/webp"><img src="img/home/product-chimney.png" width="280" height="200" loading="lazy" alt=""></picture>
+              </a>
+              <div class="catalog-card__content">
+              <h3 class="catalog-card__title"><a class="catalog-card__title-link" href="#">Система двуконтурных дымоходов Standard 550°</a></h3>
+              <p class="catalog-card__desc">Основные характеристики тоже может быить в 2 или 3 строки</p>
+              </div>
+              <img class="catalog-card__chevron" src="img/svg/arrow.svg" width="12" height="12" alt="" aria-hidden="true">
+            </article>
+          </li>
+          <li class="catalog-grid__cell">
+            <article class="catalog-card">
+              <a class="catalog-card__media" href="#">
+                <picture><source srcset="img/home/product-chimney.webp" type="image/webp"><img src="img/home/product-chimney.png" width="280" height="200" loading="lazy" alt=""></picture>
+              </a>
+              <div class="catalog-card__content">
+              <h3 class="catalog-card__title"><a class="catalog-card__title-link" href="#">Система двуконтурных дымоходов Standard 550°</a></h3>
+              <p class="catalog-card__desc">Основные характеристики тоже может быить в 2 или 3 строки</p>
+              </div>
+              <img class="catalog-card__chevron" src="img/svg/arrow.svg" width="12" height="12" alt="" aria-hidden="true">
+            </article>
+          </li>
+          <li class="catalog-grid__cell">
+            <article class="catalog-card">
+              <a class="catalog-card__media" href="#">
+                <picture><source srcset="img/home/product-chimney.webp" type="image/webp"><img src="img/home/product-chimney.png" width="280" height="200" loading="lazy" alt=""></picture>
+              </a>
+              <div class="catalog-card__content">
+              <h3 class="catalog-card__title"><a class="catalog-card__title-link" href="#">Система двуконтурных дымоходов Standard 550°</a></h3>
+              <p class="catalog-card__desc">Основные характеристики тоже может быить в 2 или 3 строки</p>
+              </div>
+              <img class="catalog-card__chevron" src="img/svg/arrow.svg" width="12" height="12" alt="" aria-hidden="true">
+            </article>
+          </li>
+          <li class="catalog-grid__cell">
+            <article class="catalog-card">
+              <a class="catalog-card__media" href="#">
+                <picture><source srcset="img/home/product-chimney.webp" type="image/webp"><img src="img/home/product-chimney.png" width="280" height="200" loading="lazy" alt=""></picture>
+              </a>
+              <div class="catalog-card__content">
+              <h3 class="catalog-card__title"><a class="catalog-card__title-link" href="#">Система двуконтурных дымоходов Standard 550°</a></h3>
+              <p class="catalog-card__desc">Основные характеристики тоже может быить в 2 или 3 строки</p>
+              </div>
+              <img class="catalog-card__chevron" src="img/svg/arrow.svg" width="12" height="12" alt="" aria-hidden="true">
+            </article>
+          </li>
+        </ul>
+
+        <nav class="catalog-pagination" aria-label="Страницы каталога">
+          <ul class="catalog-pagination__list list-reset">
+            <li><a class="catalog-pagination__link catalog-pagination__link--current" href="#" aria-current="page">1</a></li>
+            <li><a class="catalog-pagination__link" href="#">2</a></li>
+            <li><a class="catalog-pagination__link" href="#">3</a></li>
+            <li><span class="catalog-pagination__ellipsis" aria-hidden="true">…</span></li>
+            <li><a class="catalog-pagination__link" href="#">99</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
-    <button class="production__price btn-reset" type="button" data-quiz-open data-graph-path="quiz">
-      Получить оптовый прайс
-    </button>
   </div>
 </section>
 
-      <section class="academy">
+      <section class="catalog-chapter" aria-labelledby="catalog-chapter-title">
+  <div class="container">
+    <div class="catalog-chapter__intro">
+      <div class="section-head">
+        <span class="section-head__line section-head__line--left"></span>
+        <h2 class="section-head__title" id="catalog-chapter-title">Заголовок</h2>
+        <span class="section-head__line section-head__line--right"></span>
+      </div>
+      <p class="catalog-chapter__lead">
+        Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс: от перевода до похода к нотариусу.<br>
+        Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс: от перевода до похода к нотариусу.<br>
+        Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс: от перевода до похода к нотариусу.
+      </p>
+    </div>
+
+    <div class="article-body__chapter-row catalog-chapter__row">
+      <figure class="article-body__chapter-media">
+        <picture>
+          <source srcset="img/article/article-body-hero.webp" type="image/webp">
+          <img src="img/article/article-body-hero.png" width="548" height="250" loading="lazy" alt="">
+        </picture>
+      </figure>
+      <div class="article-body__chapter-text">
+        <h3>Требования к переводу и нотариальное заверение</h3>
+        <p>Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс: от перевода до похода к нотариусу.</p>
+      </div>
+    </div>
+
+    <div class="article-body__chapter-row article-body__chapter-row--reverse catalog-chapter__row">
+      <div class="article-body__chapter-text">
+        <h3>Требования к переводу и нотариальное заверение</h3>
+        <p>Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс: от перевода до похода к нотариусу.</p>
+        <p>Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс: от перевода до похода к нотариусу.</p>
+        <p>Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс: от перевода до похода к нотариусу.</p>
+      </div>
+      <figure class="article-body__chapter-media">
+        <picture>
+          <source srcset="img/article/article-body-hero.webp" type="image/webp">
+          <img src="img/article/article-body-hero.png" width="546" height="350" loading="lazy" alt="">
+        </picture>
+      </figure>
+    </div>
+  </div>
+</section>
+
+      <section class="article-opt" aria-labelledby="article-opt-cta">
+  <div class="container">
+    <div class="article-opt__inner">
+      <a class="article-opt__cta" id="article-opt-cta" href="#">Заказать в интернет-магазине</a>
+    </div>
+  </div>
+</section>
+
+      <div class="container">
+  <figure class="article-body__figure article-body__figure--hero" data-article-tooltips>
+    <picture>
+      <source srcset="img/article/article-body-hero.webp" type="image/webp">
+      <img src="img/article/article-body-hero.png" width="1400" height="500" loading="lazy" alt="Печь и дымоход в парной">
+    </picture>
+    <button
+      class="btn-reset article-body__tooltip-dot"
+      type="button"
+      style="left: 61.1%; top: 62.8%;"
+      data-tooltip-title="Заголовок"
+      data-tooltip-text="Печь Air+, дымоход, вентиляция и «Живое дыхание» — единый комплекс для стабильного пара и правильного микроклимата."
+    >
+      1
+    </button>
+    <button
+      class="btn-reset article-body__tooltip-dot"
+      type="button"
+      style="left: 33.7%; top: 26.2%;"
+      data-tooltip-title="Заголовок"
+      data-tooltip-text="Печь Air+, дымоход, вентиляция и «Живое дыхание» — единый комплекс для стабильного пара и правильного микроклимата."
+    >
+      2
+    </button>
+    <button
+      class="btn-reset article-body__tooltip-dot"
+      type="button"
+      style="left: 64.4%; top: 30.2%;"
+      data-tooltip-title="Заголовок"
+      data-tooltip-text="Печь Air+, дымоход, вентиляция и «Живое дыхание» — единый комплекс для стабильного пара и правильного микроклимата."
+    >
+      2
+    </button>
+    <button
+      class="btn-reset article-body__tooltip-dot article-body__tooltip-dot--active"
+      type="button"
+      style="left: 33.8%; top: 47.2%;"
+      data-tooltip-title="Заголовок"
+      data-tooltip-text="Печь Air+, дымоход, вентиляция и «Живое дыхание» — единый комплекс для стабильного пара и правильного микроклимата."
+    >
+      3
+    </button>
+    <button
+      class="btn-reset article-body__tooltip-dot"
+      type="button"
+      style="left: 33%; top: 71.8%;"
+      data-tooltip-title="Заголовок"
+      data-tooltip-text="Печь Air+, дымоход, вентиляция и «Живое дыхание» — единый комплекс для стабильного пара и правильного микроклимата."
+    >
+      4
+    </button>
+    <div class="article-body__tooltip-popup" data-tooltip-popup>
+      <h3 class="article-body__tooltip-title" data-tooltip-popup-title>Заголовок</h3>
+      <p class="article-body__tooltip-text" data-tooltip-popup-text>
+        Печь Air+, дымоход, вентиляция и «Живое дыхание» — единый комплекс для стабильного пара и правильного микроклимата.
+      </p>
+    </div>
+  </figure>
+</div>
+
+      <section class="article-read-more" aria-labelledby="article-read-more-title">
   <div class="container">
     <div class="section-head">
       <span class="section-head__line section-head__line--left"></span>
-      <h2 class="section-head__title"><span class="section-head__title--accent">Академия</span> ЖарGo</h2>
+      <h2 class="section-head__title" id="article-read-more-title">Читайте также</h2>
       <span class="section-head__line section-head__line--right"></span>
     </div>
-    <div class="academy__grid">
-      <article class="academy-video">
-        <button
-          class="academy-video__preview btn-reset"
-          type="button"
-          data-video-modal
-          data-graph-path="video"
-          data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-          aria-label="Открыть видео"
-        >
+    <div class="article-read-more__grid">
+      <a class="academy-card" href="#">
+        <p class="academy-card__text">Основной фокус — надёжность, безопасность</p>
+        <span class="academy-card__media">
           <picture>
-            <source srcset="img/home/academy-video-preview.webp" type="image/webp">
-            <img src="img/home/academy-video-preview.png" width="788" height="500" alt="">
+            <source srcset="img/academy/academy-1.webp" type="image/webp">
+            <img src="img/academy/academy-1.png" width="274" height="150" loading="lazy" alt="">
           </picture>
-          <span class="academy-video__play" aria-hidden="true"></span>
-        </button>
-        <div class="academy-video__meta">
-          <h3>Название видео</h3>
-          <span>5 мин</span>
+          <span class="academy-card__arrow" aria-hidden="true">
+            <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
+              <use href="img/sprite.svg#arrow"></use>
+            </svg>
+          </span>
+        </span>
+      </a>
+      <a class="academy-card" href="#">
+        <p class="academy-card__text">Основной фокус — надёжность, безопасность</p>
+        <span class="academy-card__media">
+          <picture>
+            <source srcset="img/academy/academy-2.webp" type="image/webp">
+            <img src="img/academy/academy-2.png" width="274" height="150" loading="lazy" alt="">
+          </picture>
+          <span class="academy-card__arrow" aria-hidden="true">
+            <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
+              <use href="img/sprite.svg#arrow"></use>
+            </svg>
+          </span>
+        </span>
+      </a>
+      <a class="academy-card" href="#">
+        <p class="academy-card__text">Основной фокус — надёжность, безопасность и развитие устойчивой эксплуатации</p>
+        <span class="academy-card__media">
+          <picture>
+            <source srcset="img/academy/academy-1.webp" type="image/webp">
+            <img src="img/academy/academy-1.png" width="274" height="150" loading="lazy" alt="">
+          </picture>
+          <span class="academy-card__arrow" aria-hidden="true">
+            <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
+              <use href="img/sprite.svg#arrow"></use>
+            </svg>
+          </span>
+        </span>
+      </a>
+      <a class="academy-card" href="#">
+        <p class="academy-card__text">Основной фокус — надёжность, безопасность</p>
+        <span class="academy-card__media">
+          <picture>
+            <source srcset="img/academy/academy-2.webp" type="image/webp">
+            <img src="img/academy/academy-2.png" width="274" height="150" loading="lazy" alt="">
+          </picture>
+          <span class="academy-card__arrow" aria-hidden="true">
+            <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
+              <use href="img/sprite.svg#arrow"></use>
+            </svg>
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+      <section class="article-text-block" aria-labelledby="article-text-block-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__line section-head__line--left"></span>
+      <h2 class="section-head__title" id="article-text-block-title">Заголовок</h2>
+      <span class="section-head__line section-head__line--right"></span>
+    </div>
+    <p class="article-text-block__text">
+      Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется
+      нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс:
+      от перевода до похода к нотариусу.
+      <br>
+      Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется
+      нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс:
+      от перевода до похода к нотариусу.
+      <br>
+      Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется
+      нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс:
+      от перевода до похода к нотариусу.
+    </p>
+  </div>
+</section>
+
+      <section class="catalog-consult" aria-labelledby="catalog-consult-title">
+  <div class="container">
+    <div class="catalog-consult__shell">
+      <h2 class="catalog-consult__title" id="catalog-consult-title">получить консультацию</h2>
+      <p class="catalog-consult__lead">Оставьте контакты и наши менеджеры обязательно вам перезвонят</p>
+      <form class="catalog-consult__form" action="#" method="post">
+        <div class="catalog-consult__fields">
+          <label class="catalog-consult__field">
+            <span class="visually-hidden">Имя</span>
+            <input class="catalog-consult__input input-reset" type="text" name="name" placeholder="Имя" autocomplete="name">
+          </label>
+          <label class="catalog-consult__field">
+            <span class="visually-hidden">Телефон</span>
+            <input class="catalog-consult__input input-reset" type="tel" name="phone" placeholder="Телефон" autocomplete="tel">
+          </label>
+          <label class="catalog-consult__field catalog-consult__field--message">
+            <span class="visually-hidden">Ваш вопрос</span>
+            <input class="catalog-consult__input input-reset" type="text" name="message" placeholder="Ваш вопрос">
+          </label>
         </div>
-      </article>
-      <div class="academy__aside">
-        <div class="academy__cards">
-          <a class="academy-card" href="#">
-            <p class="academy-card__text">Основной фокус — надёжность, безопасность</p>
-            <span class="academy-card__media">
-              <picture>
-                <source srcset="img/academy/academy-1.webp" type="image/webp">
-                <img src="img/academy/academy-1.png" width="274" height="150" loading="lazy" alt="">
-              </picture>
-              <span class="academy-card__arrow" aria-hidden="true">
-                <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
-                  <use href="img/sprite.svg#arrow"></use>
-                </svg>
-              </span>
-            </span>
-          </a>
-          <a class="academy-card" href="#">
-            <p class="academy-card__text">Основной фокус — надёжность, безопасность и развитие устойчивой</p>
-            <span class="academy-card__media">
-              <picture>
-                <source srcset="img/academy/academy-2.webp" type="image/webp">
-                <img src="img/academy/academy-2.png" width="274" height="150" loading="lazy" alt="">
-              </picture>
-              <span class="academy-card__arrow" aria-hidden="true">
-                <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
-                  <use href="img/sprite.svg#arrow"></use>
-                </svg>
-              </span>
-            </span>
-          </a>
-          <a class="academy-card" href="#">
-            <p class="academy-card__text">Основной фокус — надёжность, безопасность и развитие устойчивой</p>
-            <span class="academy-card__media">
-              <picture>
-                <source srcset="img/academy/academy-3.webp" type="image/webp">
-                <img src="img/academy/academy-3.png" width="274" height="150" loading="lazy" alt="">
-              </picture>
-              <span class="academy-card__arrow" aria-hidden="true">
-                <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
-                  <use href="img/sprite.svg#arrow"></use>
-                </svg>
-              </span>
-            </span>
-          </a>
-          <a class="academy-card" href="#">
-            <p class="academy-card__text">Основной фокус — надёжность, безопасность</p>
-            <span class="academy-card__media">
-              <picture>
-                <source srcset="img/academy/academy-4.webp" type="image/webp">
-                <img src="img/academy/academy-4.png" width="274" height="150" loading="lazy" alt="">
-              </picture>
-              <span class="academy-card__arrow" aria-hidden="true">
-                <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
-                  <use href="img/sprite.svg#arrow"></use>
-                </svg>
-              </span>
-            </span>
-          </a>
+        <div class="catalog-consult__bottom">
+          <label class="catalog-consult__consent">
+            <input class="catalog-consult__checkbox visually-hidden" type="checkbox" name="consent" value="1" required>
+            <span class="catalog-consult__checkbox-ui" aria-hidden="true"></span>
+            <span class="catalog-consult__consent-text">Я согласен (а) с условиями Политики на обработку персональных данных</span>
+          </label>
+          <button class="catalog-consult__submit btn-reset" type="submit">Отправить заявку</button>
         </div>
-        <div class="academy__bar">
-          <div class="academy-support">
-            <a class="academy-support__link" href="#">Поддержка</a>
-            <ul class="academy-support__social list-reset">
-              <li>
-                <a href="#" aria-label="MAX">
-                  <svg class="icon icon--max" width="30" height="30" aria-hidden="true">
-                    <use href="img/sprite.svg#logo-max"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="Telegram">
-                  <svg class="icon icon--tg" width="30" height="30" aria-hidden="true">
-                    <use href="img/sprite.svg#logo-tg"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <a class="academy__more" href="#">Перейти в академию</a>
-        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+      <section class="article-faq article-faq--chimneys" aria-labelledby="article-faq-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__line section-head__line--left"></span>
+      <h2 class="section-head__title" id="article-faq-title">Часто задаваемые вопросы</h2>
+      <span class="section-head__line section-head__line--right"></span>
+    </div>
+    <div class="article-faq__grid">
+      <div class="article-faq__col">
+        <details class="article-faq__item">
+          <summary><span>Можно ли поставить обычную металлическую печь (не банную) в парную?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Как часто нужно менять камни в каменке?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Нужно ли заземлять печь в бане?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Нужно ли заземлять печь в бане?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
       </div>
+
+      <div class="article-faq__col">
+        <details class="article-faq__item" open>
+          <summary><span>Можно ли поставить обычную металлическую печь (не банную) в парную?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+          <div class="article-faq__answer">
+            <p>Категорически нет. Обычная печь-буржуйка не имеет каменки (емкости для камней), дает жесткий инфракрасный «прожигающий» луч, а ее стенки нагреваются до красна. Банная печь конструктивно иная: она аккумулирует тепло в камнях и дает «мягкий» пар. Кроме того, у обычной печи нет поддувала для регулировки тяги в условиях маленького помещения — можно угореть.</p>
+          </div>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Как часто нужно менять камни в каменке?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Нужно ли заземлять печь в бане?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Нужно ли заземлять печь в бане?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="article-tags" aria-labelledby="article-tags-title">
+  <div class="container">
+    <div class="section-head section-head--tags">
+      <span class="section-head__line section-head__line--left"></span>
+      <h2 class="section-head__title" id="article-tags-title">Часто ищут</h2>
+      <span class="section-head__line section-head__line--right"></span>
+    </div>
+    <div class="article-tags__cloud">
+      <a class="article-tags__link article-tags__link--active" href="#">Агентство по подбору персонала</a>
+      <a class="article-tags__link" href="#">Подбор персонала по отраслям</a>
+      <a class="article-tags__link" href="#">Поиск и подбор персонала</a>
+      <a class="article-tags__link" href="#">Кадровое агентство в Москве</a>
+      <a class="article-tags__link" href="#">Услуги кадрового агентства</a>
+      <a class="article-tags__link" href="#">Рекрутинговое агентство</a>
+      <a class="article-tags__link" href="#">Рекрутинговое агентство</a>
     </div>
   </div>
 </section>

@@ -7,7 +7,8 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>MaxGraph New Site</title>
+  <meta name="yandex-maps-api-key" content="">
+  <title>Как выбрать оборудование для бани — ЖарGo</title>
   <link rel="preload" href="fonts/GolosTextRegular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/GolosTextMedium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/GolosTextSemiBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -395,298 +396,476 @@
   </div>
 </header>
 
-        <section class="hero">
+        <section class="hero hero--chimneys">
   <div class="container">
     <div class="hero__inner">
       <div class="hero__content">
-        <h1 class="hero__title">Инженерные решения для бани, дома и огня</h1>
-        <p class="hero__subtitle">Печи, дымоходы и системы вентиляции</p>
-        <button class="hero__cta btn-reset" type="button" data-quiz-open data-graph-path="quiz">
-          Подобрать печь для бани
-        </button>
+        <nav class="hero__breadcrumb" aria-label="Навигация по разделам">Главная/Дымоходы</nav>
+        <h1 class="hero__title">Дымоходы</h1>
+        <p class="hero__subtitle">Предназначена для отопления частных домов, дач, гаражей, теплиц, а также для приготовления и разогрева пищи. Печь относится к нагревательным устройствам конвекционного типа, работающим на твердом топливе (дрова)</p>
       </div>
-      <div class="hero__media" aria-hidden="true">
-        <picture>
-          <source srcset="img/home/hero-main.webp" type="image/webp">
-          <img src="img/home/hero-main.png" width="526" height="441" alt="">
-        </picture>
-      </div>
+      <figure class="hero__media hero__media--chimneys">
+        <div class="hero__slider swiper hero__slider--chimneys" data-chimneys-hero-slider>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" data-caption="Название модификации">
+              <div class="hero__slide-visual">
+                <picture>
+                  <source srcset="img/article/article-body-hero.webp" type="image/webp">
+                  <img src="img/article/article-body-hero.png" width="515" height="274" loading="lazy" alt="Дымоходы">
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-slide" data-caption="Вариант комплектации">
+              <div class="hero__slide-visual">
+                <picture>
+                  <source srcset="img/equipment/q1.webp" type="image/webp">
+                  <img src="img/equipment/q1.png" width="515" height="274" loading="lazy" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-slide" data-caption="Схема монтажа">
+              <div class="hero__slide-visual">
+                <picture>
+                  <source srcset="img/equipment/q2.webp" type="image/webp">
+                  <img src="img/equipment/q2.png" width="515" height="274" loading="lazy" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption class="hero__caption" data-chimneys-hero-caption>Название модификации</figcaption>
+        <div class="hero__pagination swiper-pagination" data-chimneys-hero-pagination></div>
+      </figure>
     </div>
   </div>
 </section>
 
       </div>
     </div>
-    <main class="main">
-      <section class="systems">
+    <main class="main main--article">
+      <section class="chimneys-configurator" aria-labelledby="chimneys-configurator-heading">
+  <div class="container">
+    <div class="chimneys-configurator__panel">
+      <figure class="chimneys-configurator__figure chimneys-configurator__figure--left">
+        <picture>
+          <source srcset="img/equipment/q1.webp" type="image/webp">
+          <img
+            class="chimneys-configurator__img"
+            src="img/equipment/q1.png"
+            width="369"
+            height="336"
+            loading="lazy"
+            alt=""
+          >
+        </picture>
+      </figure>
+      <figure class="chimneys-configurator__figure chimneys-configurator__figure--right">
+        <picture>
+          <source srcset="img/equipment/q2.webp" type="image/webp">
+          <img
+            class="chimneys-configurator__img"
+            src="img/equipment/q2.png"
+            width="343"
+            height="312"
+            loading="lazy"
+            alt=""
+          >
+        </picture>
+      </figure>
+
+      <div class="chimneys-configurator__stack">
+        <div class="chimneys-configurator__intro">
+          <h2 class="chimneys-configurator__heading" id="chimneys-configurator-heading">
+            Конфигуратор дымохода
+          </h2>
+          <p class="chimneys-configurator__lead">
+            Выберите тип теплогенератора и схему монтажа — конфигуратор составит список элементов с количеством.
+          </p>
+        </div>
+        <button
+          class="chimneys-configurator__start btn-reset"
+          type="button"
+          data-quiz-open
+          data-graph-path="quiz"
+        >
+          Начать →
+        </button>
+      </div>
+
+      <button
+        class="chimneys-configurator__faq btn-reset"
+        type="button"
+        data-graph-path="quiz-hint"
+        aria-label="Справка по подбору"
+      >
+       ?
+      </button>
+    </div>
+  </div>
+</section>
+
+      <section class="article-product-feature article-product-feature--chimneys" aria-labelledby="article-product-feature-title-1">
   <div class="container">
     <div class="section-head">
       <span class="section-head__line section-head__line--left"></span>
-      <h2 class="section-head__title">РЕШЕНИЯ</h2>
+      <h2 class="section-head__title" id="article-product-feature-title-1">Система двуконтурных дымоходов Standard 550°</h2>
+      <span class="section-head__line section-head__line--right"></span>
+    </div>
+    <div class="article-product-feature__layout">
+  <figure class="article-product-feature__media article-product-feature__media--video">
+    <article class="academy-video article-product-feature__video">
+      <button
+        class="academy-video__preview btn-reset"
+        type="button"
+        data-video-modal
+        data-graph-path="video"
+        data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+        aria-label="Видеопрезентация"
+      >
+        <picture>
+          <source srcset="img/article/article-body-hero.webp" type="image/webp">
+          <img src="img/article/article-body-hero.png" width="547" height="583" loading="lazy" alt="">
+        </picture>
+        <span class="academy-video__play" aria-hidden="true"></span>
+      </button>
+    </article>
+  </figure>
+  <div class="article-product-feature__content">
+    <p class="article-product-feature__intro">При проектировании и монтаже дымохода необходимо руководствоваться правилами по выбору диаметра дымохода, его высоты, учитывать интенсивность и периодичности работы теплогенерирующего аппарата, и другие факторы. Для аппаратов, работающих на твердом топливе, рекомендуем использовать сталь толщиной 1.0 мм.</p>
+
+    <section class="article-product-feature__group">
+      <h3>Особенности</h3>
+      <div class="article-product-feature__specs">
+        <div><span>Внутренний контур</span><p>AISI 430<br>0,5/0,8 мм</p></div>
+        <div><span>Изоляция</span><p>Базальтовая вата</p></div>
+        <div><span>Наружный контур</span><p>Оцинкованная / Нержавейка</p></div>
+        <div><span>Топливо</span><p>Газ</p></div>
+        <div><span>режим</span><p>Сухой</p></div>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Применение</h3>
+      <div class="article-product-feature__chips">
+        <span>Банная печь</span><span>Отопительная печь</span><span>Камин</span><span>Котел твердотопливный</span><span>Котел газовый</span>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Элементы серии</h3>
+      <div class="article-product-feature__elements">
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Конус</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Оголовок</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Ревизия внутренняя</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Старт сендвич</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Дефлектор</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Заглушка с отверстием</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Конденсат отвод внутренний</p></article>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Варианты окраски</h3>
+      <div class="article-product-feature__colors">
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--black"></span><p>RAL 905</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--graphite"></span><p>RAL 7024</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--brown"></span><p>RAL 8017</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--wine"></span><p>RAL 3005</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--green"></span><p>RAL 6005</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--ral9050b"></span><p>RAL 9050</p><small>250 °C</small></article>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Возможно будет полезно</h3>
+      <div class="article-product-feature__links">
+        <a href="#">Печи для бани</a><a href="#">Дымоходы</a><a href="#">Мангалы</a><a href="#">Обливные устройства</a><a href="#">Аксессуары</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+  </div>
+</section>
+
+      <section class="article-product-feature article-product-feature--chimneys" aria-labelledby="article-product-feature-title-2">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__line section-head__line--left"></span>
+      <h2 class="section-head__title" id="article-product-feature-title-2">Система двуконтурных дымоходов Standard 550°</h2>
+      <span class="section-head__line section-head__line--right"></span>
+    </div>
+    <div class="article-product-feature__layout">
+  <figure class="article-product-feature__media article-product-feature__media--video">
+    <article class="academy-video article-product-feature__video">
+      <button
+        class="academy-video__preview btn-reset"
+        type="button"
+        data-video-modal
+        data-graph-path="video"
+        data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+        aria-label="Видеопрезентация"
+      >
+        <picture>
+          <source srcset="img/article/article-body-hero.webp" type="image/webp">
+          <img src="img/article/article-body-hero.png" width="547" height="583" loading="lazy" alt="">
+        </picture>
+        <span class="academy-video__play" aria-hidden="true"></span>
+      </button>
+    </article>
+  </figure>
+  <div class="article-product-feature__content">
+    <p class="article-product-feature__intro">При проектировании и монтаже дымохода необходимо руководствоваться правилами по выбору диаметра дымохода, его высоты, учитывать интенсивность и периодичности работы теплогенерирующего аппарата, и другие факторы. Для аппаратов, работающих на твердом топливе, рекомендуем использовать сталь толщиной 1.0 мм.</p>
+
+    <section class="article-product-feature__group">
+      <h3>Особенности</h3>
+      <div class="article-product-feature__specs">
+        <div><span>Внутренний контур</span><p>AISI 430<br>0,5/0,8 мм</p></div>
+        <div><span>Изоляция</span><p>Базальтовая вата</p></div>
+        <div><span>Наружный контур</span><p>Оцинкованная / Нержавейка</p></div>
+        <div><span>Топливо</span><p>Газ</p></div>
+        <div><span>режим</span><p>Сухой</p></div>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Применение</h3>
+      <div class="article-product-feature__chips">
+        <span>Банная печь</span><span>Отопительная печь</span><span>Камин</span><span>Котел твердотопливный</span><span>Котел газовый</span>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Элементы серии</h3>
+      <div class="article-product-feature__elements">
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Конус</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Оголовок</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Ревизия внутренняя</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Старт сендвич</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Дефлектор</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Заглушка с отверстием</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Конденсат отвод внутренний</p></article>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Варианты окраски</h3>
+      <div class="article-product-feature__colors">
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--black"></span><p>RAL 905</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--graphite"></span><p>RAL 7024</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--brown"></span><p>RAL 8017</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--wine"></span><p>RAL 3005</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--green"></span><p>RAL 6005</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--ral9050b"></span><p>RAL 9050</p><small>250 °C</small></article>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Возможно будет полезно</h3>
+      <div class="article-product-feature__links">
+        <a href="#">Печи для бани</a><a href="#">Дымоходы</a><a href="#">Мангалы</a><a href="#">Обливные устройства</a><a href="#">Аксессуары</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+  </div>
+</section>
+
+      <section class="article-product-feature article-product-feature--chimneys" aria-labelledby="article-product-feature-title-3">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__line section-head__line--left"></span>
+      <h2 class="section-head__title" id="article-product-feature-title-3">Система двуконтурных дымоходов Standard 550°</h2>
+      <span class="section-head__line section-head__line--right"></span>
+    </div>
+    <div class="article-product-feature__layout">
+  <figure class="article-product-feature__media article-product-feature__media--video">
+    <article class="academy-video article-product-feature__video">
+      <button
+        class="academy-video__preview btn-reset"
+        type="button"
+        data-video-modal
+        data-graph-path="video"
+        data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+        aria-label="Видеопрезентация"
+      >
+        <picture>
+          <source srcset="img/article/article-body-hero.webp" type="image/webp">
+          <img src="img/article/article-body-hero.png" width="547" height="583" loading="lazy" alt="">
+        </picture>
+        <span class="academy-video__play" aria-hidden="true"></span>
+      </button>
+    </article>
+  </figure>
+  <div class="article-product-feature__content">
+    <p class="article-product-feature__intro">При проектировании и монтаже дымохода необходимо руководствоваться правилами по выбору диаметра дымохода, его высоты, учитывать интенсивность и периодичности работы теплогенерирующего аппарата, и другие факторы. Для аппаратов, работающих на твердом топливе, рекомендуем использовать сталь толщиной 1.0 мм.</p>
+
+    <section class="article-product-feature__group">
+      <h3>Особенности</h3>
+      <div class="article-product-feature__specs">
+        <div><span>Внутренний контур</span><p>AISI 430<br>0,5/0,8 мм</p></div>
+        <div><span>Изоляция</span><p>Базальтовая вата</p></div>
+        <div><span>Наружный контур</span><p>Оцинкованная / Нержавейка</p></div>
+        <div><span>Топливо</span><p>Газ</p></div>
+        <div><span>режим</span><p>Сухой</p></div>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Применение</h3>
+      <div class="article-product-feature__chips">
+        <span>Банная печь</span><span>Отопительная печь</span><span>Камин</span><span>Котел твердотопливный</span><span>Котел газовый</span>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Элементы серии</h3>
+      <div class="article-product-feature__elements">
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Конус</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Оголовок</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Ревизия внутренняя</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Старт сендвич</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Дефлектор</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Заглушка с отверстием</p></article>
+        <article><img src="img/home/product-chimney.png" width="58" height="50" loading="lazy" alt=""><p>Конденсат отвод внутренний</p></article>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Варианты окраски</h3>
+      <div class="article-product-feature__colors">
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--black"></span><p>RAL 905</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--graphite"></span><p>RAL 7024</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--brown"></span><p>RAL 8017</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--wine"></span><p>RAL 3005</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--green"></span><p>RAL 6005</p><small>250 °C</small></article>
+        <article><span class="article-product-feature__swatch article-product-feature__swatch--ral9050b"></span><p>RAL 9050</p><small>250 °C</small></article>
+      </div>
+    </section>
+
+    <section class="article-product-feature__group">
+      <h3>Возможно будет полезно</h3>
+      <div class="article-product-feature__links">
+        <a href="#">Печи для бани</a><a href="#">Дымоходы</a><a href="#">Мангалы</a><a href="#">Обливные устройства</a><a href="#">Аксессуары</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+  </div>
+</section>
+
+      <section class="article-opt" aria-labelledby="chimneys-opt-cta">
+  <div class="container">
+    <div class="article-opt__inner">
+      <a class="article-opt__cta" id="chimneys-opt-cta" href="#">Заказать в интернет-магазине</a>
+    </div>
+  </div>
+</section>
+
+      <section class="article-read-more article-read-more--recommend article-read-more--chimneys" aria-labelledby="article-recommend-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-head__line section-head__line--left"></span>
+      <h2 class="section-head__title" id="article-recommend-title">Рекомендуем посмотреть</h2>
       <span class="section-head__line section-head__line--right"></span>
     </div>
     <div class="systems__cards">
-      <a class="systems-card systems-card--bath" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">СИСТЕМА ДЛЯ БАНИ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
+      <a class="systems-card systems-card--compact" href="#">
+        <div class="systems-card__head systems-card__head--compact">
+          <h3 class="systems-card__title">Основной фокус — надёжность, безопасность</h3>
+          <img class="systems-card__arrow-img" src="img/svg/arrow.svg" width="24" height="24" alt="" aria-hidden="true">
         </div>
-        <p class="systems-card__text">
-          Печь Air+, дымоход, вентиляция и «Живое дыхание» — единый комплекс для стабильного пара и правильного микроклимата.
-        </p>
       </a>
-      <a class="systems-card systems-card--home" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">СИСТЕМА ДЛЯ ДОМА</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
+      <a class="systems-card systems-card--compact" href="#">
+        <div class="systems-card__head systems-card__head--compact">
+          <h3 class="systems-card__title">Основной фокус — надёжность, безопасность</h3>
+          <img class="systems-card__arrow-img" src="img/svg/arrow.svg" width="24" height="24" alt="" aria-hidden="true">
         </div>
-        <p class="systems-card__text">
-          Трёхконтурный дымоход и теплообменник — надёжный отвод дыма и обогрев смежных помещений без затрат на электричество.
-        </p>
       </a>
-      <a class="systems-card systems-card--chimney" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">ДЫМОХОДНЫЕ СИСТЕМЫ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
+      <a class="systems-card systems-card--compact" href="#">
+        <div class="systems-card__head systems-card__head--compact">
+          <h3 class="systems-card__title">Основной фокус — надёжность, безопасность и развитие устойчивой</h3>
+          <img class="systems-card__arrow-img" src="img/svg/arrow.svg" width="24" height="24" alt="" aria-hidden="true">
         </div>
-        <p class="systems-card__text">
-          Три системы — чтобы подобрать дымоход точно под тип оборудования, режим работы и условия монтажа.
-        </p>
       </a>
-      <a class="systems-card systems-card--grill" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">МАНГАЛЫ И ГРИЛИ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
+      <a class="systems-card systems-card--compact" href="#">
+        <div class="systems-card__head systems-card__head--compact">
+          <h3 class="systems-card__title">Основной фокус — надёжность, безопасность</h3>
+          <img class="systems-card__arrow-img" src="img/svg/arrow.svg" width="24" height="24" alt="" aria-hidden="true">
         </div>
-        <p class="systems-card__text">Единая кухня на огне — выбирай модули и собирай систему под себя</p>
+      </a>
+      <a class="systems-card systems-card--compact" href="#">
+        <div class="systems-card__head systems-card__head--compact">
+          <h3 class="systems-card__title">Основной фокус — надёжность, безопасность</h3>
+          <img class="systems-card__arrow-img" src="img/svg/arrow.svg" width="24" height="24" alt="" aria-hidden="true">
+        </div>
+      </a>
+      <a class="systems-card systems-card--compact" href="#">
+        <div class="systems-card__head systems-card__head--compact">
+          <h3 class="systems-card__title">Основной фокус — надёжность, безопасность и развитие устойчивой</h3>
+          <img class="systems-card__arrow-img" src="img/svg/arrow.svg" width="24" height="24" alt="" aria-hidden="true">
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-      <section class="products">
+      <section class="article-text-block article-text-block--read-also" aria-labelledby="chimneys-text-block-title">
   <div class="container">
     <div class="section-head">
       <span class="section-head__line section-head__line--left"></span>
-      <h2 class="section-head__title">Продукция</h2>
+      <h2 class="section-head__title" id="chimneys-text-block-title">Читайте также</h2>
       <span class="section-head__line section-head__line--right"></span>
     </div>
-    <ul class="products__list list-reset">
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-bath-stove.webp" type="image/webp"><img src="img/home/product-bath-stove.png" width="120" height="100" alt=""></picture>
-          <span>Печи для бани</span>
-        </a>
-      </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-chimney.webp" type="image/webp"><img src="img/home/product-chimney.png" width="120" height="100" alt=""></picture>
-          <span>Дымоходы</span>
-        </a>
-      </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-bath-ventilation.webp" type="image/webp"><img src="img/home/product-bath-ventilation.png" width="120" height="100" alt=""></picture>
-          <span>Вентиляция для бани</span>
-        </a>
-      </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-pouring-device.webp" type="image/webp"><img src="img/home/product-pouring-device.png" width="120" height="100" alt=""></picture>
-          <span>Обливное устройство</span>
-        </a>
-      </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-home-stove.webp" type="image/webp"><img src="img/home/product-home-stove.png" width="120" height="100" alt=""></picture>
-          <span>Печи для дома</span>
-        </a>
-      </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-tanks.webp" type="image/webp"><img src="img/home/product-tanks.png" width="120" height="100" alt=""></picture>
-          <span>Баки</span>
-        </a>
-      </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-grills.webp" type="image/webp"><img src="img/home/product-grills.png" width="120" height="100" alt=""></picture>
-          <span>Грили, мангалы</span>
-        </a>
-      </li>
-      <li class="products__cell">
-        <a class="products__item" href="#">
-          <picture><source srcset="img/home/product-accessories.webp" type="image/webp"><img src="img/home/product-accessories.png" width="120" height="100" alt=""></picture>
-          <span>Аксессуары</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</section>
-
-      <section class="production">
-  <div class="container">
-    <div class="production__inner">
-      <div class="production__content">
-        <h2 class="production__title">современное производство</h2>
-        <div class="production-tabs tabs" data-tabs="production-tabs">
-          <div class="tabs__content">
-            <div class="tabs__panel">
-              <p class="production__text">
-                Производитель печей, дымоходов и комплексных решений для бани и дома. Компания ведёт полный цикл разработки и
-                производства, контролируя качество на каждом этапе — от инженерных расчётов до готового изделия. Основной фокус —
-                надёжность, безопасность и развитие устойчивой дилерской сети.
-              </p>
-            </div>
-            <div class="tabs__panel">
-              <p class="production__text">
-                Мы развиваем инженерный подход к каждому изделию: продумываем конструкцию, ресурсы и удобство эксплуатации, чтобы
-                клиент получал не просто оборудование, а готовое решение с прогнозируемым результатом.
-              </p>
-            </div>
-            <div class="tabs__panel">
-              <p class="production__text">
-                Производственный цикл включает проектирование, проверку узлов, сборку и контроль качества на каждом этапе. Это
-                позволяет стабильно выпускать надёжные печи и дымоходные системы под реальные задачи клиентов.
-              </p>
-            </div>
-            <div class="tabs__panel">
-              <p class="production__text">
-                Компания работает официально и открыто: вся юридическая информация, реквизиты и документация доступны партнёрам и
-                клиентам. Это упрощает взаимодействие и повышает доверие к бренду.
-              </p>
-            </div>
-          </div>
-          <ul class="tabs__nav production__links list-reset">
-            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">от основателя</button></li>
-            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">философия</button></li>
-            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">производство</button></li>
-            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">реквизиты</button></li>
-          </ul>
-        </div>
-      </div>
-      <div class="production__gallery" aria-hidden="true">
-        <picture>
-          <source srcset="img/production/production-1.webp" type="image/webp">
-          <img src="img/production/production-1.png" width="200" height="279" alt="">
-        </picture>
-      </div>
+    <div class="article-text-block__body">
+      <p class="article-text-block__text">Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс: от перевода до похода к нотариусу.</p>
+      <p class="article-text-block__text">Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс: от перевода до похода к нотариусу.</p>
+      <p class="article-text-block__text">Чтобы перевод был принят в официальных органах, он должен быть выполнен дипломированным специалистом. В большинстве случаев требуется нотариальное заверение — процедура, при которой нотариус свидетельствует подлинность подписи переводчика. Мы берем на себя весь процесс: от перевода до похода к нотариусу.</p>
     </div>
-    <button class="production__price btn-reset" type="button" data-quiz-open data-graph-path="quiz">
-      Получить оптовый прайс
-    </button>
   </div>
 </section>
 
-      <section class="academy">
+      <section class="article-faq article-faq--chimneys" aria-labelledby="article-faq-title">
   <div class="container">
     <div class="section-head">
       <span class="section-head__line section-head__line--left"></span>
-      <h2 class="section-head__title"><span class="section-head__title--accent">Академия</span> ЖарGo</h2>
+      <h2 class="section-head__title" id="article-faq-title">Часто задаваемые вопросы</h2>
       <span class="section-head__line section-head__line--right"></span>
     </div>
-    <div class="academy__grid">
-      <article class="academy-video">
-        <button
-          class="academy-video__preview btn-reset"
-          type="button"
-          data-video-modal
-          data-graph-path="video"
-          data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-          aria-label="Открыть видео"
-        >
-          <picture>
-            <source srcset="img/home/academy-video-preview.webp" type="image/webp">
-            <img src="img/home/academy-video-preview.png" width="788" height="500" alt="">
-          </picture>
-          <span class="academy-video__play" aria-hidden="true"></span>
-        </button>
-        <div class="academy-video__meta">
-          <h3>Название видео</h3>
-          <span>5 мин</span>
-        </div>
-      </article>
-      <div class="academy__aside">
-        <div class="academy__cards">
-          <a class="academy-card" href="#">
-            <p class="academy-card__text">Основной фокус — надёжность, безопасность</p>
-            <span class="academy-card__media">
-              <picture>
-                <source srcset="img/academy/academy-1.webp" type="image/webp">
-                <img src="img/academy/academy-1.png" width="274" height="150" loading="lazy" alt="">
-              </picture>
-              <span class="academy-card__arrow" aria-hidden="true">
-                <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
-                  <use href="img/sprite.svg#arrow"></use>
-                </svg>
-              </span>
-            </span>
-          </a>
-          <a class="academy-card" href="#">
-            <p class="academy-card__text">Основной фокус — надёжность, безопасность и развитие устойчивой</p>
-            <span class="academy-card__media">
-              <picture>
-                <source srcset="img/academy/academy-2.webp" type="image/webp">
-                <img src="img/academy/academy-2.png" width="274" height="150" loading="lazy" alt="">
-              </picture>
-              <span class="academy-card__arrow" aria-hidden="true">
-                <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
-                  <use href="img/sprite.svg#arrow"></use>
-                </svg>
-              </span>
-            </span>
-          </a>
-          <a class="academy-card" href="#">
-            <p class="academy-card__text">Основной фокус — надёжность, безопасность и развитие устойчивой</p>
-            <span class="academy-card__media">
-              <picture>
-                <source srcset="img/academy/academy-3.webp" type="image/webp">
-                <img src="img/academy/academy-3.png" width="274" height="150" loading="lazy" alt="">
-              </picture>
-              <span class="academy-card__arrow" aria-hidden="true">
-                <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
-                  <use href="img/sprite.svg#arrow"></use>
-                </svg>
-              </span>
-            </span>
-          </a>
-          <a class="academy-card" href="#">
-            <p class="academy-card__text">Основной фокус — надёжность, безопасность</p>
-            <span class="academy-card__media">
-              <picture>
-                <source srcset="img/academy/academy-4.webp" type="image/webp">
-                <img src="img/academy/academy-4.png" width="274" height="150" loading="lazy" alt="">
-              </picture>
-              <span class="academy-card__arrow" aria-hidden="true">
-                <svg class="icon icon--arrow" width="24" height="24" aria-hidden="true">
-                  <use href="img/sprite.svg#arrow"></use>
-                </svg>
-              </span>
-            </span>
-          </a>
-        </div>
-        <div class="academy__bar">
-          <div class="academy-support">
-            <a class="academy-support__link" href="#">Поддержка</a>
-            <ul class="academy-support__social list-reset">
-              <li>
-                <a href="#" aria-label="MAX">
-                  <svg class="icon icon--max" width="30" height="30" aria-hidden="true">
-                    <use href="img/sprite.svg#logo-max"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="Telegram">
-                  <svg class="icon icon--tg" width="30" height="30" aria-hidden="true">
-                    <use href="img/sprite.svg#logo-tg"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+    <div class="article-faq__grid">
+      <div class="article-faq__col">
+        <details class="article-faq__item">
+          <summary><span>Можно ли поставить обычную металлическую печь (не банную) в парную?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Как часто нужно менять камни в каменке?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Нужно ли заземлять печь в бане?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Нужно ли заземлять печь в бане?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+      </div>
+
+      <div class="article-faq__col">
+        <details class="article-faq__item" open>
+          <summary><span>Можно ли поставить обычную металлическую печь (не банную) в парную?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+          <div class="article-faq__answer">
+            <p>Категорически нет. Обычная печь-буржуйка не имеет каменки (емкости для камней), дает жесткий инфракрасный «прожигающий» луч, а ее стенки нагреваются до красна. Банная печь конструктивно иная: она аккумулирует тепло в камнях и дает «мягкий» пар. Кроме того, у обычной печи нет поддувала для регулировки тяги в условиях маленького помещения — можно угореть.</p>
           </div>
-          <a class="academy__more" href="#">Перейти в академию</a>
-        </div>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Как часто нужно менять камни в каменке?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Нужно ли заземлять печь в бане?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
+        <details class="article-faq__item">
+          <summary><span>Нужно ли заземлять печь в бане?</span><span class="article-faq__toggle" aria-hidden="true">+</span></summary>
+        </details>
       </div>
     </div>
   </div>
@@ -1107,12 +1286,53 @@
   </div>
 </div>
 
+      <div class="graph-modal__container graph-modal__container--quiz-hint" role="dialog" aria-modal="true" aria-labelledby="quiz-hint-title" data-graph-target="quiz-hint">
+  <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть окно"></button>
+  <div class="graph-modal__content graph-modal__content--quiz-hint">
+    <h2 class="quiz-hint-modal__title" id="quiz-hint-title">Заголовок</h2>
+    <div class="quiz-hint-modal__video">
+      <figure class="quiz-hint-modal__figure">
+        <picture>
+          <source srcset="img/equipment/q1.webp" type="image/webp">
+          <img src="img/equipment/q1.png" width="840" height="400" loading="lazy" alt="">
+        </picture>
+        <button
+          class="quiz-hint-modal__play btn-reset"
+          type="button"
+          data-video-modal
+          data-graph-path="video"
+          data-graph-return="quiz-hint"
+          data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+          aria-label="Воспроизвести видео"
+        >
+          <svg width="23" height="26" viewBox="0 0 23 26" aria-hidden="true">
+            <path fill="#fff" d="M22 11.268c1.333.77 1.333 2.694 0 3.464L3.25 25.856c-1.333.768-3-.192-3-1.732V1.876c0-1.54 1.667-2.5 3-1.732L22 11.268Z" />
+          </svg>
+        </button>
+      </figure>
+    </div>
+    <div class="quiz-hint-modal__copy">
+      <p class="quiz-hint-modal__text">
+        Производитель печей, дымоходов и комплексных решений для бани и дома. Компания ведёт полный цикл разработки и производства,
+        контролируя качество на каждом этапе — от инженерных расчётов до готового изделия. Основной фокус — надёжность,
+        безопасность и развитие устойчивой дилерской сети.
+      </p>
+      <p class="quiz-hint-modal__text">
+        ведёт полный цикл разработки и производства, контролируя качество на каждом этапе — от инженерных расчётов
+        до готового изделия. Основной фокус — надёжность, безопасность и развитие устойчивой дилерской сети.
+      </p>
+    </div>
+    <a class="quiz-hint-modal__link" href="#">Кнопка</a>
+  </div>
+</div>
+
       <div class="graph-modal__container graph-modal__container--video" role="dialog" aria-modal="true" data-graph-target="video">
         <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модалку"></button>
         <div class="graph-modal__content">
           <div class="video-modal" data-video-container></div>
         </div>
       </div>
+
     </div>
   </div>
 </body>
