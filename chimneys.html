@@ -76,7 +76,7 @@
               </button>
             </li>
             <li>
-              <button class="btn-reset" type="button" aria-label="Войти">
+              <button class="btn-reset" type="button" aria-label="Войти" data-graph-path="auth">
                 <svg class="icon icon--login" width="20" height="20" aria-hidden="true">
                   <use href="img/sprite.svg#sing"></use>
                 </svg>
@@ -400,8 +400,12 @@
   <div class="container">
     <div class="hero__inner">
       <div class="hero__content">
-        <nav class="hero__breadcrumb" aria-label="Навигация по разделам">Главная/Дымоходы</nav>
-        <h1 class="hero__title">Дымоходы</h1>
+        <div class="hero__lead">
+          <nav class="hero__breadcrumb" aria-label="Навигация по разделам">
+            <a class="hero__breadcrumb-link" href="index.html">Главная</a><span class="hero__breadcrumb-sep">/</span><span class="hero__breadcrumb-current">Дымоходы</span>
+          </nav>
+          <h1 class="hero__title">Дымоходы</h1>
+        </div>
         <p class="hero__subtitle">Предназначена для отопления частных домов, дач, гаражей, теплиц, а также для приготовления и разогрева пищи. Печь относится к нагревательным устройствам конвекционного типа, работающим на твердом топливе (дрова)</p>
       </div>
       <figure class="hero__media hero__media--chimneys">
@@ -409,26 +413,17 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide" data-caption="Название модификации">
               <div class="hero__slide-visual">
-                <picture>
-                  <source srcset="img/article/article-body-hero.webp" type="image/webp">
-                  <img src="img/article/article-body-hero.png" width="515" height="274" loading="lazy" alt="Дымоходы">
-                </picture>
+                <img src="img/chimneys/hero-chimneys.png" width="515" height="274" loading="eager" fetchpriority="high" alt="Дымоходы">
               </div>
             </div>
-            <div class="swiper-slide" data-caption="Вариант комплектации">
+            <div class="swiper-slide" data-caption="Название модификации">
               <div class="hero__slide-visual">
-                <picture>
-                  <source srcset="img/equipment/q1.webp" type="image/webp">
-                  <img src="img/equipment/q1.png" width="515" height="274" loading="lazy" alt="">
-                </picture>
+                <img src="img/chimneys/hero-chimneys.png" width="515" height="274" loading="lazy" alt="">
               </div>
             </div>
-            <div class="swiper-slide" data-caption="Схема монтажа">
+            <div class="swiper-slide" data-caption="Название модификации">
               <div class="hero__slide-visual">
-                <picture>
-                  <source srcset="img/equipment/q2.webp" type="image/webp">
-                  <img src="img/equipment/q2.png" width="515" height="274" loading="lazy" alt="">
-                </picture>
+                <img src="img/chimneys/hero-chimneys.png" width="515" height="274" loading="lazy" alt="">
               </div>
             </div>
           </div>
@@ -442,54 +437,55 @@
 
       </div>
     </div>
-    <main class="main main--article">
+    <main class="main main--article main--chimneys">
       <section class="chimneys-configurator" aria-labelledby="chimneys-configurator-heading">
   <div class="container">
     <div class="chimneys-configurator__panel">
-      <figure class="chimneys-configurator__figure chimneys-configurator__figure--left">
-        <picture>
-          <source srcset="img/equipment/q1.webp" type="image/webp">
-          <img
-            class="chimneys-configurator__img"
-            src="img/equipment/q1.png"
-            width="369"
-            height="336"
-            loading="lazy"
-            alt=""
-          >
-        </picture>
-      </figure>
-      <figure class="chimneys-configurator__figure chimneys-configurator__figure--right">
-        <picture>
-          <source srcset="img/equipment/q2.webp" type="image/webp">
-          <img
-            class="chimneys-configurator__img"
-            src="img/equipment/q2.png"
-            width="343"
-            height="312"
-            loading="lazy"
-            alt=""
-          >
-        </picture>
-      </figure>
-
       <div class="chimneys-configurator__stack">
-        <div class="chimneys-configurator__intro">
-          <h2 class="chimneys-configurator__heading" id="chimneys-configurator-heading">
-            Конфигуратор дымохода
-          </h2>
-          <p class="chimneys-configurator__lead">
-            Выберите тип теплогенератора и схему монтажа — конфигуратор составит список элементов с количеством.
-          </p>
+        <figure class="chimneys-configurator__figure chimneys-configurator__figure--left">
+          <picture>
+            <source srcset="img/equipment/q1.webp" type="image/webp">
+            <img
+              class="chimneys-configurator__img"
+              src="img/equipment/q1.png"
+              width="369"
+              height="336"
+              loading="lazy"
+              alt=""
+            >
+          </picture>
+        </figure>
+        <div class="chimneys-configurator__top">
+          <div class="chimneys-configurator__intro">
+            <h2 class="chimneys-configurator__heading" id="chimneys-configurator-heading">
+              Конфигуратор дымохода
+            </h2>
+            <p class="chimneys-configurator__lead">
+              Выберите тип теплогенератора и схему монтажа — конфигуратор составит список элементов с количеством.
+            </p>
+          </div>
+          <button
+            class="chimneys-configurator__start btn-reset"
+            type="button"
+            data-quiz-open
+            data-graph-path="quiz"
+          >
+            Начать →
+          </button>
         </div>
-        <button
-          class="chimneys-configurator__start btn-reset"
-          type="button"
-          data-quiz-open
-          data-graph-path="quiz"
-        >
-          Начать →
-        </button>
+        <figure class="chimneys-configurator__figure chimneys-configurator__figure--right">
+          <picture>
+            <source srcset="img/equipment/q2.webp" type="image/webp">
+            <img
+              class="chimneys-configurator__img"
+              src="img/equipment/q2.png"
+              width="343"
+              height="312"
+              loading="lazy"
+              alt=""
+            >
+          </picture>
+        </figure>
       </div>
 
       <button
@@ -1283,6 +1279,61 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+      <div class="graph-modal__container graph-modal__container--auth" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title" data-graph-target="auth">
+  <button class="btn-reset js-modal-close graph-modal__close graph-modal__close--auth" type="button" aria-label="Закрыть окно">
+    <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false">
+      <use xlink:href="img/svg/circle-x.svg#circle-x" href="img/svg/circle-x.svg#circle-x"></use>
+    </svg>
+  </button>
+  <div class="graph-modal__content graph-modal__content--auth">
+    <form class="auth-modal" action="#" method="post">
+      <div class="section-head auth-modal__head">
+        <span class="section-head__line section-head__line--left" aria-hidden="true"></span>
+        <h2 class="section-head__title auth-modal__title" id="auth-modal-title">Регистрация</h2>
+        <span class="section-head__line section-head__line--right" aria-hidden="true"></span>
+      </div>
+      <div class="auth-modal__body">
+        <div class="auth-modal__fields">
+          <div class="auth-modal__row auth-modal__row--2">
+            <label class="auth-modal__field">
+              <span class="auth-modal__label">ФИО</span>
+              <input class="auth-modal__input input-reset" type="text" name="auth-name" autocomplete="name" required>
+            </label>
+            <label class="auth-modal__field">
+              <span class="auth-modal__label">ИНН</span>
+              <input class="auth-modal__input input-reset" type="text" name="auth-inn" inputmode="numeric" autocomplete="off" required>
+            </label>
+          </div>
+          <label class="auth-modal__field">
+            <span class="auth-modal__label">Город</span>
+            <input class="auth-modal__input input-reset" type="text" name="auth-city" autocomplete="address-level2" required>
+          </label>
+          <div class="auth-modal__row auth-modal__row--2">
+            <label class="auth-modal__field">
+              <span class="auth-modal__label">Email</span>
+              <input class="auth-modal__input input-reset" type="email" name="auth-email" autocomplete="email" required>
+            </label>
+            <label class="auth-modal__field">
+              <span class="auth-modal__label">Телефон</span>
+              <input class="auth-modal__input input-reset" type="tel" name="auth-phone" autocomplete="tel" required>
+            </label>
+          </div>
+        </div>
+        <label class="auth-modal__consent">
+          <input class="auth-modal__checkbox visually-hidden" type="checkbox" name="auth-consent" required>
+          <span class="auth-modal__checkbox-ui" aria-hidden="true"></span>
+          <span class="auth-modal__consent-text">Я согласен (а) с условиями <a class="auth-modal__consent-link" href="#">Политики</a> на обработку персональных данных</span>
+        </label>
+        <button class="auth-modal__submit btn-reset" type="submit">Зарегистрироваться</button>
+        <div class="auth-modal__footer">
+          <span class="auth-modal__footer-note">У меня уже есть аккаунт</span>
+          <button class="auth-modal__footer-link btn-reset" type="button">Забыли пароль?</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
 

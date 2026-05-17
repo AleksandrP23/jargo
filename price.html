@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>Страница не найдена — ЖарGo</title>
+  <title>Прайс-лист — ЖарGo</title>
   <link rel="preload" href="fonts/GolosTextRegular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/GolosTextMedium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/GolosTextSemiBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -22,7 +22,7 @@
   <script defer src="js/main.js"></script>
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--price">
   <div class="site-container">
     <div class="container">
       <div class="top-shell top-shell--article">
@@ -396,73 +396,478 @@
 </header>
 
       </div>
-    </div>
-    <main class="main main--404">
-      <section class="page-404" aria-labelledby="page-404-title">
+      <section class="article-masthead article-masthead--price">
   <div class="container">
-    <div class="page-404__inner">
-      <div class="page-404__visual" aria-hidden="true">
-        <img class="page-404__img" src="img/404-visual.png" width="600" height="241" loading="eager" alt="">
-      </div>
-      <div class="page-404__content">
-        <div class="page-404__head">
-          <span class="page-404__line" aria-hidden="true"></span>
-          <h1 class="page-404__title" id="page-404-title">Страница не найдена</h1>
-          <span class="page-404__line" aria-hidden="true"></span>
-        </div>
-        <p class="page-404__lead">
-          Неправильно набран адрес или такой страницы не существует. Пожалуйста, воспользуйтесь поиском, попробуйте перезагрузить страницу или посмотрите <a class="page-404__lead-link" href="catalog.html">наш каталог</a>
-        </p>
-      </div>
+    <nav class="article-masthead__breadcrumb" aria-label="Навигация по разделам">
+      <a class="article-masthead__crumb" href="index.html">Главная</a>
+      <span class="article-masthead__sep" aria-hidden="true">/</span>
+      <span class="article-masthead__current">Заголовок</span>
+    </nav>
+    <div class="article-masthead__cover">
+      <h1 class="article-masthead__title">Заголовок H1</h1>
     </div>
   </div>
 </section>
 
-      <section class="systems">
+    </div>
+    <main class="main main--price">
+      <div class="price-page">
+  <div class="price-page__products">
+    <section class="products">
   <div class="container">
     <div class="section-head">
       <span class="section-head__line section-head__line--left"></span>
-      <h2 class="section-head__title">РЕШЕНИЯ</h2>
+      <h2 class="section-head__title">Продукция</h2>
       <span class="section-head__line section-head__line--right"></span>
     </div>
-    <div class="systems__cards">
-      <a class="systems-card systems-card--bath" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">СИСТЕМА ДЛЯ БАНИ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">
-          Печь Air+, дымоход, вентиляция и «Живое дыхание» — единый комплекс для стабильного пара и правильного микроклимата.
-        </p>
-      </a>
-      <a class="systems-card systems-card--home" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">СИСТЕМА ДЛЯ ДОМА</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">
-          Трёхконтурный дымоход и теплообменник — надёжный отвод дыма и обогрев смежных помещений без затрат на электричество.
-        </p>
-      </a>
-      <a class="systems-card systems-card--chimney" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">ДЫМОХОДНЫЕ СИСТЕМЫ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">
-          Три системы — чтобы подобрать дымоход точно под тип оборудования, режим работы и условия монтажа.
-        </p>
-      </a>
-      <a class="systems-card systems-card--grill" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">МАНГАЛЫ И ГРИЛИ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">Единая кухня на огне — выбирай модули и собирай систему под себя</p>
-      </a>
-    </div>
+    <ul class="products__list list-reset">
+      <li class="products__cell">
+        <a class="products__item" href="#">
+          <picture><source srcset="img/home/product-bath-stove.webp" type="image/webp"><img src="img/home/product-bath-stove.png" width="120" height="100" alt=""></picture>
+          <span>Печи для бани</span>
+        </a>
+      </li>
+      <li class="products__cell">
+        <a class="products__item" href="#">
+          <picture><source srcset="img/home/product-chimney.webp" type="image/webp"><img src="img/home/product-chimney.png" width="120" height="100" alt=""></picture>
+          <span>Дымоходы</span>
+        </a>
+      </li>
+      <li class="products__cell">
+        <a class="products__item" href="#">
+          <picture><source srcset="img/home/product-bath-ventilation.webp" type="image/webp"><img src="img/home/product-bath-ventilation.png" width="120" height="100" alt=""></picture>
+          <span>Вентиляция для бани</span>
+        </a>
+      </li>
+      <li class="products__cell">
+        <a class="products__item" href="#">
+          <picture><source srcset="img/home/product-pouring-device.webp" type="image/webp"><img src="img/home/product-pouring-device.png" width="120" height="100" alt=""></picture>
+          <span>Обливное устройство</span>
+        </a>
+      </li>
+      <li class="products__cell">
+        <a class="products__item" href="#">
+          <picture><source srcset="img/home/product-home-stove.webp" type="image/webp"><img src="img/home/product-home-stove.png" width="120" height="100" alt=""></picture>
+          <span>Печи для дома</span>
+        </a>
+      </li>
+      <li class="products__cell">
+        <a class="products__item" href="#">
+          <picture><source srcset="img/home/product-tanks.webp" type="image/webp"><img src="img/home/product-tanks.png" width="120" height="100" alt=""></picture>
+          <span>Баки</span>
+        </a>
+      </li>
+      <li class="products__cell">
+        <a class="products__item" href="#">
+          <picture><source srcset="img/home/product-grills.webp" type="image/webp"><img src="img/home/product-grills.png" width="120" height="100" alt=""></picture>
+          <span>Грили, мангалы</span>
+        </a>
+      </li>
+      <li class="products__cell">
+        <a class="products__item" href="#">
+          <picture><source srcset="img/home/product-accessories.webp" type="image/webp"><img src="img/home/product-accessories.png" width="120" height="100" alt=""></picture>
+          <span>Аксессуары</span>
+        </a>
+      </li>
+    </ul>
   </div>
 </section>
+
+  </div>
+
+  <div class="price-toolbar" data-price-toolbar>
+  <div class="container">
+    <div class="price-toolbar__inner">
+      <div class="price-toolbar__modes">
+        <span class="price-toolbar__label">розничные цены, ₽</span>
+        <button
+          class="price-toolbar__switch btn-reset"
+          type="button"
+          role="switch"
+          aria-checked="false"
+          aria-label="Переключить тип цен"
+          data-price-mode-switch
+        ></button>
+        <span class="price-toolbar__label price-toolbar__label--muted">Цены с вашей скидкой, ₽</span>
+      </div>
+      <label class="price-toolbar__markup">
+        <span class="price-toolbar__markup-label">Наценка, %</span>
+        <span class="price-toolbar__markup-field">
+          <input class="price-toolbar__markup-input" type="text" inputmode="decimal" value="0" aria-label="Наценка в процентах" data-price-markup>
+          <button class="price-toolbar__markup-clear btn-reset" type="button" aria-label="Сбросить наценку">×</button>
+        </span>
+      </label>
+      <a class="price-toolbar__download" href="#" download>Скачать прайс-лист</a>
+    </div>
+  </div>
+</div>
+
+  <nav class="price-series-nav" aria-label="Серии продукции" data-price-series-nav>
+  <div class="container">
+    <ul class="price-series-nav__list list-reset">
+      <li><button class="price-series-nav__btn price-series-nav__btn--active btn-reset" type="button" data-price-series-link>Названием серии</button></li>
+      <li><button class="price-series-nav__btn btn-reset" type="button" data-price-series-link>Названием серии</button></li>
+      <li><button class="price-series-nav__btn btn-reset" type="button" data-price-series-link>Названием серии</button></li>
+      <li><button class="price-series-nav__btn btn-reset" type="button" data-price-series-link>Названием серии</button></li>
+      <li><button class="price-series-nav__btn btn-reset" type="button" data-price-series-link>Названием серии</button></li>
+    </ul>
+  </div>
+</nav>
+
+  <div class="container price-page__body">
+    <section class="price-spotlight" aria-labelledby="price-spotlight-title">
+      <h2 class="price-spotlight__title" id="price-spotlight-title">Подзаголовок с названием серии</h2>
+      <div class="price-spotlight__filters" role="group" aria-label="Фильтры таблицы">
+        <button class="price-spotlight__filter btn-reset" type="button">
+          <span>Толщина металла</span>
+          <span class="price-spotlight__filter-sort" aria-hidden="true"></span>
+        </button>
+        <button class="price-spotlight__filter btn-reset" type="button">
+          <span>Диаметр</span>
+          <span class="price-spotlight__filter-sort" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="article-body__table-wrap price-table-wrap">
+        <table class="article-body__table price-table price-table--featured">
+          <tbody>
+            <tr>
+              <td>Модификация</td>
+              <td>Осн. характеристики</td>
+              <td><span class="price-table__stock price-table__stock--many">Много</span></td>
+              <td class="price-table__price">111 111 111 ₽</td>
+              <td class="price-table__action">
+                <button class="price-table__cart-icon btn-reset" type="button">В заявку</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Модификация</td>
+              <td>Осн. характеристики</td>
+              <td><span class="price-table__stock price-table__stock--few">Мало</span></td>
+              <td class="price-table__price">111 111 111 ₽</td>
+              <td class="price-table__action">
+                <button class="price-table__cart-icon btn-reset" type="button">В заявку</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Модификация</td>
+              <td>Осн. характеристики</td>
+              <td><span class="price-table__stock price-table__stock--order">Под заказ</span></td>
+              <td class="price-table__price">111 111 111 ₽</td>
+              <td class="price-table__action">
+                <button class="price-table__cart-icon btn-reset" type="button">В заявку</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Модификация</td>
+              <td>Осн. характеристики</td>
+              <td><span class="price-table__stock price-table__stock--many">Много</span></td>
+              <td class="price-table__price">111 111 111 ₽</td>
+              <td class="price-table__action">
+                <button class="price-table__cart-icon btn-reset" type="button">В заявку</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Модификация</td>
+              <td>Осн. характеристики</td>
+              <td><span class="price-table__stock price-table__stock--many">Много</span></td>
+              <td class="price-table__price">111 111 111 ₽</td>
+              <td class="price-table__action">
+                <button class="price-table__cart-icon btn-reset" type="button">В заявку</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Модификация</td>
+              <td>Осн. характеристики</td>
+              <td><span class="price-table__stock price-table__stock--many">Много</span></td>
+              <td class="price-table__price">111 111 111 ₽</td>
+              <td class="price-table__action">
+                <button class="price-table__cart-icon btn-reset" type="button">В заявку</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="price-group" data-price-group>
+  <h2 class="price-group__title">Подзаголовок с названием серии</h2>
+  <div class="article-body__table-wrap price-table-wrap price-table-wrap--matrix" data-price-table-scroll>
+    <table class="article-body__table price-table price-table--matrix">
+      <thead>
+        <tr class="price-table__head-group">
+          <th class="price-table__th-name" rowspan="2" scope="colgroup">Наименование</th>
+          <th class="price-table__th-diams" colspan="16" scope="colgroup">Диаметры</th>
+        </tr>
+        <tr class="price-table__head-diams">
+          <th scope="col">80</th>
+          <th scope="col">100</th>
+          <th scope="col">110</th>
+          <th scope="col">115</th>
+          <th scope="col">120</th>
+          <th scope="col">125</th>
+          <th scope="col">130</th>
+          <th scope="col">135</th>
+          <th scope="col">140</th>
+          <th scope="col">150</th>
+          <th scope="col">160</th>
+          <th scope="col">180</th>
+          <th scope="col">200</th>
+          <th scope="col">220</th>
+          <th scope="col">250</th>
+          <th scope="col">300</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
+          <td class="price-table__cell-price">132 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">246 ₽</td>
+          <td class="price-table__cell-price">262 ₽</td>
+          <td class="price-table__cell-price">278 ₽</td>
+          <td class="price-table__cell-price">310 ₽</td>
+          <td class="price-table__cell-price">358 ₽</td>
+        </tr>
+        <tr>
+          <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
+          <td class="price-table__cell-price">132 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">246 ₽</td>
+          <td class="price-table__cell-price">262 ₽</td>
+          <td class="price-table__cell-price">278 ₽</td>
+          <td class="price-table__cell-price">310 ₽</td>
+          <td class="price-table__cell-price">358 ₽</td>
+        </tr>
+        <tr class="price-table__row--hidden" data-price-collapsed-row>
+          <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
+          <td class="price-table__cell-price">132 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">246 ₽</td>
+          <td class="price-table__cell-price">262 ₽</td>
+          <td class="price-table__cell-price">278 ₽</td>
+          <td class="price-table__cell-price">310 ₽</td>
+          <td class="price-table__cell-price">358 ₽</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="price-group__expand btn-reset" type="button" data-price-expand>Развернуть все</button>
+</section>
+
+    <section class="price-group" data-price-group>
+  <h2 class="price-group__title">Подзаголовок с названием серии</h2>
+  <div class="article-body__table-wrap price-table-wrap price-table-wrap--matrix" data-price-table-scroll>
+    <table class="article-body__table price-table price-table--matrix">
+      <thead>
+        <tr class="price-table__head-group">
+          <th class="price-table__th-name" rowspan="2" scope="colgroup">Наименование</th>
+          <th class="price-table__th-diams" colspan="16" scope="colgroup">Диаметры</th>
+        </tr>
+        <tr class="price-table__head-diams">
+          <th scope="col">80</th>
+          <th scope="col">100</th>
+          <th scope="col">110</th>
+          <th scope="col">115</th>
+          <th scope="col">120</th>
+          <th scope="col">125</th>
+          <th scope="col">130</th>
+          <th scope="col">135</th>
+          <th scope="col">140</th>
+          <th scope="col">150</th>
+          <th scope="col">160</th>
+          <th scope="col">180</th>
+          <th scope="col">200</th>
+          <th scope="col">220</th>
+          <th scope="col">250</th>
+          <th scope="col">300</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
+          <td class="price-table__cell-price">132 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">246 ₽</td>
+          <td class="price-table__cell-price">262 ₽</td>
+          <td class="price-table__cell-price">278 ₽</td>
+          <td class="price-table__cell-price">310 ₽</td>
+          <td class="price-table__cell-price">358 ₽</td>
+        </tr>
+        <tr>
+          <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
+          <td class="price-table__cell-price">132 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">246 ₽</td>
+          <td class="price-table__cell-price">262 ₽</td>
+          <td class="price-table__cell-price">278 ₽</td>
+          <td class="price-table__cell-price">310 ₽</td>
+          <td class="price-table__cell-price">358 ₽</td>
+        </tr>
+        <tr class="price-table__row--hidden" data-price-collapsed-row>
+          <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
+          <td class="price-table__cell-price">132 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">246 ₽</td>
+          <td class="price-table__cell-price">262 ₽</td>
+          <td class="price-table__cell-price">278 ₽</td>
+          <td class="price-table__cell-price">310 ₽</td>
+          <td class="price-table__cell-price">358 ₽</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="price-group__expand btn-reset" type="button" data-price-expand>Развернуть все</button>
+</section>
+
+    <section class="price-group" data-price-group>
+  <h2 class="price-group__title">Подзаголовок с названием серии</h2>
+  <div class="article-body__table-wrap price-table-wrap price-table-wrap--matrix" data-price-table-scroll>
+    <table class="article-body__table price-table price-table--matrix">
+      <thead>
+        <tr class="price-table__head-group">
+          <th class="price-table__th-name" rowspan="2" scope="colgroup">Наименование</th>
+          <th class="price-table__th-diams" colspan="16" scope="colgroup">Диаметры</th>
+        </tr>
+        <tr class="price-table__head-diams">
+          <th scope="col">80</th>
+          <th scope="col">100</th>
+          <th scope="col">110</th>
+          <th scope="col">115</th>
+          <th scope="col">120</th>
+          <th scope="col">125</th>
+          <th scope="col">130</th>
+          <th scope="col">135</th>
+          <th scope="col">140</th>
+          <th scope="col">150</th>
+          <th scope="col">160</th>
+          <th scope="col">180</th>
+          <th scope="col">200</th>
+          <th scope="col">220</th>
+          <th scope="col">250</th>
+          <th scope="col">300</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
+          <td class="price-table__cell-price">132 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">246 ₽</td>
+          <td class="price-table__cell-price">262 ₽</td>
+          <td class="price-table__cell-price">278 ₽</td>
+          <td class="price-table__cell-price">310 ₽</td>
+          <td class="price-table__cell-price">358 ₽</td>
+        </tr>
+        <tr>
+          <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
+          <td class="price-table__cell-price">132 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">246 ₽</td>
+          <td class="price-table__cell-price">262 ₽</td>
+          <td class="price-table__cell-price">278 ₽</td>
+          <td class="price-table__cell-price">310 ₽</td>
+          <td class="price-table__cell-price">358 ₽</td>
+        </tr>
+        <tr class="price-table__row--hidden" data-price-collapsed-row>
+          <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
+          <td class="price-table__cell-price">132 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">214 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">230 ₽</td>
+          <td class="price-table__cell-price">246 ₽</td>
+          <td class="price-table__cell-price">262 ₽</td>
+          <td class="price-table__cell-price">278 ₽</td>
+          <td class="price-table__cell-price">310 ₽</td>
+          <td class="price-table__cell-price">358 ₽</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="price-group__expand btn-reset" type="button" data-price-expand>Развернуть все</button>
+</section>
+
+  </div>
+
+</div>
 
     </main>
     <footer class="footer">
@@ -934,12 +1339,6 @@
   </div>
 </div>
 
-      <div class="graph-modal__container graph-modal__container--video" role="dialog" aria-modal="true" data-graph-target="video">
-        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модалку"></button>
-        <div class="graph-modal__content">
-          <div class="video-modal" data-video-container></div>
-        </div>
-      </div>
     </div>
   </div>
 </body>

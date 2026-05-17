@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>Страница не найдена — ЖарGo</title>
+  <title>Видеоматериалы и статьи — ЖарGo</title>
   <link rel="preload" href="fonts/GolosTextRegular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/GolosTextMedium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/GolosTextSemiBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -396,71 +396,431 @@
 </header>
 
       </div>
-    </div>
-    <main class="main main--404">
-      <section class="page-404" aria-labelledby="page-404-title">
+      <section class="article-masthead article-masthead--materials">
   <div class="container">
-    <div class="page-404__inner">
-      <div class="page-404__visual" aria-hidden="true">
-        <img class="page-404__img" src="img/404-visual.png" width="600" height="241" loading="eager" alt="">
-      </div>
-      <div class="page-404__content">
-        <div class="page-404__head">
-          <span class="page-404__line" aria-hidden="true"></span>
-          <h1 class="page-404__title" id="page-404-title">Страница не найдена</h1>
-          <span class="page-404__line" aria-hidden="true"></span>
-        </div>
-        <p class="page-404__lead">
-          Неправильно набран адрес или такой страницы не существует. Пожалуйста, воспользуйтесь поиском, попробуйте перезагрузить страницу или посмотрите <a class="page-404__lead-link" href="catalog.html">наш каталог</a>
-        </p>
-      </div>
+    <nav class="article-masthead__breadcrumb" aria-label="Навигация по разделам">
+      <a class="article-masthead__crumb" href="index.html">Главная</a>
+      <span class="article-masthead__sep" aria-hidden="true">/</span>
+      <a class="article-masthead__crumb" href="#">Блог</a>
+      <span class="article-masthead__sep" aria-hidden="true">/</span>
+      <span class="article-masthead__current">Как выбрать оборудование для бани: от печи до веника</span>
+    </nav>
+    <div class="article-masthead__cover article-masthead__cover--materials">
+      <h1 class="article-masthead__title">Заголовок H1</h1>
     </div>
   </div>
 </section>
 
-      <section class="systems">
+    </div>
+    <main class="main main--materials">
+      <section class="materials-videos" aria-labelledby="materials-videos-title" data-materials-videos>
   <div class="container">
-    <div class="section-head">
+    <div class="section-head materials-videos__head">
       <span class="section-head__line section-head__line--left"></span>
-      <h2 class="section-head__title">РЕШЕНИЯ</h2>
+      <h2 class="section-head__title" id="materials-videos-title">Видеоматериалы</h2>
       <span class="section-head__line section-head__line--right"></span>
     </div>
-    <div class="systems__cards">
-      <a class="systems-card systems-card--bath" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">СИСТЕМА ДЛЯ БАНИ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">
-          Печь Air+, дымоход, вентиляция и «Живое дыхание» — единый комплекс для стабильного пара и правильного микроклимата.
-        </p>
-      </a>
-      <a class="systems-card systems-card--home" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">СИСТЕМА ДЛЯ ДОМА</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">
-          Трёхконтурный дымоход и теплообменник — надёжный отвод дыма и обогрев смежных помещений без затрат на электричество.
-        </p>
-      </a>
-      <a class="systems-card systems-card--chimney" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">ДЫМОХОДНЫЕ СИСТЕМЫ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">
-          Три системы — чтобы подобрать дымоход точно под тип оборудования, режим работы и условия монтажа.
-        </p>
-      </a>
-      <a class="systems-card systems-card--grill" href="#">
-        <div class="systems-card__head">
-          <h3 class="systems-card__title">МАНГАЛЫ И ГРИЛИ</h3>
-          <img src="img/svg/arrow.svg" width="30" height="30" alt="">
-        </div>
-        <p class="systems-card__text">Единая кухня на огне — выбирай модули и собирай систему под себя</p>
-      </a>
+    <div class="materials-videos__layout">
+      <div class="materials-videos__feature">
+        <article class="academy-video materials-videos__player">
+          <button
+            class="academy-video__preview btn-reset"
+            type="button"
+            data-materials-video-preview
+            data-video-modal
+            data-graph-path="video"
+            data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+            aria-label="Открыть видео"
+          >
+            <picture>
+              <source srcset="img/home/academy-video-preview.webp" type="image/webp">
+              <img src="img/home/academy-video-preview.png" width="792" height="400" loading="lazy" alt="">
+            </picture>
+            <span class="academy-video__play" aria-hidden="true"></span>
+          </button>
+          <div class="academy-video__meta">
+            <h3 data-materials-video-heading>Сердце парной: выбираем банную печь</h3>
+            <span data-materials-video-duration>5 мин</span>
+          </div>
+        </article>
+      </div>
+      <aside class="materials-videos__aside">
+        <label class="materials-search">
+          <span class="visually-hidden">Поиск по видеозаписи</span>
+          <input class="materials-search__input" type="search" name="video-search" placeholder="Поиск по видеозаписи" autocomplete="off">
+          <span class="materials-search__icon" aria-hidden="true">
+            <img src="img/svg/Magnifer.svg" width="24" height="24" alt="">
+          </span>
+        </label>
+        <ul class="materials-videos__list list-reset">
+          <li>
+            <button
+              class="materials-videos__pick materials-videos__pick--active btn-reset"
+              type="button"
+              data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              data-video-poster-webp="img/home/academy-video-preview.webp"
+              data-video-poster="img/home/academy-video-preview.png"
+              data-video-title="Сердце парной: выбираем банную печь"
+              data-video-duration="5 мин"
+            >Сердце парной: выбираем банную печь</button>
+          </li>
+          <li>
+            <button
+              class="materials-videos__pick btn-reset"
+              type="button"
+              data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              data-video-poster-webp="img/home/academy-video-preview.webp"
+              data-video-poster="img/home/academy-video-preview.png"
+              data-video-title="Сердце парной: выбираем банную печь"
+              data-video-duration="5 мин"
+            >Сердце парной: выбираем банную печь</button>
+          </li>
+          <li>
+            <button
+              class="materials-videos__pick btn-reset"
+              type="button"
+              data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              data-video-poster-webp="img/home/academy-video-preview.webp"
+              data-video-poster="img/home/academy-video-preview.png"
+              data-video-title="Сердце парной: выбираем банную печь"
+              data-video-duration="5 мин"
+            >Сердце парной: выбираем банную печь</button>
+          </li>
+          <li>
+            <button
+              class="materials-videos__pick btn-reset"
+              type="button"
+              data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              data-video-poster-webp="img/home/academy-video-preview.webp"
+              data-video-poster="img/home/academy-video-preview.png"
+              data-video-title="Сердце парной: выбираем банную печь"
+              data-video-duration="5 мин"
+            >Сердце парной: выбираем банную печь</button>
+          </li>
+          <li>
+            <button
+              class="materials-videos__pick btn-reset"
+              type="button"
+              data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              data-video-poster-webp="img/home/academy-video-preview.webp"
+              data-video-poster="img/home/academy-video-preview.png"
+              data-video-title="Сердце парной: выбираем банную печь"
+              data-video-duration="5 мин"
+            >Сердце парной: выбираем банную печь</button>
+          </li>
+          <li>
+            <button
+              class="materials-videos__pick btn-reset"
+              type="button"
+              data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              data-video-poster-webp="img/home/academy-video-preview.webp"
+              data-video-poster="img/home/academy-video-preview.png"
+              data-video-title="Сердце парной: выбираем банную печь"
+              data-video-duration="5 мин"
+            >Сердце парной: выбираем банную печь</button>
+          </li>
+          <li>
+            <button
+              class="materials-videos__pick btn-reset"
+              type="button"
+              data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              data-video-poster-webp="img/home/academy-video-preview.webp"
+              data-video-poster="img/home/academy-video-preview.png"
+              data-video-title="Сердце парной: выбираем банную печь"
+              data-video-duration="5 мин"
+            >Сердце парной: выбираем банную печь</button>
+          </li>
+          <li>
+            <button
+              class="materials-videos__pick btn-reset"
+              type="button"
+              data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              data-video-poster-webp="img/home/academy-video-preview.webp"
+              data-video-poster="img/home/academy-video-preview.png"
+              data-video-title="Сердце парной: выбираем банную печь"
+              data-video-duration="5 мин"
+            >Сердце парной: выбираем банную печь</button>
+          </li>
+        </ul>
+        <nav class="materials-pagination" aria-label="Номера страниц">
+  <ul class="materials-pagination__list list-reset">
+    <li><a class="materials-pagination__link materials-pagination__link--active" href="#">1</a></li>
+    <li><a class="materials-pagination__link" href="#">2</a></li>
+    <li><a class="materials-pagination__link" href="#">3</a></li>
+    <li><span class="materials-pagination__ellipsis" aria-hidden="true">…</span></li>
+    <li><a class="materials-pagination__link" href="#">99</a></li>
+  </ul>
+</nav>
+
+      </aside>
     </div>
+  </div>
+</section>
+
+      <section class="materials-board materials-board--articles" aria-labelledby="materials-articles-title">
+  <div class="container">
+    <div class="section-head materials-board__head">
+      <span class="section-head__line section-head__line--left"></span>
+      <h2 class="section-head__title" id="materials-articles-title">Статьи</h2>
+      <span class="section-head__line section-head__line--right"></span>
+    </div>
+    <div class="materials-board__toolbar">
+      <div class="materials-board__chips" role="group" aria-label="Группы тем">
+        <button class="materials-chip btn-reset" type="button">Группа тем</button>
+        <button class="materials-chip btn-reset" type="button">Группа тем</button>
+        <button class="materials-chip btn-reset" type="button">Группа тем</button>
+        <button class="materials-chip btn-reset" type="button">Группа тем</button>
+        <button class="materials-chip btn-reset" type="button">Группа тем</button>
+        <button class="materials-chip materials-chip--accent btn-reset" type="button">Все</button>
+      </div>
+      <label class="materials-search materials-search--compact">
+        <span class="visually-hidden">Поиск по статьям</span>
+        <input class="materials-search__input" type="search" name="articles-search" placeholder="Поиск по статьям" autocomplete="off">
+        <span class="materials-search__icon" aria-hidden="true">
+          <img src="img/svg/Magnifer.svg" width="24" height="24" alt="">
+        </span>
+      </label>
+    </div>
+    <div class="materials-articles">
+      <div class="materials-articles__grid">
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-1.webp" type="image/webp">
+              <img src="img/academy/academy-1.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Основной фокус — надёжность, безопасность и развитие</p>
+        </a>
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-2.webp" type="image/webp">
+              <img src="img/academy/academy-2.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Сердце парной: выбираем банную печь</p>
+        </a>
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-1.webp" type="image/webp">
+              <img src="img/academy/academy-1.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Основной фокус — надёжность и безопасность</p>
+        </a>
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-2.webp" type="image/webp">
+              <img src="img/academy/academy-2.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Комплексные решения для бани и дома</p>
+        </a>
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-1.webp" type="image/webp">
+              <img src="img/academy/academy-1.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Основной фокус — надёжность, безопасность</p>
+        </a>
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-2.webp" type="image/webp">
+              <img src="img/academy/academy-2.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Сердце парной: выбираем банную печь</p>
+        </a>
+      </div>
+      <div class="materials-articles__grid">
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-2.webp" type="image/webp">
+              <img src="img/academy/academy-2.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Основной фокус — надёжность, безопасность</p>
+        </a>
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-1.webp" type="image/webp">
+              <img src="img/academy/academy-1.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Комплекс для стабильного пара</p>
+        </a>
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-2.webp" type="image/webp">
+              <img src="img/academy/academy-2.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Основной фокус — надёжность</p>
+        </a>
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-1.webp" type="image/webp">
+              <img src="img/academy/academy-1.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Сердце парной: выбираем банную печь</p>
+        </a>
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-2.webp" type="image/webp">
+              <img src="img/academy/academy-2.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Основной фокус — надёжность, безопасность и развитие</p>
+        </a>
+        <a class="materials-article" href="#">
+          <span class="materials-article__media">
+            <picture>
+              <source srcset="img/academy/academy-1.webp" type="image/webp">
+              <img src="img/academy/academy-1.png" width="168" height="130" loading="lazy" alt="">
+            </picture>
+          </span>
+          <p class="materials-article__text">Комплексные решения для бани</p>
+        </a>
+      </div>
+    </div>
+    <nav class="materials-pagination" aria-label="Номера страниц">
+  <ul class="materials-pagination__list list-reset">
+    <li><a class="materials-pagination__link materials-pagination__link--active" href="#">1</a></li>
+    <li><a class="materials-pagination__link" href="#">2</a></li>
+    <li><a class="materials-pagination__link" href="#">3</a></li>
+    <li><span class="materials-pagination__ellipsis" aria-hidden="true">…</span></li>
+    <li><a class="materials-pagination__link" href="#">99</a></li>
+  </ul>
+</nav>
+
+  </div>
+</section>
+
+      <section class="materials-board materials-board--files" aria-labelledby="materials-files-title">
+  <div class="container">
+    <div class="section-head materials-board__head">
+      <span class="section-head__line section-head__line--left"></span>
+      <h2 class="section-head__title" id="materials-files-title">Файлы для скачивания</h2>
+      <span class="section-head__line section-head__line--right"></span>
+    </div>
+    <div class="materials-board__toolbar">
+      <div class="materials-board__chips materials-board__chips--narrow" role="group" aria-label="Тип файла">
+        <button class="materials-chip btn-reset" type="button">Тип</button>
+        <button class="materials-chip btn-reset" type="button">Тип</button>
+        <button class="materials-chip btn-reset" type="button">Тип</button>
+        <button class="materials-chip btn-reset" type="button">Тип</button>
+        <button class="materials-chip btn-reset" type="button">Тип</button>
+        <button class="materials-chip materials-chip--accent btn-reset" type="button">Все</button>
+      </div>
+      <label class="materials-search materials-search--compact">
+        <span class="visually-hidden">Поиск по файлам</span>
+        <input class="materials-search__input" type="search" name="files-search" placeholder="Поиск по файлам" autocomplete="off">
+        <span class="materials-search__icon" aria-hidden="true">
+          <img src="img/svg/Magnifer.svg" width="24" height="24" alt="">
+        </span>
+      </label>
+    </div>
+    <div class="materials-files">
+      <ul class="materials-files__list list-reset">
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+        <li class="materials-files__cell">
+          <a class="materials-files__link" href="#">Заголовок статьи может быть 2 или 3 строчки, а может быть и четыре</a>
+        </li>
+      </ul>
+    </div>
+    <nav class="materials-pagination" aria-label="Номера страниц">
+  <ul class="materials-pagination__list list-reset">
+    <li><a class="materials-pagination__link materials-pagination__link--active" href="#">1</a></li>
+    <li><a class="materials-pagination__link" href="#">2</a></li>
+    <li><a class="materials-pagination__link" href="#">3</a></li>
+    <li><span class="materials-pagination__ellipsis" aria-hidden="true">…</span></li>
+    <li><a class="materials-pagination__link" href="#">99</a></li>
+  </ul>
+</nav>
+
   </div>
 </section>
 
@@ -935,7 +1295,7 @@
 </div>
 
       <div class="graph-modal__container graph-modal__container--video" role="dialog" aria-modal="true" data-graph-target="video">
-        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модалку"></button>
+        <button class="btn-reset js-modal-close graph-modal__close" type="button" aria-label="Закрыть модалку"></button>
         <div class="graph-modal__content">
           <div class="video-modal" data-video-container></div>
         </div>

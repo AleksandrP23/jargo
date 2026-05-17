@@ -75,7 +75,7 @@
               </button>
             </li>
             <li>
-              <button class="btn-reset" type="button" aria-label="Войти">
+              <button class="btn-reset" type="button" aria-label="Войти" data-graph-path="auth">
                 <svg class="icon icon--login" width="20" height="20" aria-hidden="true">
                   <use href="img/sprite.svg#sing"></use>
                 </svg>
@@ -442,12 +442,24 @@
   </div>
 </section>
 
-      <section class="catalog-listing" aria-label="Каталог товаров">
+      <section class="catalog-listing" data-catalog-listing aria-label="Каталог товаров">
   <div class="container">
     <div class="catalog-listing__layout">
-      <aside class="catalog-filter" aria-label="Фильтр подбора">
+      <div class="catalog-filter__backdrop" data-catalog-filter-backdrop aria-hidden="true"></div>
+      <aside
+        class="catalog-filter"
+        id="catalog-filter-panel"
+        data-catalog-filter-panel
+        aria-labelledby="catalog-filter-heading"
+      >
         <div class="catalog-filter__head">
-          <h2 class="catalog-filter__heading">Фильтр</h2>
+          <h2 class="catalog-filter__heading" id="catalog-filter-heading">Фильтр</h2>
+          <button
+            class="catalog-filter__close btn-reset"
+            type="button"
+            data-catalog-filter-close
+            aria-label="Закрыть фильтр"
+          ><span aria-hidden="true">×</span></button>
         </div>
 
         <div class="catalog-filter__group">
@@ -539,6 +551,28 @@
 
       <div class="catalog-listing__main">
         <div class="catalog-toolbar">
+          <button
+            class="catalog-toolbar__filter btn-reset"
+            type="button"
+            id="catalog-filter-open-btn"
+            data-catalog-filter-open
+            aria-expanded="false"
+            aria-controls="catalog-filter-panel"
+          >
+            <svg
+              class="catalog-toolbar__filter-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use xlink:href="img/svg/filter.svg#icon-filter" href="img/svg/filter.svg#icon-filter" />
+            </svg>
+            <span class="catalog-toolbar__filter-text">Фильтр</span>
+          </button>
           <div class="catalog-sort" data-catalog-sort aria-label="Сортировка товаров">
             <span class="catalog-sort__label" id="catalog-sort-label">Сортировать:</span>
             <div class="catalog-sort__control">
@@ -575,14 +609,40 @@
               aria-label="Сетка"
               aria-pressed="true"
               data-catalog-view="grid"
-            ></button>
+            >
+              <svg
+                class="catalog-view__icon"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <use xlink:href="img/svg/icon-grid.svg#icon-grid" href="img/svg/icon-grid.svg#icon-grid" />
+              </svg>
+            </button>
             <button
               class="catalog-view__btn catalog-view__btn--list btn-reset"
               type="button"
               aria-label="Список"
               aria-pressed="false"
               data-catalog-view="list"
-            ></button>
+            >
+              <svg
+                class="catalog-view__icon"
+                width="24"
+                height="20"
+                viewBox="0 0 24 20"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <use xlink:href="img/svg/icon-line.svg#icon-line" href="img/svg/icon-line.svg#icon-line" />
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -1453,6 +1513,61 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+      <div class="graph-modal__container graph-modal__container--auth" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title" data-graph-target="auth">
+  <button class="btn-reset js-modal-close graph-modal__close graph-modal__close--auth" type="button" aria-label="Закрыть окно">
+    <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false">
+      <use xlink:href="img/svg/circle-x.svg#circle-x" href="img/svg/circle-x.svg#circle-x"></use>
+    </svg>
+  </button>
+  <div class="graph-modal__content graph-modal__content--auth">
+    <form class="auth-modal" action="#" method="post">
+      <div class="section-head auth-modal__head">
+        <span class="section-head__line section-head__line--left" aria-hidden="true"></span>
+        <h2 class="section-head__title auth-modal__title" id="auth-modal-title">Регистрация</h2>
+        <span class="section-head__line section-head__line--right" aria-hidden="true"></span>
+      </div>
+      <div class="auth-modal__body">
+        <div class="auth-modal__fields">
+          <div class="auth-modal__row auth-modal__row--2">
+            <label class="auth-modal__field">
+              <span class="auth-modal__label">ФИО</span>
+              <input class="auth-modal__input input-reset" type="text" name="auth-name" autocomplete="name" required>
+            </label>
+            <label class="auth-modal__field">
+              <span class="auth-modal__label">ИНН</span>
+              <input class="auth-modal__input input-reset" type="text" name="auth-inn" inputmode="numeric" autocomplete="off" required>
+            </label>
+          </div>
+          <label class="auth-modal__field">
+            <span class="auth-modal__label">Город</span>
+            <input class="auth-modal__input input-reset" type="text" name="auth-city" autocomplete="address-level2" required>
+          </label>
+          <div class="auth-modal__row auth-modal__row--2">
+            <label class="auth-modal__field">
+              <span class="auth-modal__label">Email</span>
+              <input class="auth-modal__input input-reset" type="email" name="auth-email" autocomplete="email" required>
+            </label>
+            <label class="auth-modal__field">
+              <span class="auth-modal__label">Телефон</span>
+              <input class="auth-modal__input input-reset" type="tel" name="auth-phone" autocomplete="tel" required>
+            </label>
+          </div>
+        </div>
+        <label class="auth-modal__consent">
+          <input class="auth-modal__checkbox visually-hidden" type="checkbox" name="auth-consent" required>
+          <span class="auth-modal__checkbox-ui" aria-hidden="true"></span>
+          <span class="auth-modal__consent-text">Я согласен (а) с условиями <a class="auth-modal__consent-link" href="#">Политики</a> на обработку персональных данных</span>
+        </label>
+        <button class="auth-modal__submit btn-reset" type="submit">Зарегистрироваться</button>
+        <div class="auth-modal__footer">
+          <span class="auth-modal__footer-note">У меня уже есть аккаунт</span>
+          <button class="auth-modal__footer-link btn-reset" type="button">Забыли пароль?</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
 
