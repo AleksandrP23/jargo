@@ -112,7 +112,7 @@
 
 .page__body {
   margin: 0;
-  min-width: 360px;
+  min-width: 320px;
   min-height: 100%;
   font-size: 16px;
 }
@@ -775,6 +775,12 @@ a {
   }
   .header__tools button {
     gap: 0;
+  }
+  .header__tools .icon--search {
+    stroke: #ed7407;
+  }
+  .header__tools .icon--login {
+    fill: #ed7407;
   }
   .header__bottom {
     top: 22px;
@@ -1807,7 +1813,6 @@ a {
   }
 }
 
-/* Figma hero дымоходы: 1400 (422:14076) / 1160 (422:14247) / 768 (422:14337) / 360 (422:14408) */
 .hero--chimneys .hero__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2562,9 +2567,6 @@ a {
   .production {
     margin-bottom: 50px;
   }
-  .production__inner {
-    display: block;
-  }
   .production__content {
     padding: 30px 15px 20px;
   }
@@ -2578,12 +2580,17 @@ a {
   .production__links .tabs__nav-btn {
     font-size: 16px;
   }
-  .production__gallery {
-    display: none;
-  }
   .production__price {
     padding: 26px;
     font-size: 20px;
+  }
+}
+@media (max-width: 980px) {
+  .production__inner {
+    display: block;
+  }
+  .production__gallery {
+    display: none;
   }
 }
 @media (max-width: 560px) {
@@ -2615,6 +2622,44 @@ a {
     border-radius: 0 0 16px 16px;
     padding: 20px;
     font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .production__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .production__gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+  .production__gallery picture {
+    width: 100%;
+    height: auto;
+  }
+  .production__gallery img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 }
 
@@ -4000,7 +4045,7 @@ a {
 }
 .footer__phone-note {
   display: inline-block;
-  width: 95%;
+  width: 100%;
   font-size: 9px;
   line-height: 1.2;
   text-align: center;
@@ -4201,6 +4246,7 @@ a {
     -ms-grid-columns: (minmax(0, 1fr))[3];
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-bottom: 15px;
+    text-align: center;
     gap: 15px;
   }
   .footer__list {
@@ -4258,7 +4304,6 @@ a {
   .footer__nav {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    text-align: center;
     gap: 9px;
   }
   .footer__col {
@@ -4282,7 +4327,6 @@ a {
   }
 }
 
-/* Страница каталога с сортировкой (Figma 169:895 «Страница с сортировкой») */
 .main--catalog > section {
   margin-bottom: 70px;
 }
@@ -4329,9 +4373,6 @@ a {
   font-size: 16px;
   line-height: 1.3;
 }
-.catalog-subcats {
-  /* Figma: подкатегория 738 (334:13423) — 2 колонки, ряд 50px, превью 56×50, текст 20 / 120% */
-}
 @media (max-width: 1024px) {
   .catalog-subcats__list {
     -ms-grid-columns: (minmax(0, 1fr))[2];
@@ -4353,9 +4394,6 @@ a {
     font-size: 20px;
     line-height: 1.2;
   }
-}
-.catalog-subcats {
-  /* Figma: подкатегория 330 (339:17436) — 2 колонки, gap 10, ряд 30px, превью 34×30, текст 16 / 120% */
 }
 @media (max-width: 560px) {
   .catalog-subcats__list {
@@ -4410,7 +4448,6 @@ a {
     grid-template-columns: 1fr;
   }
   .catalog-listing__main {
-    /* Figma: колонка листинга 728 (334:13482) — 20px между тулбаром и сеткой */
     gap: 20px;
   }
 }
@@ -4790,9 +4827,6 @@ a {
   flex: 1 1 auto;
   min-width: 0;
 }
-.catalog-toolbar {
-  /* Figma: тулбар 738 одна строка (334:13483) — фильтр, сортировка, вид */
-}
 @media (max-width: 1024px) {
   .catalog-toolbar {
     -ms-flex-wrap: nowrap;
@@ -4843,9 +4877,6 @@ a {
     outline-offset: 2px;
   }
 }
-.catalog-toolbar {
-  /* Figma: тулбар 330 — фильтр + вид, сортировка строкой ниже (см. макет mobile-каталога) */
-}
 @media (max-width: 560px) {
   .catalog-toolbar {
     display: -ms-grid;
@@ -4889,7 +4920,6 @@ a {
   }
 }
 
-/* Выпадающий список сортировки: Figma 173:5022 */
 .catalog-sort {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4898,7 +4928,6 @@ a {
   -ms-flex-align: center;
   align-items: center;
   gap: 5px;
-  /* Figma: сортировка в колонке 878 (334:12074) — «Сортировать:» 18 / 120% #363636 */
 }
 .catalog-sort__label {
   font-weight: 400;
@@ -4986,9 +5015,6 @@ a {
 .catalog-sort__option--active {
   color: #ed7407;
 }
-.catalog-sort {
-  /* Figma: сортировка 738 (334:13483) */
-}
 @media (max-width: 1024px) {
   .catalog-sort {
     -webkit-box-align: center;
@@ -5032,9 +5058,6 @@ a {
     font-size: 16px;
     line-height: 1.2;
   }
-}
-.catalog-sort {
-  /* Figma: сортировка 330 (339:17453) */
 }
 @media (max-width: 560px) {
   .catalog-sort {
@@ -5087,7 +5110,6 @@ a {
   }
 }
 
-/* Переключатель вида: Figma 169:1469 / tablet 334:13490 — inline SVG + currentColor */
 .catalog-view {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5164,9 +5186,6 @@ a {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
-.catalog-grid {
-  /* Figma: сетка 728 (334:13482) — 4 колонки, межколонник 20 */
-}
 @media (max-width: 1024px) {
   .catalog-grid {
     -ms-grid-columns: (minmax(0, 1fr))[4];
@@ -5174,18 +5193,12 @@ a {
     gap: 20px;
   }
 }
-.catalog-grid {
-  /* Figma: сетка 330 (339:17451) — 2 колонки, ряд 10px, между карточками 20 */
-}
 @media (max-width: 560px) {
   .catalog-grid {
     -ms-grid-columns: (minmax(0, 1fr))[2];
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px 20px;
   }
-}
-.catalog-grid {
-  /* Линейный вид: Figma 251:19026 (1118) / 417:20774 (878) / 417:20871 (728) / 339:21279 (330) */
 }
 .catalog-grid--list {
   display: -webkit-box;
@@ -5210,7 +5223,6 @@ a {
   max-width: 100%;
 }
 
-/* Карточка сетки: Figma 334:12074 (878) / 334:13482 (728) / 339:17451 (330) */
 .catalog-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5316,9 +5328,6 @@ a {
   width: 115px;
   height: 100px;
   aspect-ratio: auto;
-}
-.catalog-grid--list .catalog-card {
-  /* 251:19026 — ряд текста 961px: 330 + gap 30 + 601 */
 }
 .catalog-grid--list .catalog-card__content {
   display: -ms-grid;
@@ -5439,9 +5448,6 @@ a {
   width: 127px;
   gap: 16px;
 }
-.catalog-pagination {
-  /* Figma: блок «страницы» 334:12074 / 334:13482 / 339:17451 — 16 / 130%, неактивные 60% */
-}
 .catalog-pagination__link {
   font-size: 16px;
   line-height: 1.3;
@@ -5495,9 +5501,6 @@ a {
   margin-top: 0;
 }
 
-.catalog-consult {
-  /* Блок «Получить оптовый прайс»: Figma 334:12173 (1160) / 334:14859 (728) / 339:17561 (330) */
-}
 .catalog-consult__shell {
   position: relative;
   overflow: hidden;
@@ -5617,9 +5620,6 @@ a {
   color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
   gap: 10px;
-}
-.catalog-consult {
-  /* Чекбокс: Figma 180:11132 — контейнер 24×24, квадрат 18×18 со смещением 3px, stroke 1px #fff */
 }
 .catalog-consult__checkbox-ui {
   position: relative;
@@ -5785,7 +5785,6 @@ a {
   }
 }
 
-/* Страница 404 — адаптив: Figma 348:28803 (1200), 348:29770 (768), 348:30144 (360) */
 .main--404 {
   background: #fff;
 }
@@ -5966,7 +5965,6 @@ a {
   border-radius: 2px;
 }
 
-/* Отступы: Figma «Название серии» 170:2223, блок серий 260:3613 (MCP figma-bridge) */
 .bath-series {
   padding-bottom: 70px;
 }
@@ -5979,9 +5977,6 @@ a {
   .bath-series {
     padding-bottom: 40px;
   }
-}
-.bath-series {
-  /* 260:3613: gap 30 между заголовком с линиями и каждым рядом «Продукция» */
 }
 .bath-series__head.section-head {
   margin-bottom: 30px;
@@ -6033,7 +6028,6 @@ a {
   background-color: #fff;
   gap: 12px;
   /* COMPONENT «01»: padding 20; вертикальный gap 12 между блоками */
-  /* Frame 2131328936: gap 15 между изображением и текстом */
 }
 .bath-series-card__top {
   display: -webkit-box;
@@ -6054,9 +6048,6 @@ a {
   width: 176px;
   height: auto;
   max-width: 100%;
-}
-.bath-series-card {
-  /* Frame 2131328837: gap 10 между категорией, названием, лидом, метой, тегами */
 }
 .bath-series-card__intro {
   display: -webkit-box;
@@ -6211,9 +6202,6 @@ a {
   height: 5px;
   background-color: #ed7407;
 }
-.bath-series-card {
-  /* Frame 2131328950: gap 10 между двумя рядами метрик */
-}
 .bath-series-card__metrics {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6223,9 +6211,6 @@ a {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
-}
-.bath-series-card {
-  /* Frame 2131328948: gap 40 между двумя метриками в ряду; 10 между рядами */
 }
 .bath-series-card__metrics-row {
   display: -ms-grid;
@@ -7037,6 +7022,7 @@ a {
   font-size: 20px;
   line-height: 1.2;
   color: #363636;
+  text-transform: uppercase;
 }
 .article-body__toc-list {
   margin: 0;
@@ -7367,7 +7353,6 @@ a {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  /* Без фиксированных px: ~60/40 как в макете (834:546), треки сжимаются внутри контейнера */
   -ms-grid-columns: minmax(0, 1.53fr) minmax(0, 1fr);
   grid-template-columns: minmax(0, 1.53fr) minmax(0, 1fr);
   margin: 40px 0;
@@ -7647,6 +7632,7 @@ a {
   font-size: 22px;
   line-height: 1.2;
   color: #363636;
+  text-transform: uppercase;
 }
 .article-body__thesis-item p {
   -ms-grid-row-align: start;
@@ -7663,9 +7649,6 @@ a {
   width: 45px;
   height: 45px;
   background: #d9d9d9;
-}
-.article-body {
-  /* Figma: compact тезисы 1160 (325:12194) — колонка: иконка + текст, gap 10, текст 18 / 140% */
 }
 .article-body__thesis--compact .section-head {
   margin-bottom: 20px;
@@ -7721,9 +7704,6 @@ a {
   overflow-x: auto;
   margin: 20px 0;
   border-radius: 20px;
-}
-.article-body {
-  /* Figma: таблица 1160 (325:12220) */
 }
 .article-body__table {
   overflow: hidden;
@@ -7784,9 +7764,6 @@ a {
     gap: 20px;
   }
 }
-.article-body {
-  /* Figma: оглавление + глава 1160 (325:12047, 325:12056) */
-}
 @media (max-width: 1024px) {
   .article-body__toc {
     margin: 0 0 32px;
@@ -7817,9 +7794,6 @@ a {
     -ms-grid-columns: (minmax(0, 1fr))[2];
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .article-body {
-    /* Figma: compact тезисы 738 (325:12969) — 3×2, gap 15, заголовок 25, текст 16 / 140% */
-  }
   .article-body__thesis--compact .section-head {
     margin-bottom: 20px;
   }
@@ -7837,9 +7811,6 @@ a {
   .article-body__thesis--compact .article-body__thesis-item p {
     font-size: 16px;
     line-height: 1.4;
-  }
-  .article-body {
-    /* Figma: таблица 738 (325:12995) */
   }
   .article-body__table-wrap {
     border-radius: 16px;
@@ -7859,15 +7830,9 @@ a {
     font-size: 16px;
     line-height: 1.2;
   }
-  .article-body {
-    /* Figma: видео-блок 738 (333:11263) — отступ секции 30 */
-  }
   .article-body__block--video {
     margin-bottom: 30px;
   }
-}
-.article-body {
-  /* Figma: оглавление + глава 738 (325:12822, 325:12831) */
 }
 @media (max-width: 768px) {
   .article-body__toc {
@@ -7943,9 +7908,6 @@ a {
   .article-body__chapter-media img {
     max-height: 350px;
   }
-  .article-body {
-    /* Figma: split/highlight/quote 738 (325:12910, 325:12917, 325:12922) */
-  }
   .article-body__split {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -8020,9 +7982,6 @@ a {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .article-body {
-    /* Figma: оглавление 330 (325:13692) */
-  }
   .article-body__toc {
     margin: 0 0 24px;
   }
@@ -8040,9 +7999,6 @@ a {
   }
   .article-body__toc-list li + li {
     margin-top: 14px;
-  }
-  .article-body {
-    /* Figma: глава 330 (325:13701) */
   }
   .article-body__chapter {
     margin-bottom: 36px;
@@ -8063,7 +8019,6 @@ a {
     line-height: 1.3;
   }
   .article-body h2 {
-    margin-top: 32px;
     font-size: 20px;
   }
   .article-body__gallery {
@@ -8114,9 +8069,6 @@ a {
   .article-body__thesis-item h3 {
     font-size: 20px;
   }
-  .article-body {
-    /* Figma: compact тезисы 330 (325:13876) — колонка, gap 15 между карточками, заголовок 20, текст 16 */
-  }
   .article-body__thesis--compact .section-head {
     margin-bottom: 20px;
     gap: 20px;
@@ -8134,47 +8086,67 @@ a {
     font-size: 16px;
     line-height: 1.4;
   }
-  .article-body {
-    /* Figma: таблица 511 (325:13902) */
-  }
   .article-body__table-wrap {
     margin: 16px 0;
     border-radius: 16px;
   }
   .article-body__table {
     border-radius: 16px;
-    min-width: 100%;
+    min-width: 511px;
     font-size: 16px;
     line-height: 28px;
   }
   .article-body__table th,
   .article-body__table td {
     padding: 10px 15px;
+    vertical-align: middle;
   }
   .article-body__table th {
     padding: 15px 20px;
     font-size: 16px;
     line-height: 1.2;
   }
+  .article-body__table th:nth-child(3),
+  .article-body__table td:nth-child(3) {
+    white-space: nowrap;
+  }
   .article-body__highlight {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-grid-columns: 36px minmax(0, 1fr);
+    grid-template-columns: 36px minmax(0, 1fr);
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
     padding: 10px;
     gap: 10px;
   }
+  .article-body__highlight-icon {
+    -ms-grid-row-align: center;
+    align-self: center;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
   .article-body__highlight-text {
+    -ms-grid-row-align: start;
+    align-self: start;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
     font-size: 16px;
+    line-height: 1.4;
   }
   .article-body__highlight-link {
+    grid-column: 1/-1;
+    -ms-grid-row: 2;
+    grid-row: 2;
     font-size: 16px;
+    line-height: 1.2;
   }
   .article-body__block-head {
     -ms-flex-wrap: wrap;
@@ -8220,7 +8192,6 @@ a {
   }
 }
 
-/* Figma: видео в теле статьи и сериях — 738 (333:11263), 320 (332:10168) */
 @media (max-width: 1024px) {
   .article-body__video.academy-video .academy-video__preview {
     border-radius: 20px;
@@ -8254,7 +8225,7 @@ a {
 @media (max-width: 560px) {
   .article-body__video.academy-video .academy-video__preview {
     border-radius: 10px;
-    padding: 10px;
+    padding: 0;
     max-height: none;
     aspect-ratio: 320/250;
   }
@@ -8266,7 +8237,7 @@ a {
     border-width: 10px 0 10px 16px;
   }
   .article-body__video.academy-video .academy-video__meta {
-    margin-top: 15px;
+    margin-top: 0;
   }
   .article-body__video.academy-video .academy-video__meta h3 {
     font-weight: 500;
@@ -8851,9 +8822,6 @@ a {
   outline-offset: 2px;
   border-radius: 2px;
 }
-.article-contacts {
-  /* Figma: контакты 738 (325:13062) */
-}
 @media (max-width: 1024px) {
   .article-contacts {
     margin-bottom: 50px;
@@ -8884,9 +8852,6 @@ a {
   .article-contacts__line--hours .article-contacts__value {
     grid-column: 1/-1;
   }
-}
-.article-contacts {
-  /* Figma: контакты 330 (325:14000) — блок над картой, карта 300px */
 }
 @media (max-width: 560px) {
   .article-contacts {
@@ -9101,9 +9066,6 @@ a {
   margin: 0;
   color: #585858;
 }
-.article-branches {
-  /* Figma: филиалы 738 (325:13091) — карта 350, город 18, meta wrap gap 30 / 15 */
-}
 @media (max-width: 1024px) {
   .article-branches {
     margin-bottom: 50px;
@@ -9122,9 +9084,6 @@ a {
     margin-top: 0;
     margin-left: 0;
   }
-}
-.article-branches {
-  /* Figma: филиалы 330 (325:14029) — карта 300, meta колонка gap 10 */
 }
 @media (max-width: 560px) {
   .article-branches {
@@ -9152,6 +9111,9 @@ a {
   .article-branches__info {
     font-size: 15px;
     line-height: 1.1;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
   }
   .article-branches__map-link {
     margin-top: 0;
@@ -9270,6 +9232,64 @@ a {
     font-size: 20px;
   }
 }
+.article-strip--wholesale .article-strip__inner {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  padding: 30px 20px;
+  background: #12392c;
+  gap: 60px;
+}
+.article-strip--wholesale .article-strip__title {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  max-width: none;
+}
+.article-strip--wholesale .article-strip__cta {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-size: 20px;
+}
+@media (max-width: 1024px) {
+  .article-strip--wholesale .article-strip__inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px 15px;
+    gap: 20px;
+  }
+  .article-strip--wholesale .article-strip__title {
+    font-size: 25px;
+  }
+  .article-strip--wholesale .article-strip__cta {
+    font-size: 16px;
+  }
+}
+@media (max-width: 560px) {
+  .article-strip--wholesale .article-strip__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .article-strip--wholesale .article-strip__title {
+    font-size: 18px;
+  }
+  .article-strip--wholesale .article-strip__cta {
+    font-size: 16px;
+  }
+}
 
 .article-read-more {
   margin-bottom: 70px;
@@ -9315,9 +9335,6 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
   gap: 10px;
-}
-.article-showcase {
-  /* Figma: Arrows 330 (333:11075) */
 }
 .article-showcase__nav {
   position: relative;
@@ -9376,9 +9393,6 @@ a {
   -ms-grid-columns: (minmax(0, 1fr))[4];
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
-}
-.article-showcase {
-  /* Figma: Блок с товаром 1160 (325:12264) — колонки 275, gap 20, медиа ~229, gap 15, padding-bottom 10 */
 }
 .article-showcase__card {
   display: -webkit-box;
@@ -9444,9 +9458,6 @@ a {
   font-size: 18px;
   line-height: 1.4;
   color: #585858;
-}
-.article-showcase {
-  /* Figma: Блок с товаром 738 (325:13039) — 4 колонки, gap 10, медиа ~147.5, текст gap 5 */
 }
 @media (max-width: 1024px) {
   .article-showcase {
@@ -9514,7 +9525,6 @@ a {
   }
 }
 
-/* Figma equipment «Вентиляция»: 1160 (326:14693) / 738 (326:15308) / 330 (326:16085); сетка без Swiper */
 .article-showcase.article-showcase--vent .section-head {
   margin-bottom: 20px;
 }
@@ -9633,9 +9643,6 @@ a {
     font-size: 16px;
   }
 }
-.article-tags {
-  /* Figma: теги 330 (325:13999) — заголовок 20/120%, облако gap 15, ссылки 14/130% */
-}
 @media (max-width: 560px) {
   .article-tags {
     margin-bottom: 40px;
@@ -9749,7 +9756,6 @@ a {
   }
 }
 
-/* Узкий макет обзора — только equipment (Figma 1160 / 738 / 330) */
 .main--equipment .article-overview__layout {
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -10039,7 +10045,6 @@ a {
   color: #585858;
 }
 
-/* Figma «Продукция» Standard 550°: 1400 (262:3996) ≥1301px; 1160 (332:6373) ≤1300; 738 (332:6854); 330 (332:8353) */
 .article-product-feature--chimneys .section-head {
   margin-bottom: 30px;
 }
@@ -10296,12 +10301,8 @@ a {
   }
 }
 
-/* Figma «Продукция»: 1160 (326:14546) / 738 (326:15161) / 330 (326:15964) */
 .article-product-feature--equipment .section-head {
   margin-bottom: 30px;
-}
-.article-product-feature--equipment {
-  /* Заголовок секции: Figma 35 / 1.2 (1160), 25 (738), 20 (330); без uppercase как в макете */
 }
 .article-product-feature--equipment .section-head__title {
   font-size: 35px;
@@ -10768,7 +10769,6 @@ a {
   padding: 30px 60px;
   min-height: 460px;
   background: linear-gradient(125deg, #283430 0%, #103a2c 100%);
-  /* Ellipse 4 — Figma 339:17340 */
 }
 .article-quiz__inner::before {
   content: "";
@@ -10783,9 +10783,6 @@ a {
   -webkit-filter: blur(87.6px);
   filter: blur(87.6px);
   pointer-events: none;
-}
-.article-quiz__inner {
-  /* Ellipse 5 — Figma 339:17341 */
 }
 .article-quiz__inner::after {
   content: "";
@@ -10921,7 +10918,6 @@ a {
     bottom: 20px;
   }
   .article-quiz {
-    /* Figma 738 (326:15150): две схемы по бокам, текст по центру */
     /* ≤768: колонка со схемами сверху/снизу */
   }
 }
@@ -11305,7 +11301,6 @@ a {
   transition: transform 0.2s ease, color 0.2s ease, -webkit-transform 0.2s ease;
 }
 
-/* FAQ equipment: Figma 738 (326:15371), 330 (326:16174) — без правок h2 */
 @media (max-width: 1024px) {
   .main--equipment .article-faq .article-faq__item {
     padding: 8px 15px;
@@ -11685,9 +11680,6 @@ a {
   color: #585858;
   text-underline-offset: 2px;
 }
-.series-content {
-  /* Figma series /series.html: 738 (513:20608) — @include tablet */
-}
 @media (max-width: 1024px) {
   .series-content {
     margin-bottom: 50px;
@@ -11772,9 +11764,6 @@ a {
   .series-content__doc-link {
     font-size: 16px;
   }
-}
-.series-content {
-  /* Figma series /series.html: 330 (513:20610) — @include mobile */
 }
 @media (max-width: 560px) {
   .series-content {
@@ -11878,7 +11867,6 @@ a {
   }
 }
 
-/* Страница прайса: Figma 414:16009 (desktop) / 301:4265 (mobile) */
 .main--price {
   padding-bottom: 100px;
   background: #fff;
@@ -11891,7 +11879,6 @@ a {
   display: none;
 }
 
-/* Figma Frame 2131328857 — gap 42, height 44 */
 .price-toolbar {
   margin-bottom: 50px;
 }
@@ -11929,9 +11916,6 @@ a {
 .price-toolbar__label--muted {
   font-weight: 400;
   color: #585858;
-}
-.price-toolbar {
-  /* Figma 312:6552 — 50×25, #999 / #ed7407 */
 }
 .price-toolbar__switch {
   position: relative;
@@ -12022,9 +12006,6 @@ a {
 .price-toolbar__markup-clear:hover, .price-toolbar__markup-clear:focus-visible {
   color: #363636;
 }
-.price-toolbar {
-  /* Figma 299:3337 — текст с подчёркиванием, без рамки */
-}
 .price-toolbar__download {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -12057,7 +12038,6 @@ a {
   outline-offset: 2px;
 }
 
-/* Figma Frame 2131329048 */
 .price-series-nav {
   margin: -30px 0 20px;
 }
@@ -12103,7 +12083,6 @@ a {
   gap: 50px;
 }
 
-/* Figma Frame 2131329040 — без картинок */
 .price-spotlight__title {
   margin: 0 0 15px;
   font-weight: 400;
@@ -12144,7 +12123,6 @@ a {
   background: linear-gradient(#363636, #363636) center/10px 1px no-repeat, url("../img/svg/arrow-slider.svg") center/10px 6px no-repeat;
 }
 
-/* Figma Frame 2131328908 */
 /* Первая матрица — без шапки; следующие — с head-diams на #fafafa */
 .price-page__body > .price-group:first-of-type .price-table--matrix thead {
   display: none;
@@ -12414,7 +12392,6 @@ body.price-toolbar--discount .price-toolbar__label--muted {
     border-radius: 16px;
   }
 }
-/* Страница материалов: 173:6204; адаптив 350:30517 (1200), 350:30998 (768), 350:31781 (360) */
 .main--materials {
   padding-bottom: 70px;
   background: #fff;
@@ -13007,7 +12984,6 @@ body.price-toolbar--discount .price-toolbar__label--muted {
     font-size: 18px;
   }
 }
-/* Личный кабинет: 221:5686 (заказы), 221:5694 (период), 221:4886, 220:2692 */
 .top-shell--cabinet {
   margin-bottom: 0;
 }
@@ -13242,7 +13218,6 @@ body.price-toolbar--discount .price-toolbar__label--muted {
   margin-bottom: 20px;
 }
 
-/* Figma 221:5694 — период, даты, ссылки «Показать» / «Сбросить» */
 .cabinet-order-period {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13365,7 +13340,6 @@ body.price-toolbar--discount .price-toolbar__label--muted {
   gap: 40px;
 }
 
-/* Figma 398:14323 (закрыто), 398:13555 (открыто); mobile 398:14800 */
 .cabinet-order-cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13617,7 +13591,6 @@ body.price-toolbar--discount .price-toolbar__label--muted {
   }
 }
 @media (max-width: 560px) {
-  /* Figma 398:14784 — период */
   .cabinet-order-period {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -13679,7 +13652,6 @@ body.price-toolbar--discount .price-toolbar__label--muted {
     min-height: 0;
     font-size: 16px;
   }
-  /* Figma 398:14800 — карточка заказа (мобильная шапка и таблица) */
   .cabinet-order-cards {
     gap: 20px;
   }
@@ -13772,7 +13744,6 @@ body.price-toolbar--discount .price-toolbar__label--muted {
     height: 30px;
   }
 }
-/* Figma 221:4886 — ряд полей 265×70, gap 20, кнопка-ссылка */
 .cabinet-pass {
   width: 100%;
 }
@@ -13945,7 +13916,6 @@ body.price-toolbar--discount .price-toolbar__label--muted {
   }
 }
 
-/* Оформление заказа: Figma 221:6026, 398:15662, 398:16190, 398:16578, контент 224:6461 */
 .main--checkout {
   padding-bottom: 70px;
   background: #fff;
@@ -14410,9 +14380,6 @@ body.price-toolbar--discount .price-toolbar__label--muted {
   width: 36px;
   height: 36px;
 }
-.checkout-line {
-  /* Tablet 768: Figma 398:16190 — компактная строка, gap 15 */
-}
 @media (max-width: 1024px) {
   .checkout-line {
     -ms-grid-columns: minmax(120px, 1fr) auto 111px auto 30px;
@@ -14478,9 +14445,6 @@ body.price-toolbar--discount .price-toolbar__label--muted {
     padding: 4px 0;
     gap: 0 15px;
   }
-}
-.checkout-line {
-  /* Mobile 360: Figma 398:16578 — две строки в карточке */
 }
 @media (max-width: 560px) {
   .checkout-line {
@@ -14810,7 +14774,6 @@ body.price-toolbar--discount .price-toolbar__label--muted {
   }
 }
 
-/* Модалка регистрации: Figma 221:5946 */
 .graph-modal__container--auth {
   position: relative;
   border-radius: 20px;
