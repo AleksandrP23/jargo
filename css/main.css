@@ -6884,7 +6884,7 @@ a {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    gap: 30px;
+    gap: 15px;
   }
 }
 
@@ -6932,6 +6932,13 @@ a {
 .bath-product-hero-toolbar__step:focus-visible {
   outline: 2px solid #ed7407;
   outline-offset: 2px;
+}
+@media (max-width: 560px) {
+  .bath-product-hero-toolbar__step {
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+  }
 }
 
 .bath-product-hero-toolbar__value {
