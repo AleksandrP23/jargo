@@ -6976,7 +6976,6 @@ a {
 @media (max-width: 560px) {
   .bath-product-hero-toolbar__cta {
     font-size: 18px;
-    text-transform: none;
   }
 }
 .bath-product-hero-toolbar__cta:hover, .bath-product-hero-toolbar__cta:focus-visible {
