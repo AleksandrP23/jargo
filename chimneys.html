@@ -983,7 +983,7 @@
       <div class="graph-modal__container graph-modal__container--quiz" role="dialog" aria-modal="true" data-graph-target="quiz">
   <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модалку"></button>
   <div class="graph-modal__content graph-modal__content--quiz">
-    <div class="quiz" data-quiz data-quiz-demo-results="true">
+    <div class="quiz" data-quiz>
       <section class="quiz-intro" data-quiz-intro aria-label="Начало подбора печи">
         <div class="quiz-intro__glow quiz-intro__glow--1" aria-hidden="true"></div>
         <div class="quiz-intro__glow quiz-intro__glow--2" aria-hidden="true"></div>
@@ -1070,7 +1070,7 @@
                 <div class="quiz-fields__group quiz-fields__group--narrow">
                   <p class="quiz-fields__legend">Площадь неутепленных поверхностей, м<sup>2</sup>*</p>
                   <label class="quiz-field">
-                    <input class="input-reset quiz-field__input" type="text" name="quiz-area" inputmode="decimal" placeholder="0.0" autocomplete="off" required>
+                    <input class="input-reset quiz-field__input" type="text" name="quiz-area" inputmode="decimal" placeholder="0.0" autocomplete="off">
                   </label>
                 </div>
                 <div class="quiz-hint-block">
@@ -1092,7 +1092,7 @@
                 <p class="quiz-fields__legend">Материал стен</p>
                 <div class="quiz-fields__row quiz-fields__row--2">
                   <label class="quiz-radio-card">
-                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-wall" value="vagon" required>
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-wall" value="vagon" checked>
                     <span class="quiz-radio-card__box">
                       <span class="quiz-radio-card__control" aria-hidden="true"></span>
                       <span class="quiz-radio-card__text">Вагонка/утепленные</span>
@@ -1111,7 +1111,7 @@
                 <p class="quiz-fields__legend">Тип парной</p>
                 <div class="quiz-fields__row quiz-fields__row--2 quiz-fields__row--tall">
                   <label class="quiz-radio-card quiz-radio-card--tall">
-                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-sauna-type" value="russian" required>
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-sauna-type" value="russian" checked>
                     <span class="quiz-radio-card__box">
                       <span class="quiz-radio-card__control" aria-hidden="true"></span>
                       <span class="quiz-radio-card__text-wrap">
@@ -1136,7 +1136,7 @@
                 <p class="quiz-fields__legend">Расположение топки</p>
                 <div class="quiz-fields__row quiz-fields__row--2 quiz-fields__row--tall">
                   <label class="quiz-radio-card quiz-radio-card--tall">
-                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-firebox" value="ktk" required>
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-firebox" value="ktk" checked>
                     <span class="quiz-radio-card__box">
                       <span class="quiz-radio-card__control" aria-hidden="true"></span>
                       <span class="quiz-radio-card__text-wrap">
@@ -1169,17 +1169,17 @@
                 <p class="quiz-fields__legend">Материал печи</p>
                 <div class="quiz-fields__row quiz-fields__row--2">
                   <label class="quiz-radio-card">
-                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-material" value="chugun" required>
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-material" value="chugun">
                     <span class="quiz-radio-card__box">
                       <span class="quiz-radio-card__control" aria-hidden="true"></span>
                       <span class="quiz-radio-card__text">Чугун</span>
                     </span>
                   </label>
                   <label class="quiz-radio-card">
-                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-material" value="stal">
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-material" value="stal" checked>
                     <span class="quiz-radio-card__box">
                       <span class="quiz-radio-card__control" aria-hidden="true"></span>
-                      <span class="quiz-radio-card__text">Сталь</span>
+                      <span class="quiz-radio-card__text">Конструкционная сталь</span>
                     </span>
                   </label>
                 </div>
@@ -1187,15 +1187,15 @@
               <div class="quiz-fields__group">
                 <p class="quiz-fields__legend">Дверца</p>
                 <div class="quiz-fields__row quiz-fields__row--2">
-                  <label class="quiz-radio-card">
-                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-door" value="glass" required>
+                  <label class="quiz-radio-card" data-quiz-door-glass>
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-door" value="glass">
                     <span class="quiz-radio-card__box">
                       <span class="quiz-radio-card__control" aria-hidden="true"></span>
                       <span class="quiz-radio-card__text">Со стеклом</span>
                     </span>
                   </label>
                   <label class="quiz-radio-card">
-                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-door" value="plain">
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="quiz-door" value="plain" checked>
                     <span class="quiz-radio-card__box">
                       <span class="quiz-radio-card__control" aria-hidden="true"></span>
                       <span class="quiz-radio-card__text">Без стекла</span>
@@ -1211,33 +1211,9 @@
               <div class="quiz__step-head">
                 <h3 class="quiz__step-title">Подобранные модели</h3>
                 <p class="quiz__step-desc">По вашим параметрам мы нашли подходящие печи ЖарGO.</p>
+                <p class="quiz-result-volume">Расчётный объём парной: <strong data-quiz-result-volume>—</strong></p>
               </div>
-              <ul class="quiz-result-success__list list-reset">
-                <li>
-                  <article class="quiz-result-card">
-                    <a class="quiz-result-card__link" href="#">
-                      <picture class="quiz-result-card__pic">
-                        <source srcset="img/home/product-bath-stove.webp" type="image/webp">
-                        <img src="img/home/product-bath-stove.png" width="120" height="100" alt="">
-                      </picture>
-                      <span class="quiz-result-card__title">Печь для бани «ЖарGO Классик»</span>
-                      <span class="quiz-result-card__more">Подробнее →</span>
-                    </a>
-                  </article>
-                </li>
-                <li>
-                  <article class="quiz-result-card">
-                    <a class="quiz-result-card__link" href="#">
-                      <picture class="quiz-result-card__pic">
-                        <source srcset="img/home/product-bath-stove.webp" type="image/webp">
-                        <img src="img/home/product-bath-stove.png" width="120" height="100" alt="">
-                      </picture>
-                      <span class="quiz-result-card__title">Печь для бани «ЖарGO Компакт»</span>
-                      <span class="quiz-result-card__more">Подробнее →</span>
-                    </a>
-                  </article>
-                </li>
-              </ul>
+              <ul class="quiz-result-success__list list-reset" data-quiz-result-list></ul>
             </div>
           </div>
 
@@ -1275,6 +1251,7 @@
 
         <div class="quiz__actions" data-quiz-actions>
           <button class="btn-reset quiz__nav quiz__nav--prev" type="button" data-quiz-prev disabled>← Назад</button>
+          <button class="btn-reset quiz__nav quiz__nav--print" type="button" data-quiz-print hidden>Распечатать в PDF</button>
           <button class="btn-reset quiz__nav quiz__nav--next" type="button" data-quiz-next>Далее →</button>
           <button class="btn-reset quiz__nav quiz__nav--again" type="button" data-quiz-again hidden>Рассчитать еще раз</button>
         </div>
@@ -1331,10 +1308,59 @@
         <button class="auth-modal__submit btn-reset" type="submit">Зарегистрироваться</button>
         <div class="auth-modal__footer">
           <span class="auth-modal__footer-note">У меня уже есть аккаунт</span>
-          <button class="auth-modal__footer-link btn-reset" type="button">Забыли пароль?</button>
+          <button class="auth-modal__footer-link btn-reset" type="button" data-graph-path="password-reset">Забыли пароль?</button>
         </div>
       </div>
     </form>
+  </div>
+</div>
+<div class="graph-modal__container graph-modal__container--auth graph-modal__container--password-reset" role="dialog" aria-modal="true" aria-labelledby="password-reset-modal-title" data-graph-target="password-reset">
+  <button class="btn-reset js-modal-close graph-modal__close graph-modal__close--auth" type="button" aria-label="Закрыть окно">
+    <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false">
+      <use xlink:href="img/svg/circle-x.svg#circle-x" href="img/svg/circle-x.svg#circle-x"></use>
+    </svg>
+  </button>
+  <div class="graph-modal__content graph-modal__content--auth">
+    <form class="auth-modal password-reset-modal" action="#" method="post" data-password-reset-form>
+      <div class="section-head password-reset-modal__head">
+        <span class="section-head__line section-head__line--left"></span>
+        <h2 class="section-head__title" id="password-reset-modal-title">Восстановление пароля</h2>
+        <span class="section-head__line section-head__line--right"></span>
+      </div>
+      <p class="password-reset-modal__lead">
+        Новый пароль будет отправлен на вашу почту
+        <span class="password-reset-modal__lead-note">(Проверьте почту через 1–2 минуты, письмо может попасть в папку Спам)</span>
+      </p>
+      <div class="auth-modal__body password-reset-modal__body">
+        <div class="auth-modal__fields">
+          <label class="auth-modal__field">
+            <span class="auth-modal__label">Email</span>
+            <input class="auth-modal__input input-reset" type="email" name="password-reset-email" autocomplete="email" required>
+          </label>
+        </div>
+        <button class="auth-modal__submit btn-reset" type="submit">Выслать новый пароль</button>
+        <div class="auth-modal__footer auth-modal__footer--end">
+          <button class="auth-modal__footer-link btn-reset" type="button" data-graph-path="auth">Вспомнил пароль? Вернуться ко входу</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="graph-modal__container graph-modal__container--auth graph-modal__container--password-reset-success" role="dialog" aria-modal="true" aria-labelledby="password-reset-success-title" data-graph-target="password-reset-success">
+  <button class="btn-reset js-modal-close graph-modal__close graph-modal__close--auth" type="button" aria-label="Закрыть окно">
+    <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false">
+      <use xlink:href="img/svg/circle-x.svg#circle-x" href="img/svg/circle-x.svg#circle-x"></use>
+    </svg>
+  </button>
+  <div class="graph-modal__content graph-modal__content--auth">
+    <div class="password-reset-success-modal">
+      <h2 class="visually-hidden" id="password-reset-success-title">Пароль отправлен</h2>
+      <p class="password-reset-success-modal__text">
+        Новый пароль отправлен на email <span data-password-reset-success-email>example@mail.ru</span>. Используйте его для входа.
+      </p>
+      <p class="password-reset-success-modal__note">Рекомендуем сменить пароль в личном кабинете после входа</p>
+    </div>
   </div>
 </div>
 

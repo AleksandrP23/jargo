@@ -358,6 +358,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_cabinet_order_cards_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/cabinet-order-cards.js */ "./src/js/components/cabinet-order-cards.js");
 /* harmony import */ var _components_bath_series_card_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/bath-series-card.js */ "./src/js/components/bath-series-card.js");
 /* harmony import */ var _components_consult_modal_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/consult-modal.js */ "./src/js/components/consult-modal.js");
+/* harmony import */ var _components_auth_modal_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/auth-modal.js */ "./src/js/components/auth-modal.js");
+
 
 
 
@@ -386,6 +388,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_components_cabinet_order_cards_js__WEBPACK_IMPORTED_MODULE_19__["default"])();
 (0,_components_bath_series_card_js__WEBPACK_IMPORTED_MODULE_20__["default"])();
 (0,_components_consult_modal_js__WEBPACK_IMPORTED_MODULE_21__["default"])();
+(0,_components_auth_modal_js__WEBPACK_IMPORTED_MODULE_22__["default"])();
 window.graphModal = new graph_modal__WEBPACK_IMPORTED_MODULE_2__["default"]({
   isClose(modal) {
     const closedTarget = modal.modalContainer?.getAttribute('data-graph-target');
@@ -875,6 +878,41 @@ const initArticleTooltips = () => {
   document.querySelectorAll('[data-article-tooltips]').forEach(initTooltipRoot);
 };
 initArticleTooltips();
+
+/***/ },
+
+/***/ "./src/js/components/auth-modal.js"
+/*!*****************************************!*\
+  !*** ./src/js/components/auth-modal.js ***!
+  \*****************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ initAuthModal)
+/* harmony export */ });
+function initAuthModal() {
+  const resetForm = document.querySelector('[data-password-reset-form]');
+  const successEmailNode = document.querySelector('[data-password-reset-success-email]');
+  if (!resetForm) {
+    return;
+  }
+  resetForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const emailInput = resetForm.querySelector('[name="password-reset-email"]');
+    const email = emailInput?.value.trim() || '';
+    if (successEmailNode) {
+      successEmailNode.textContent = email || 'example@mail.ru';
+    }
+    const modal = window.graphModal;
+    if (!modal) {
+      return;
+    }
+    modal._nextContainer = document.querySelector('[data-graph-target="password-reset-success"]');
+    modal.reOpen = true;
+    modal.close();
+  });
+}
 
 /***/ },
 
@@ -1955,6 +1993,601 @@ initProductionTabs();
 
 /***/ },
 
+/***/ "./src/js/components/quiz-calc.js"
+/*!****************************************!*\
+  !*** ./src/js/components/quiz-calc.js ***!
+  \****************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   calculateVolume: () => (/* binding */ calculateVolume),
+/* harmony export */   matchStoves: () => (/* binding */ matchStoves)
+/* harmony export */ });
+const WALL_COEFFICIENT = {
+  vagon: 1.0,
+  breven: 1.2
+};
+const matchesParam = (modelValue, selectedValue) => {
+  return modelValue === 'both' || modelValue === selectedValue;
+};
+
+/**
+ * Расчётный объём парной, м³.
+ * V = (Длина × Ширина × Высота + 1.2 × S) × К_стен
+ */
+const calculateVolume = ({
+  length,
+  width,
+  height,
+  uninsulatedArea,
+  wallMaterial
+}) => {
+  const S = Number.isFinite(uninsulatedArea) ? uninsulatedArea : 0;
+  const K = WALL_COEFFICIENT[wallMaterial] ?? 1.0;
+  const raw = (length * width * height + 1.2 * S) * K;
+  return Math.round(raw * 10) / 10;
+};
+const deduplicateBySeries = models => {
+  const bySeries = new Map();
+  models.forEach(model => {
+    const existing = bySeries.get(model.series);
+    if (!existing || model.maxVolume < existing.maxVolume) {
+      bySeries.set(model.series, model);
+    }
+  });
+  return Array.from(bySeries.values());
+};
+const sortModels = (models, volume) => {
+  return [...models].sort((a, b) => {
+    const aTaganay = a.series === 'taganay' ? 0 : 1;
+    const bTaganay = b.series === 'taganay' ? 0 : 1;
+    if (aTaganay !== bTaganay) {
+      return aTaganay - bTaganay;
+    }
+    if (b.priority !== a.priority) {
+      return b.priority - a.priority;
+    }
+    const aDiff = Math.abs(a.maxVolume - volume);
+    const bDiff = Math.abs(b.maxVolume - volume);
+    return aDiff - bDiff;
+  });
+};
+
+/**
+ * Подбор до 3 моделей по параметрам парной и расчётному объёму.
+ */
+const matchStoves = (volume, filters, stoves) => {
+  const matched = stoves.filter(model => {
+    return model.maxVolume >= volume && matchesParam(model.saunaMode, filters.saunaType) && matchesParam(model.firebox, filters.firebox) && matchesParam(model.door, filters.door) && model.material === filters.material;
+  });
+  const deduped = deduplicateBySeries(matched);
+  const sorted = sortModels(deduped, volume);
+  return sorted.slice(0, 3);
+};
+
+/***/ },
+
+/***/ "./src/js/components/quiz-print.js"
+/*!*****************************************!*\
+  !*** ./src/js/components/quiz-print.js ***!
+  \*****************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   printQuizResult: () => (/* binding */ printQuizResult)
+/* harmony export */ });
+const LABELS = {
+  wall: {
+    vagon: 'Вагонка / утеплённые',
+    breven: 'Брёвна / толстый брус'
+  },
+  saunaType: {
+    russian: 'Русская баня',
+    finnish: 'Финская сауна'
+  },
+  firebox: {
+    ktk: 'КТК (из парной)',
+    vynos: 'Выносная (из предбанника)'
+  },
+  door: {
+    glass: 'Со стеклом',
+    plain: 'Без стекла'
+  },
+  material: {
+    stal: 'Конструкционная сталь',
+    chugun: 'Чугун'
+  }
+};
+const DISCLAIMER_PARAGRAPHS = ['Калькулятор подбора помогает определить расчётный объём парной и подобрать подходящие модели печей ЖарGO.', 'Рекомендации носят предварительный характер. Для уточнения комплектации, монтажа и дымохода обратитесь к специалисту.', 'Актуальные цены, наличие и технические характеристики уточняйте у менеджера или на официальном сайте.'];
+const DEFAULT_MODEL_DESCRIPTION = 'Универсальная сталь. Подходит для обоих типов парной.';
+const resolveAssetUrl = path => {
+  if (!path || path.startsWith('http')) {
+    return path;
+  }
+  return new URL(path, `${window.location.origin}/`).href;
+};
+const getSiteLabel = () => {
+  return window.location.host || 'жарго.рф';
+};
+const formatDimensions = answers => {
+  return `${answers.length} × ${answers.width} × ${answers.height} м`;
+};
+const formatUninsulated = answers => {
+  return answers.uninsulatedArea > 0 ? `${answers.uninsulatedArea} м²` : '0 м²';
+};
+const getModelDescription = model => {
+  if (model.description) {
+    return model.description;
+  }
+  if (model.id === 'taganay-22') {
+    return 'Сталь. Для просторных парных и смешанного режима.';
+  }
+  return DEFAULT_MODEL_DESCRIPTION;
+};
+const buildParamRow = (label, value) => {
+  return `
+    <div class="param-row">
+      <span class="param-row__label">${label}</span>
+      <span class="param-row__value">${value}</span>
+    </div>
+  `;
+};
+const buildModelsHtml = models => {
+  return models.map(model => {
+    const description = getModelDescription(model);
+    const details = model.details ?? '';
+    return `
+      <article class="model-row">
+        <div class="model-row__image">
+          <img src="${resolveAssetUrl(model.image)}" alt="${model.title}" width="215" height="150">
+        </div>
+        <div class="model-row__content">
+          <div class="model-row__head">
+            <h3 class="model-row__title">${model.title}</h3>
+            <p class="model-row__desc">${description}</p>
+          </div>
+          ${details ? `<p class="model-row__details">${details}</p>` : ''}
+        </div>
+      </article>
+    `;
+  }).join('');
+};
+const buildPrintStyles = () => {
+  const fontRegular = resolveAssetUrl('fonts/GolosTextRegular.woff2');
+  const fontMedium = resolveAssetUrl('fonts/GolosTextMedium.woff2');
+  return `
+    @font-face {
+      font-family: 'Golos Text';
+      src: url('${fontRegular}') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Golos Text';
+      src: url('${fontMedium}') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: #363636;
+      font-family: 'Golos Text', Arial, sans-serif;
+      background: #fff;
+    }
+
+    .pdf {
+      width: 1160px;
+      min-height: 1641px;
+      margin: 0 auto;
+      background: #fff;
+    }
+
+    .pdf__header {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 0 20px 12px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .pdf__logo {
+      flex-shrink: 0;
+      width: 120px;
+      height: 120px;
+    }
+
+    .pdf__logo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .pdf__tagline {
+      flex: 1;
+      margin: 0;
+      max-width: 690px;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .pdf__site {
+      flex-shrink: 0;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .pdf__body {
+      padding: 39px 20px 100px;
+    }
+
+    .pdf__section-title {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+
+    .pdf__section-title-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, #fff 0%, #ed7407 100%);
+    }
+
+    .pdf__section-title-line--right {
+      background: linear-gradient(270deg, #fff 0%, #ed7407 100%);
+    }
+
+    .pdf__section-title-text {
+      margin: 0;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .pdf__params {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .pdf__params-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .param-row {
+      display: flex;
+      gap: 5px;
+      align-items: baseline;
+      white-space: nowrap;
+    }
+
+    .param-row__label {
+      color: #585858;
+      font-weight: 400;
+    }
+
+    .param-row__value {
+      color: #363636;
+      font-weight: 500;
+    }
+
+    .pdf__divider {
+      height: 1px;
+      margin: 15px 0;
+      background: rgba(218, 218, 218, 0.4);
+    }
+
+    .pdf__volume {
+      margin: 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .pdf__volume-value {
+      color: #ed7407;
+    }
+
+    .pdf__subtitle {
+      margin: 0 0 15px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.4;
+      color: rgba(54, 54, 54, 0.6);
+    }
+
+    .pdf__models {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 60px;
+    }
+
+    .model-row {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .model-row__image {
+      flex-shrink: 0;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .model-row__image img {
+      display: block;
+      width: 215px;
+      height: 150px;
+      object-fit: contain;
+    }
+
+    .model-row__content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .model-row__head {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .model-row__title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .model-row__desc {
+      margin: 0;
+      color: #585858;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .model-row__details {
+      margin: 0;
+      color: #585858;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .pdf__notes {
+      margin: 0;
+      color: #585858;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .pdf__notes p {
+      margin: 0 0 15px;
+    }
+
+    .pdf__notes p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pdf__footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin-top: auto;
+      padding: 10px;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .pdf__footer-legal {
+      flex: 1;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .pdf__footer-contact {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .pdf__footer-icon {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      color: #ed7407;
+    }
+
+    @media print {
+      body { margin: 0; }
+      .pdf { width: auto; min-height: auto; }
+    }
+  `;
+};
+const buildPrintHtml = ({
+  answers,
+  volume,
+  models
+}) => {
+  const logoUrl = resolveAssetUrl('img/logo.svg');
+  const siteLabel = getSiteLabel();
+  const leftParams = [buildParamRow('Размеры:', formatDimensions(answers)), buildParamRow('Материал стен:', LABELS.wall[answers.wallMaterial] ?? '—'), buildParamRow('Топка:', LABELS.firebox[answers.firebox] ?? '—'), buildParamRow('Неутеплённые поверхности:', formatUninsulated(answers))].join('');
+  const rightParams = [buildParamRow('Тип парной:', LABELS.saunaType[answers.saunaType] ?? '—'), buildParamRow('Материал печи:', LABELS.material[answers.material] ?? '—'), buildParamRow('Дверца:', LABELS.door[answers.door] ?? '—')].join('');
+  const notesHtml = DISCLAIMER_PARAGRAPHS.map(text => `<p>${text}</p>`).join('');
+  const phoneIcon = `
+    <svg class="pdf__footer-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.25"/>
+    </svg>
+  `;
+  const calendarIcon = `
+    <svg class="pdf__footer-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+    </svg>
+  `;
+  return `<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Подбор банной печи — результат</title>
+  <style>${buildPrintStyles()}</style>
+</head>
+<body>
+  <div class="pdf">
+    <header class="pdf__header">
+      <div class="pdf__logo">
+        <img src="${logoUrl}" alt="ЖарGO">
+      </div>
+      <h1 class="pdf__tagline">Инженерные решения для&nbsp;бани, дома и&nbsp;огня</h1>
+      <div class="pdf__site">${siteLabel}</div>
+    </header>
+
+    <main class="pdf__body">
+      <div class="pdf__section-title">
+        <span class="pdf__section-title-line" aria-hidden="true"></span>
+        <h2 class="pdf__section-title-text">Результат</h2>
+        <span class="pdf__section-title-line pdf__section-title-line--right" aria-hidden="true"></span>
+      </div>
+
+      <div class="pdf__params">
+        <div class="pdf__params-col">${leftParams}</div>
+        <div class="pdf__params-col">${rightParams}</div>
+      </div>
+
+      <div class="pdf__divider" aria-hidden="true"></div>
+
+      <p class="pdf__volume">
+        Расчетный объем:
+        <span class="pdf__volume-value">${volume} м<sup>3</sup></span>
+      </p>
+
+      <div class="pdf__divider" aria-hidden="true"></div>
+
+      <p class="pdf__subtitle">Подходящие печи ЖарGO</p>
+
+      <div class="pdf__models">${buildModelsHtml(models)}</div>
+
+      <div class="pdf__notes">${notesHtml}</div>
+    </main>
+
+    <footer class="pdf__footer">
+      <p class="pdf__footer-legal">ООО «ДымоходСервис»&nbsp;&nbsp;ИНН 5257131935&nbsp;&nbsp;ОГРН 1125257006731</p>
+      <div class="pdf__footer-contact">
+        ${phoneIcon}
+        <span>8 (800) 500-54-42</span>
+      </div>
+      <div class="pdf__footer-contact">
+        ${calendarIcon}
+        <span>Пн-Пт с 9:00 до 18:00</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>`;
+};
+const waitForImages = doc => {
+  const images = Array.from(doc.images || []);
+  if (images.length === 0) {
+    return Promise.resolve();
+  }
+  return Promise.all(images.map(img => {
+    if (img.complete) {
+      return Promise.resolve();
+    }
+    return new Promise(resolve => {
+      img.addEventListener('load', resolve, {
+        once: true
+      });
+      img.addEventListener('error', resolve, {
+        once: true
+      });
+    });
+  }));
+};
+const waitForFonts = doc => {
+  if (doc.fonts?.ready) {
+    return doc.fonts.ready.catch(() => {});
+  }
+  return Promise.resolve();
+};
+const removePrintFrame = frame => {
+  frame?.parentNode?.removeChild(frame);
+};
+const printQuizResult = ({
+  answers,
+  volume,
+  models
+}) => {
+  removePrintFrame(document.getElementById('quiz-print-frame'));
+  const frame = document.createElement('iframe');
+  frame.id = 'quiz-print-frame';
+  frame.setAttribute('aria-hidden', 'true');
+  frame.style.cssText = 'position:fixed;left:-9999px;top:0;width:1160px;height:1700px;border:0;';
+  document.body.appendChild(frame);
+  const printWindow = frame.contentWindow;
+  const printDocument = printWindow.document;
+  printDocument.open();
+  printDocument.write(buildPrintHtml({
+    answers,
+    volume,
+    models
+  }));
+  printDocument.close();
+  const startPrint = () => {
+    Promise.all([waitForImages(printDocument), waitForFonts(printDocument)]).then(() => {
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          printWindow.focus();
+          printWindow.print();
+          printWindow.addEventListener('afterprint', () => {
+            removePrintFrame(frame);
+          }, {
+            once: true
+          });
+          setTimeout(() => {
+            removePrintFrame(frame);
+          }, 30000);
+        }, 250);
+      });
+    });
+  };
+  if (printDocument.readyState === 'complete') {
+    startPrint();
+  } else {
+    printWindow.addEventListener('load', startPrint, {
+      once: true
+    });
+  }
+};
+
+/***/ },
+
 /***/ "./src/js/components/quiz.js"
 /*!***********************************!*\
   !*** ./src/js/components/quiz.js ***!
@@ -1962,15 +2595,66 @@ initProductionTabs();
 (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-const validateFormStep = stepEl => {
-  const fields = stepEl.querySelectorAll('input, select, textarea');
-  for (const field of fields) {
-    if (!field.checkValidity()) {
-      field.reportValidity();
-      return false;
-    }
+/* harmony import */ var _data_quiz_stoves_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/quiz-stoves.js */ "./src/js/data/quiz-stoves.js");
+/* harmony import */ var _quiz_calc_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./quiz-calc.js */ "./src/js/components/quiz-calc.js");
+/* harmony import */ var _quiz_print_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./quiz-print.js */ "./src/js/components/quiz-print.js");
+
+
+
+const parseDecimal = value => {
+  const normalized = String(value).trim().replace(',', '.');
+  if (!normalized) {
+    return null;
   }
-  return true;
+  const num = Number.parseFloat(normalized);
+  return Number.isFinite(num) && num >= 0 ? num : null;
+};
+const getCheckedValue = (quiz, name) => {
+  return quiz.querySelector(`input[name="${name}"]:checked`)?.value ?? null;
+};
+const isDimensionsStepValid = quiz => {
+  const length = parseDecimal(quiz.querySelector('[name="quiz-length"]')?.value);
+  const width = parseDecimal(quiz.querySelector('[name="quiz-width"]')?.value);
+  const height = parseDecimal(quiz.querySelector('[name="quiz-height"]')?.value);
+  return length !== null && width !== null && height !== null && length > 0 && width > 0 && height > 0;
+};
+const collectAnswers = quiz => {
+  const length = parseDecimal(quiz.querySelector('[name="quiz-length"]')?.value);
+  const width = parseDecimal(quiz.querySelector('[name="quiz-width"]')?.value);
+  const height = parseDecimal(quiz.querySelector('[name="quiz-height"]')?.value);
+  const areaRaw = quiz.querySelector('[name="quiz-area"]')?.value ?? '';
+  const uninsulatedArea = parseDecimal(areaRaw) ?? 0;
+  return {
+    length,
+    width,
+    height,
+    uninsulatedArea,
+    wallMaterial: getCheckedValue(quiz, 'quiz-wall'),
+    saunaType: getCheckedValue(quiz, 'quiz-sauna-type'),
+    firebox: getCheckedValue(quiz, 'quiz-firebox'),
+    door: getCheckedValue(quiz, 'quiz-door'),
+    material: getCheckedValue(quiz, 'quiz-material')
+  };
+};
+const renderResultCards = (listEl, models) => {
+  listEl.innerHTML = models.map((model, index) => {
+    const badge = index === 0 ? '<span class="quiz-result-card__badge">Рекомендуем</span>' : '';
+    return `
+      <li>
+        <article class="quiz-result-card">
+          <a class="quiz-result-card__link" href="${model.url}">
+            ${badge}
+            <picture class="quiz-result-card__pic">
+              <source srcset="${model.imageWebp}" type="image/webp">
+              <img src="${model.image}" width="120" height="100" alt="">
+            </picture>
+            <span class="quiz-result-card__title">Печь для бани «${model.title}»</span>
+            <span class="quiz-result-card__more">Подробнее&nbsp;&rarr;</span>
+          </a>
+        </article>
+      </li>
+    `;
+  }).join('');
 };
 const initQuiz = () => {
   const quiz = document.querySelector('[data-quiz]');
@@ -1983,16 +2667,37 @@ const initQuiz = () => {
   const formSteps = Array.from(quiz.querySelectorAll('[data-quiz-form-step]'));
   const resultSuccessEl = quiz.querySelector('[data-quiz-result-panel="success"]');
   const resultEmptyEl = quiz.querySelector('[data-quiz-result-panel="empty"]');
+  const resultListEl = quiz.querySelector('[data-quiz-result-list]');
+  const resultVolumeEl = quiz.querySelector('[data-quiz-result-volume]');
   const startBtn = quiz.querySelector('[data-quiz-start]');
   const prevBtn = quiz.querySelector('[data-quiz-prev]');
   const nextBtn = quiz.querySelector('[data-quiz-next]');
   const againBtn = quiz.querySelector('[data-quiz-again]');
+  const printBtn = quiz.querySelector('[data-quiz-print]');
+  const actionsEl = quiz.querySelector('[data-quiz-actions]');
   const openers = document.querySelectorAll('[data-quiz-open]');
+  const fireboxInputs = quiz.querySelectorAll('input[name="quiz-firebox"]');
+  const doorGlassLabel = quiz.querySelector('[data-quiz-door-glass]');
+  const doorGlassInput = quiz.querySelector('input[name="quiz-door"][value="glass"]');
+  const doorPlainInput = quiz.querySelector('input[name="quiz-door"][value="plain"]');
+  const dimensionInputs = quiz.querySelectorAll('[name="quiz-length"], [name="quiz-width"], [name="quiz-height"]');
   let showingIntro = true;
   /** @type {number} 0..2 — шаги анкеты, 3 — экран результата */
   let stepIndex = 0;
   let showingResult = false;
-  const demoHasResults = () => quiz.getAttribute('data-quiz-demo-results') !== 'false';
+  let lastResult = null;
+  const isKtkSelected = () => getCheckedValue(quiz, 'quiz-firebox') === 'ktk';
+  const applyKtkDoorRule = () => {
+    if (!doorGlassLabel || !doorGlassInput || !doorPlainInput) {
+      return;
+    }
+    const ktk = isKtkSelected();
+    doorGlassLabel.classList.toggle('quiz-radio-card--disabled', ktk);
+    doorGlassInput.disabled = ktk;
+    if (ktk) {
+      doorPlainInput.checked = true;
+    }
+  };
   const setPhase = phase => {
     if (stepperEl) {
       stepperEl.setAttribute('data-phase', String(phase));
@@ -2035,13 +2740,50 @@ const initQuiz = () => {
       resultEmptyEl.classList.remove('quiz__step--active');
     }
     setPhase(stepIndex);
+    applyKtkDoorRule();
+  };
+  const runCalculation = () => {
+    const answers = collectAnswers(quiz);
+    const volume = (0,_quiz_calc_js__WEBPACK_IMPORTED_MODULE_1__.calculateVolume)({
+      length: answers.length,
+      width: answers.width,
+      height: answers.height,
+      uninsulatedArea: answers.uninsulatedArea,
+      wallMaterial: answers.wallMaterial
+    });
+    const models = (0,_quiz_calc_js__WEBPACK_IMPORTED_MODULE_1__.matchStoves)(volume, {
+      saunaType: answers.saunaType,
+      firebox: answers.firebox,
+      door: answers.door,
+      material: answers.material
+    }, _data_quiz_stoves_js__WEBPACK_IMPORTED_MODULE_0__.QUIZ_STOVES);
+    return {
+      volume,
+      models
+    };
   };
   const renderResultView = () => {
     showingResult = true;
     formSteps.forEach(el => {
       el.classList.remove('quiz__step--active');
     });
-    const hasResults = demoHasResults();
+    const answers = collectAnswers(quiz);
+    const {
+      volume,
+      models
+    } = runCalculation();
+    const hasResults = models.length > 0;
+    lastResult = hasResults ? {
+      answers,
+      volume,
+      models
+    } : null;
+    if (resultVolumeEl) {
+      resultVolumeEl.textContent = `${volume} м³`;
+    }
+    if (resultListEl && hasResults) {
+      renderResultCards(resultListEl, models);
+    }
     if (resultSuccessEl) {
       resultSuccessEl.hidden = !hasResults;
       resultSuccessEl.classList.toggle('quiz__step--active', hasResults);
@@ -2060,11 +2802,20 @@ const initQuiz = () => {
       return;
     }
     if (showingResult) {
+      const hasSuccessResult = Boolean(lastResult);
       prevBtn.disabled = false;
       prevBtn.textContent = '← Назад';
       nextBtn.hidden = true;
       againBtn.hidden = false;
+      if (printBtn) {
+        printBtn.hidden = !hasSuccessResult;
+      }
+      actionsEl?.classList.toggle('quiz__actions--result-success', hasSuccessResult);
       return;
+    }
+    actionsEl?.classList.remove('quiz__actions--result-success');
+    if (printBtn) {
+      printBtn.hidden = true;
     }
     nextBtn.hidden = false;
     againBtn.hidden = true;
@@ -2072,11 +2823,19 @@ const initQuiz = () => {
       prevBtn.disabled = true;
       nextBtn.textContent = 'Далее →';
       nextBtn.classList.remove('quiz__nav--accent');
+      nextBtn.disabled = !isDimensionsStepValid(quiz);
+    } else if (stepIndex === 1) {
+      prevBtn.disabled = false;
+      prevBtn.textContent = '← Назад';
+      nextBtn.textContent = 'Далее →';
+      nextBtn.classList.remove('quiz__nav--accent');
+      nextBtn.disabled = false;
     } else {
       prevBtn.disabled = false;
       prevBtn.textContent = '← Назад';
-      nextBtn.textContent = 'Смотреть результат →';
+      nextBtn.textContent = 'Подобрать →';
       nextBtn.classList.add('quiz__nav--accent');
+      nextBtn.disabled = false;
     }
   };
   const render = () => {
@@ -2093,11 +2852,14 @@ const initQuiz = () => {
     }
     renderActions();
   };
-  const goNext = () => {
-    if (showingIntro) {
-      return;
+  const validateFormStep = stepEl => {
+    if (stepIndex === 0) {
+      return isDimensionsStepValid(quiz);
     }
-    if (showingResult) {
+    return true;
+  };
+  const goNext = () => {
+    if (showingIntro || showingResult) {
       return;
     }
     if (!validateFormStep(formSteps[stepIndex])) {
@@ -2126,17 +2888,30 @@ const initQuiz = () => {
       render();
     }
   };
+  const resetDefaults = () => {
+    quiz.querySelector('[name="quiz-length"]').value = '';
+    quiz.querySelector('[name="quiz-width"]').value = '';
+    quiz.querySelector('[name="quiz-height"]').value = '';
+    quiz.querySelector('[name="quiz-area"]').value = '';
+    quiz.querySelector('input[name="quiz-wall"][value="vagon"]').checked = true;
+    quiz.querySelector('input[name="quiz-sauna-type"][value="russian"]').checked = true;
+    quiz.querySelector('input[name="quiz-firebox"][value="ktk"]').checked = true;
+    quiz.querySelector('input[name="quiz-door"][value="plain"]').checked = true;
+    quiz.querySelector('input[name="quiz-material"][value="stal"]').checked = true;
+    applyKtkDoorRule();
+  };
   const restartFromScratch = () => {
-    quiz.querySelectorAll('input').forEach(input => {
-      if (input.type === 'radio' || input.type === 'checkbox') {
-        input.checked = false;
-      } else {
-        input.value = '';
-      }
-    });
+    resetDefaults();
     showingResult = false;
+    lastResult = null;
     showIntroView();
     renderActions();
+  };
+  const printResult = () => {
+    if (!lastResult) {
+      return;
+    }
+    (0,_quiz_print_js__WEBPACK_IMPORTED_MODULE_2__.printQuizResult)(lastResult);
   };
   startBtn?.addEventListener('click', () => {
     showingIntro = false;
@@ -2147,14 +2922,204 @@ const initQuiz = () => {
   nextBtn?.addEventListener('click', goNext);
   prevBtn?.addEventListener('click', goPrev);
   againBtn?.addEventListener('click', restartFromScratch);
+  printBtn?.addEventListener('click', printResult);
   openers.forEach(opener => {
     opener.addEventListener('click', () => {
       restartFromScratch();
     });
   });
+  fireboxInputs.forEach(input => {
+    input.addEventListener('change', () => {
+      applyKtkDoorRule();
+    });
+  });
+  dimensionInputs.forEach(input => {
+    input.addEventListener('input', () => {
+      if (!showingIntro && !showingResult && stepIndex === 0) {
+        renderActions();
+      }
+    });
+  });
+  applyKtkDoorRule();
   render();
 };
 initQuiz();
+
+/***/ },
+
+/***/ "./src/js/data/quiz-stoves.js"
+/*!************************************!*\
+  !*** ./src/js/data/quiz-stoves.js ***!
+  \************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   QUIZ_STOVES: () => (/* binding */ QUIZ_STOVES)
+/* harmony export */ });
+/**
+ * Конфигурация моделей печей для калькулятора подбора.
+ * Параметры предварительные — заказчик уточняет значения по каждой модели.
+ *
+ * saunaMode / firebox / door: конкретное значение или 'both' (подходит любой выбор).
+ */
+const QUIZ_STOVES = [{
+  id: 'taganay-14',
+  title: 'Таганай 14',
+  series: 'taganay',
+  priority: 5,
+  maxVolume: 14,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}, {
+  id: 'taganay-22',
+  title: 'Таганай 22',
+  series: 'taganay',
+  priority: 5,
+  maxVolume: 22,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}, {
+  id: 'taganay-28',
+  title: 'Таганай 28',
+  series: 'taganay',
+  priority: 5,
+  maxVolume: 28,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}, {
+  id: 'volga-18',
+  title: 'Волга 18',
+  series: 'volga',
+  priority: 5,
+  maxVolume: 18,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}, {
+  id: 'zdrava-18',
+  title: 'Здрава 18',
+  series: 'zdrava',
+  priority: 5,
+  maxVolume: 18,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}, {
+  id: 'optima-14',
+  title: 'Оптима 14',
+  series: 'optima',
+  priority: 3,
+  maxVolume: 14,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}, {
+  id: 'poltava-22',
+  title: 'Полтава 22',
+  series: 'poltava',
+  priority: 5,
+  maxVolume: 22,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}, {
+  id: 'istra-10',
+  title: 'Истра 10',
+  series: 'istra',
+  priority: 1,
+  maxVolume: 10,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}, {
+  id: 'optima-12',
+  title: 'Оптима 12',
+  series: 'optima',
+  priority: 1,
+  maxVolume: 12,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}, {
+  id: 'zarya-14',
+  title: 'Заря 14',
+  series: 'zarya',
+  priority: 1,
+  maxVolume: 14,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}, {
+  id: 'vetluga',
+  title: 'Ветлуга',
+  series: 'vetluga',
+  priority: 1,
+  maxVolume: 18,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}, {
+  id: 'kama-22',
+  title: 'Кама 22',
+  series: 'kama',
+  priority: 1,
+  maxVolume: 22,
+  saunaMode: 'both',
+  firebox: 'both',
+  door: 'both',
+  material: 'stal',
+  url: '#',
+  image: 'img/home/product-bath-stove.png',
+  imageWebp: 'img/home/product-bath-stove.webp'
+}];
 
 /***/ },
 
