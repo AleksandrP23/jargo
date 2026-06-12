@@ -444,12 +444,12 @@
       <div class="chimneys-configurator__stack">
         <figure class="chimneys-configurator__figure chimneys-configurator__figure--left">
           <picture>
-            <source srcset="img/equipment/q1.webp" type="image/webp">
+            <source srcset="img/chimneys/configurator-left.webp" type="image/webp">
             <img
               class="chimneys-configurator__img"
-              src="img/equipment/q1.png"
-              width="369"
-              height="336"
+              src="img/chimneys/configurator-left.png"
+              width="413"
+              height="377"
               loading="lazy"
               alt=""
             >
@@ -467,20 +467,20 @@
           <button
             class="chimneys-configurator__start btn-reset"
             type="button"
-            data-quiz-open
-            data-graph-path="quiz"
+            data-chimney-configurator-open
+            data-graph-path="chimney-configurator"
           >
             Начать →
           </button>
         </div>
         <figure class="chimneys-configurator__figure chimneys-configurator__figure--right">
           <picture>
-            <source srcset="img/equipment/q2.webp" type="image/webp">
+            <source srcset="img/chimneys/configurator-right.webp" type="image/webp">
             <img
               class="chimneys-configurator__img"
-              src="img/equipment/q2.png"
-              width="343"
-              height="312"
+              src="img/chimneys/configurator-right.png"
+              width="413"
+              height="377"
               loading="lazy"
               alt=""
             >
@@ -987,12 +987,24 @@
       <section class="quiz-intro" data-quiz-intro aria-label="Начало подбора печи">
         <div class="quiz-intro__glow quiz-intro__glow--1" aria-hidden="true"></div>
         <div class="quiz-intro__glow quiz-intro__glow--2" aria-hidden="true"></div>
+        <figure class="quiz-intro__pane quiz-intro__pane--left" aria-hidden="true">
+          <picture>
+            <source srcset="img/quiz/quiz-left.webp" type="image/webp">
+            <img src="img/quiz/quiz-left.png" width="413" height="377" alt="">
+          </picture>
+        </figure>
         <div class="quiz-intro__inner">
           <h2 class="quiz-intro__title">Подбор банной печи</h2>
           <p class="quiz-intro__text">Введите параметры парной — калькулятор определит расчётный объём и подберёт подходящую печь ЖарGO.</p>
           <button class="btn-reset quiz-intro__cta" type="button" data-quiz-start>Начать подбор →</button>
         </div>
-        <button class="btn-reset quiz-intro__help" type="button" aria-label="Справка по подбору">?</button>
+        <figure class="quiz-intro__pane quiz-intro__pane--right" aria-hidden="true">
+          <picture>
+            <source srcset="img/quiz/quiz-right.webp" type="image/webp">
+            <img src="img/quiz/quiz-right.png" width="413" height="377" alt="">
+          </picture>
+        </figure>
+        <button class="btn-reset quiz-intro__help" type="button" data-graph-path="quiz-hint" aria-label="Справка по подбору">?</button>
       </section>
 
       <div class="quiz__flow" data-quiz-flow hidden>
@@ -1053,16 +1065,13 @@
                 <p class="quiz-fields__legend">Внутренние размеры, м</p>
                 <div class="quiz-fields__row quiz-fields__row--3">
                   <label class="quiz-field">
-                    <span class="quiz-field__hint">Длина</span>
-                    <input class="input-reset quiz-field__input" type="text" name="quiz-length" inputmode="decimal" placeholder="" autocomplete="off" required>
+                    <input class="input-reset quiz-field__input" type="text" name="quiz-length" inputmode="decimal" placeholder="Длина" autocomplete="off" required>
                   </label>
                   <label class="quiz-field">
-                    <span class="quiz-field__hint">Ширина</span>
-                    <input class="input-reset quiz-field__input" type="text" name="quiz-width" inputmode="decimal" placeholder="" autocomplete="off" required>
+                    <input class="input-reset quiz-field__input" type="text" name="quiz-width" inputmode="decimal" placeholder="Ширина" autocomplete="off" required>
                   </label>
                   <label class="quiz-field">
-                    <span class="quiz-field__hint">Высота</span>
-                    <input class="input-reset quiz-field__input" type="text" name="quiz-height" inputmode="decimal" placeholder="" autocomplete="off" required>
+                    <input class="input-reset quiz-field__input" type="text" name="quiz-height" inputmode="decimal" placeholder="Высота" autocomplete="off" required>
                   </label>
                 </div>
               </div>
@@ -1208,36 +1217,39 @@
 
           <div class="quiz__step quiz__step--result quiz__step--result-success" data-quiz-result-panel="success" hidden>
             <div class="quiz-result-success">
-              <div class="quiz__step-head">
-                <h3 class="quiz__step-title">Подобранные модели</h3>
-                <p class="quiz__step-desc">По вашим параметрам мы нашли подходящие печи ЖарGO.</p>
-                <p class="quiz-result-volume">Расчётный объём парной: <strong data-quiz-result-volume>—</strong></p>
+              <div class="quiz__step-head quiz__step-head--result">
+                <h3 class="quiz__step-title">Результат</h3>
               </div>
+              <div class="quiz-result-summary" data-quiz-result-summary></div>
+              <hr class="quiz-result-divider">
+              <p class="quiz-result-volume">Расчетный объем: <strong data-quiz-result-volume>—</strong></p>
+              <hr class="quiz-result-divider">
+              <p class="quiz-result-success__heading">Подходящие печи ЖарGO</p>
               <ul class="quiz-result-success__list list-reset" data-quiz-result-list></ul>
             </div>
           </div>
 
           <div class="quiz__step quiz__step--result quiz__step--result-empty" data-quiz-result-panel="empty" hidden>
             <div class="quiz-result-empty">
-              <div class="quiz__step-head quiz__step-head--compact">
-                <h3 class="quiz__step-title">Нет подходящих моделей в каталоге</h3>
-                <p class="quiz__step-desc">Мы производим печи на собственном заводе в Нижнем Новгороде. Не все конфигурации попадают в типовой каталог, но это не значит, что их нет.</p>
+              <div class="quiz-result-empty__head">
+                <h3 class="quiz-result-empty__title">Нет подходящих моделей в каталоге</h3>
+                <p class="quiz-result-empty__desc">Мы производим печи на собственном заводе в Нижнем Новгороде. Не все конфигурации попадают в типовой каталог, но это не значит, что их нет.</p>
               </div>
               <div class="quiz-result-empty__cta">
-                <p class="quiz-result-empty__cta-title">📞 Свяжитесь с менеджером — подберем печь за 10 минут</p>
+                <p class="quiz-result-empty__cta-title">📞 Свяжитесь с менеджером — подберём печь за 10 минут</p>
                 <div class="quiz-result-empty__contacts">
                   <a class="quiz-result-empty__phone" href="tel:+78005005442">8 (800) 500-54-42</a>
                   <ul class="quiz-result-empty__social list-reset">
                     <li>
                       <a class="quiz-result-empty__social-link" href="#" aria-label="MAX">
-                        <svg width="24" height="24" aria-hidden="true">
+                        <svg class="quiz-result-empty__social-icon" width="24" height="24" aria-hidden="true">
                           <use href="img/sprite.svg#logo-max"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a class="quiz-result-empty__social-link" href="#" aria-label="Telegram">
-                        <svg width="24" height="24" aria-hidden="true">
+                        <svg class="quiz-result-empty__social-icon" width="24" height="24" aria-hidden="true">
                           <use href="img/sprite.svg#logo-tg"></use>
                         </svg>
                       </a>
@@ -1254,6 +1266,207 @@
           <button class="btn-reset quiz__nav quiz__nav--print" type="button" data-quiz-print hidden>Распечатать в PDF</button>
           <button class="btn-reset quiz__nav quiz__nav--next" type="button" data-quiz-next>Далее →</button>
           <button class="btn-reset quiz__nav quiz__nav--again" type="button" data-quiz-again hidden>Рассчитать еще раз</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="graph-modal__container graph-modal__container--quiz graph-modal__container--chimney-configurator" role="dialog" aria-modal="true" data-graph-target="chimney-configurator">
+  <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модалку"></button>
+  <div class="graph-modal__content graph-modal__content--quiz">
+    <div class="quiz" data-chimney-configurator>
+      <section class="quiz-intro" data-chimney-intro aria-label="Начало конфигуратора дымохода">
+        <div class="quiz-intro__glow quiz-intro__glow--1" aria-hidden="true"></div>
+        <div class="quiz-intro__glow quiz-intro__glow--2" aria-hidden="true"></div>
+        <figure class="quiz-intro__pane quiz-intro__pane--left" aria-hidden="true">
+          <picture>
+            <source srcset="img/chimneys/configurator-left.webp" type="image/webp">
+            <img src="img/chimneys/configurator-left.png" width="413" height="377" alt="">
+          </picture>
+        </figure>
+        <div class="quiz-intro__inner">
+          <h2 class="quiz-intro__title">Конфигуратор дымохода</h2>
+          <p class="quiz-intro__text">Выберите тип теплогенератора и схему монтажа — конфигуратор составит список элементов с количеством.</p>
+          <button class="btn-reset quiz-intro__cta" type="button" data-chimney-start>Начать →</button>
+        </div>
+        <figure class="quiz-intro__pane quiz-intro__pane--right" aria-hidden="true">
+          <picture>
+            <source srcset="img/chimneys/configurator-right.webp" type="image/webp">
+            <img src="img/chimneys/configurator-right.png" width="413" height="377" alt="">
+          </picture>
+        </figure>
+        <button class="btn-reset quiz-intro__help" type="button" data-graph-path="quiz-hint" aria-label="Справка по подбору">?</button>
+      </section>
+
+      <div class="quiz__flow" data-chimney-flow hidden>
+        <div class="quiz-stepper" data-chimney-stepper data-phase="0">
+          <div class="quiz-stepper__track" aria-hidden="true">
+            <div class="quiz-stepper__node">
+              <span class="quiz-stepper__circle quiz-stepper__circle--1">
+                <span class="quiz-stepper__num">1</span>
+                <svg class="quiz-stepper__check" width="10" height="8" viewBox="0 0 10 8" aria-hidden="true">
+                  <path fill="none" stroke="#fff" stroke-width="1.2" d="M1 4l2.5 2.5L9 1" />
+                </svg>
+              </span>
+            </div>
+            <span class="quiz-stepper__line quiz-stepper__line--1"></span>
+            <div class="quiz-stepper__node">
+              <span class="quiz-stepper__circle quiz-stepper__circle--2">
+                <span class="quiz-stepper__num">2</span>
+                <svg class="quiz-stepper__check" width="10" height="8" viewBox="0 0 10 8" aria-hidden="true">
+                  <path fill="none" stroke="#fff" stroke-width="1.2" d="M1 4l2.5 2.5L9 1" />
+                </svg>
+              </span>
+            </div>
+            <span class="quiz-stepper__line quiz-stepper__line--2"></span>
+            <div class="quiz-stepper__node">
+              <span class="quiz-stepper__circle quiz-stepper__circle--3">
+                <span class="quiz-stepper__num">3</span>
+                <svg class="quiz-stepper__check" width="10" height="8" viewBox="0 0 10 8" aria-hidden="true">
+                  <path fill="none" stroke="#fff" stroke-width="1.2" d="M1 4l2.5 2.5L9 1" />
+                </svg>
+              </span>
+            </div>
+            <span class="quiz-stepper__line quiz-stepper__line--3"></span>
+            <div class="quiz-stepper__node">
+              <span class="quiz-stepper__circle quiz-stepper__circle--4">
+                <span class="quiz-stepper__num">4</span>
+                <svg class="quiz-stepper__check" width="10" height="8" viewBox="0 0 10 8" aria-hidden="true">
+                  <path fill="none" stroke="#fff" stroke-width="1.2" d="M1 4l2.5 2.5L9 1" />
+                </svg>
+              </span>
+            </div>
+          </div>
+          <ul class="quiz-stepper__labels list-reset">
+            <li class="quiz-stepper__label quiz-stepper__label--1">Тип</li>
+            <li class="quiz-stepper__label quiz-stepper__label--2">Схема</li>
+            <li class="quiz-stepper__label quiz-stepper__label--3">Параметры</li>
+            <li class="quiz-stepper__label quiz-stepper__label--4">Список</li>
+          </ul>
+        </div>
+
+        <div class="quiz__steps">
+          <div class="quiz__step quiz__step--active" data-chimney-form-step="0">
+            <div class="quiz__step-head">
+              <h3 class="quiz__step-title">Тип теплогенератора</h3>
+              <p class="quiz__step-desc">Выберите устройство, к которому подключается дымоход.</p>
+            </div>
+            <div class="quiz-fields quiz-fields--radios">
+              <div class="quiz-fields__group">
+                <div class="quiz-fields__row quiz-fields__row--4">
+                  <label class="quiz-radio-card">
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="chimney-generator" value="fireplace">
+                    <span class="quiz-radio-card__box">
+                      <span class="quiz-radio-card__control" aria-hidden="true"></span>
+                      <span class="quiz-radio-card__text">Камин</span>
+                    </span>
+                  </label>
+                  <label class="quiz-radio-card">
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="chimney-generator" value="bath">
+                    <span class="quiz-radio-card__box">
+                      <span class="quiz-radio-card__control" aria-hidden="true"></span>
+                      <span class="quiz-radio-card__text">Печь для бани</span>
+                    </span>
+                  </label>
+                  <label class="quiz-radio-card">
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="chimney-generator" value="heating">
+                    <span class="quiz-radio-card__box">
+                      <span class="quiz-radio-card__control" aria-hidden="true"></span>
+                      <span class="quiz-radio-card__text">Отопительная печь</span>
+                    </span>
+                  </label>
+                  <label class="quiz-radio-card">
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="chimney-generator" value="boiler">
+                    <span class="quiz-radio-card__box">
+                      <span class="quiz-radio-card__control" aria-hidden="true"></span>
+                      <span class="quiz-radio-card__text">Котёл</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="quiz-fields__group" data-chimney-tank-group hidden>
+                <p class="quiz-fields__legend">Бак на трубе</p>
+                <div class="quiz-fields__row quiz-fields__row--2">
+                  <label class="quiz-radio-card">
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="chimney-tank" value="no" checked>
+                    <span class="quiz-radio-card__box">
+                      <span class="quiz-radio-card__control" aria-hidden="true"></span>
+                      <span class="quiz-radio-card__text">Без бака</span>
+                    </span>
+                  </label>
+                  <label class="quiz-radio-card">
+                    <input class="visually-hidden quiz-radio-card__input" type="radio" name="chimney-tank" value="yes">
+                    <span class="quiz-radio-card__box">
+                      <span class="quiz-radio-card__control" aria-hidden="true"></span>
+                      <span class="quiz-radio-card__text">С баком на трубе</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz__step" data-chimney-form-step="1">
+            <div class="quiz__step-head">
+              <h3 class="quiz__step-title">Схема монтажа</h3>
+              <p class="quiz__step-desc" data-chimney-scheme-desc>Выберите подходящую схему вывода дымохода</p>
+            </div>
+            <div class="quiz-fields quiz-fields--radios">
+              <div class="quiz-fields__group">
+                <div class="quiz-fields__row quiz-fields__row--4" data-chimney-schemes></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz__step" data-chimney-form-step="2">
+            <div class="quiz__step-head">
+              <h3 class="quiz__step-title">Параметры</h3>
+              <p class="quiz__step-desc">Укажите высоту дымохода и количество перекрытий.</p>
+            </div>
+            <div class="quiz-fields">
+              <div class="quiz-fields__row quiz-fields__row--hint">
+                <div class="quiz-fields__group quiz-fields__group--param">
+                  <p class="quiz-fields__legend">Высота дымохода, м</p>
+                  <label class="quiz-field quiz-field--plain">
+                    <input class="input-reset quiz-field__input" type="text" name="chimney-height" inputmode="decimal" placeholder="0.0" autocomplete="off" required>
+                  </label>
+                </div>
+                <div class="quiz-fields__group quiz-fields__group--param">
+                  <p class="quiz-fields__legend">Количество перекрытий, шт</p>
+                  <label class="quiz-field quiz-field--plain">
+                    <input class="input-reset quiz-field__input" type="text" name="chimney-floors" inputmode="numeric" placeholder="0" autocomplete="off" required>
+                  </label>
+                </div>
+                <div class="quiz-hint-block quiz-hint-block--tall">
+                  <p>Высота дымохода — от патрубка печи до верхней точки трубы.</p>
+                  <p>Перекрытия — количество межэтажных или чердачных перекрытий.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz__step quiz__step--result" data-chimney-result-panel hidden>
+            <div class="chimney-result">
+              <div class="chimney-result__head">
+                <h3 class="chimney-result__title">Список элементов</h3>
+                <p class="chimney-result__scheme" data-chimney-result-scheme hidden></p>
+                <div class="chimney-result__chips" data-chimney-result-chips></div>
+              </div>
+              <p class="chimney-result__desc">Элементы в порядке монтажа — от печи вверх</p>
+              <div class="chimney-result__lists">
+                <ol class="chimney-result__col list-reset" data-chimney-result-list-col="0"></ol>
+                <ol class="chimney-result__col list-reset" data-chimney-result-list-col="1"></ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz__actions" data-chimney-actions>
+          <button class="btn-reset quiz__nav quiz__nav--prev" type="button" data-chimney-prev disabled>← Назад</button>
+          <button class="btn-reset quiz__nav quiz__nav--print" type="button" data-chimney-print hidden>Отрисовать PDF</button>
+          <button class="btn-reset quiz__nav quiz__nav--next" type="button" data-chimney-next disabled>Далее →</button>
+          <button class="btn-reset quiz__nav quiz__nav--again" type="button" data-chimney-again hidden>Начать заново</button>
         </div>
       </div>
     </div>
@@ -1340,7 +1553,7 @@
         </div>
         <button class="auth-modal__submit btn-reset" type="submit">Выслать новый пароль</button>
         <div class="auth-modal__footer auth-modal__footer--end">
-          <button class="auth-modal__footer-link btn-reset" type="button" data-graph-path="auth">Вспомнил пароль? Вернуться ко входу</button>
+          <button class="auth-modal__footer-link btn-reset" type="button" data-graph-path="auth">Вспомнили пароль? Вернуться ко входу</button>
         </div>
       </div>
     </form>

@@ -342,23 +342,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header_scroll_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/header-scroll.js */ "./src/js/components/header-scroll.js");
 /* harmony import */ var _components_production_tabs_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/production-tabs.js */ "./src/js/components/production-tabs.js");
 /* harmony import */ var _components_quiz_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/quiz.js */ "./src/js/components/quiz.js");
-/* harmony import */ var _components_lazy_video_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/lazy-video.js */ "./src/js/components/lazy-video.js");
-/* harmony import */ var _components_article_toc_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/article-toc.js */ "./src/js/components/article-toc.js");
-/* harmony import */ var _components_article_gallery_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/article-gallery.js */ "./src/js/components/article-gallery.js");
-/* harmony import */ var _components_article_showcase_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/article-showcase.js */ "./src/js/components/article-showcase.js");
-/* harmony import */ var _components_chimneys_hero_slider_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/chimneys-hero-slider.js */ "./src/js/components/chimneys-hero-slider.js");
-/* harmony import */ var _components_product_rotate_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/product-rotate.js */ "./src/js/components/product-rotate.js");
-/* harmony import */ var _components_article_tooltips_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/article-tooltips.js */ "./src/js/components/article-tooltips.js");
-/* harmony import */ var _components_article_maps_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/article-maps.js */ "./src/js/components/article-maps.js");
-/* harmony import */ var _components_catalog_toolbar_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/catalog-toolbar.js */ "./src/js/components/catalog-toolbar.js");
-/* harmony import */ var _components_price_page_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/price-page.js */ "./src/js/components/price-page.js");
-/* harmony import */ var _components_materials_videos_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/materials-videos.js */ "./src/js/components/materials-videos.js");
-/* harmony import */ var _components_checkout_stepper_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/checkout-stepper.js */ "./src/js/components/checkout-stepper.js");
-/* harmony import */ var _components_cabinet_password_toggle_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/cabinet-password-toggle.js */ "./src/js/components/cabinet-password-toggle.js");
-/* harmony import */ var _components_cabinet_order_cards_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/cabinet-order-cards.js */ "./src/js/components/cabinet-order-cards.js");
-/* harmony import */ var _components_bath_series_card_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/bath-series-card.js */ "./src/js/components/bath-series-card.js");
-/* harmony import */ var _components_consult_modal_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/consult-modal.js */ "./src/js/components/consult-modal.js");
-/* harmony import */ var _components_auth_modal_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/auth-modal.js */ "./src/js/components/auth-modal.js");
+/* harmony import */ var _components_chimney_configurator_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/chimney-configurator.js */ "./src/js/components/chimney-configurator.js");
+/* harmony import */ var _components_lazy_video_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/lazy-video.js */ "./src/js/components/lazy-video.js");
+/* harmony import */ var _components_article_toc_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/article-toc.js */ "./src/js/components/article-toc.js");
+/* harmony import */ var _components_article_gallery_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/article-gallery.js */ "./src/js/components/article-gallery.js");
+/* harmony import */ var _components_article_showcase_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/article-showcase.js */ "./src/js/components/article-showcase.js");
+/* harmony import */ var _components_chimneys_hero_slider_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/chimneys-hero-slider.js */ "./src/js/components/chimneys-hero-slider.js");
+/* harmony import */ var _components_product_rotate_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/product-rotate.js */ "./src/js/components/product-rotate.js");
+/* harmony import */ var _components_article_tooltips_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/article-tooltips.js */ "./src/js/components/article-tooltips.js");
+/* harmony import */ var _components_article_maps_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/article-maps.js */ "./src/js/components/article-maps.js");
+/* harmony import */ var _components_catalog_toolbar_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/catalog-toolbar.js */ "./src/js/components/catalog-toolbar.js");
+/* harmony import */ var _components_price_page_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/price-page.js */ "./src/js/components/price-page.js");
+/* harmony import */ var _components_materials_videos_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/materials-videos.js */ "./src/js/components/materials-videos.js");
+/* harmony import */ var _components_checkout_stepper_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/checkout-stepper.js */ "./src/js/components/checkout-stepper.js");
+/* harmony import */ var _components_cabinet_password_toggle_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/cabinet-password-toggle.js */ "./src/js/components/cabinet-password-toggle.js");
+/* harmony import */ var _components_cabinet_order_cards_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/cabinet-order-cards.js */ "./src/js/components/cabinet-order-cards.js");
+/* harmony import */ var _components_bath_series_card_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/bath-series-card.js */ "./src/js/components/bath-series-card.js");
+/* harmony import */ var _components_consult_modal_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/consult-modal.js */ "./src/js/components/consult-modal.js");
+/* harmony import */ var _components_auth_modal_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/auth-modal.js */ "./src/js/components/auth-modal.js");
 
 
 
@@ -382,13 +383,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_components_catalog_toolbar_js__WEBPACK_IMPORTED_MODULE_14__["default"])();
-(0,_components_checkout_stepper_js__WEBPACK_IMPORTED_MODULE_17__["default"])();
-(0,_components_cabinet_password_toggle_js__WEBPACK_IMPORTED_MODULE_18__["default"])();
-(0,_components_cabinet_order_cards_js__WEBPACK_IMPORTED_MODULE_19__["default"])();
-(0,_components_bath_series_card_js__WEBPACK_IMPORTED_MODULE_20__["default"])();
-(0,_components_consult_modal_js__WEBPACK_IMPORTED_MODULE_21__["default"])();
-(0,_components_auth_modal_js__WEBPACK_IMPORTED_MODULE_22__["default"])();
+
+(0,_components_catalog_toolbar_js__WEBPACK_IMPORTED_MODULE_15__["default"])();
+(0,_components_checkout_stepper_js__WEBPACK_IMPORTED_MODULE_18__["default"])();
+(0,_components_cabinet_password_toggle_js__WEBPACK_IMPORTED_MODULE_19__["default"])();
+(0,_components_cabinet_order_cards_js__WEBPACK_IMPORTED_MODULE_20__["default"])();
+(0,_components_bath_series_card_js__WEBPACK_IMPORTED_MODULE_21__["default"])();
+(0,_components_consult_modal_js__WEBPACK_IMPORTED_MODULE_22__["default"])();
+(0,_components_auth_modal_js__WEBPACK_IMPORTED_MODULE_23__["default"])();
 window.graphModal = new graph_modal__WEBPACK_IMPORTED_MODULE_2__["default"]({
   isClose(modal) {
     const closedTarget = modal.modalContainer?.getAttribute('data-graph-target');
@@ -1215,6 +1217,1113 @@ function initCheckoutStepper(root) {
 function initCheckoutSteppers() {
   document.querySelectorAll('[data-checkout-stepper]').forEach(initCheckoutStepper);
 }
+
+/***/ },
+
+/***/ "./src/js/components/chimney-configurator-calc.js"
+/*!********************************************************!*\
+  !*** ./src/js/components/chimney-configurator-calc.js ***!
+  \********************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   calculateBillOfMaterials: () => (/* binding */ calculateBillOfMaterials),
+/* harmony export */   getAvailableSchemes: () => (/* binding */ getAvailableSchemes),
+/* harmony export */   getGeneratorLabel: () => (/* binding */ getGeneratorLabel)
+/* harmony export */ });
+/* harmony import */ var _data_chimney_schemes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/chimney-schemes.js */ "./src/js/data/chimney-schemes.js");
+
+const ceil = value => Math.ceil(value);
+const getSandwichCount = (height, hasTank) => {
+  return hasTank ? ceil(height - 1) : ceil(height);
+};
+const CALC_HANDLERS = {
+  sandwich: ctx => getSandwichCount(ctx.height, false),
+  sandwich_tank: ctx => getSandwichCount(ctx.height, true),
+  ppu: ctx => ctx.floors,
+  brackets_roof: ctx => Math.max(0, ceil(ctx.height / 1.5) - 1),
+  brackets_wall: ctx => ceil(ctx.height / 1.5),
+  'clamps:1': ctx => getSandwichCount(ctx.height, false) + 2,
+  'clamps:2': ctx => getSandwichCount(ctx.height, false) + 5,
+  'clamps:3': ctx => getSandwichCount(ctx.height, true) + 2,
+  'clamps:4': ctx => getSandwichCount(ctx.height, true) + 5,
+  'clamps:5': ctx => ceil(ctx.height) + 2,
+  'clamps:6': ctx => ceil(ctx.height) + 6,
+  'clamps:7': ctx => ceil(ctx.height) + 9
+};
+const resolveQuantity = (calcKey, ctx) => {
+  if (calcKey.startsWith('fixed:')) {
+    return Number.parseInt(calcKey.split(':')[1], 10);
+  }
+  const handler = CALC_HANDLERS[calcKey];
+  if (!handler) {
+    return 0;
+  }
+  return handler(ctx);
+};
+const getAvailableSchemes = (generatorId, hasTank) => {
+  const generator = _data_chimney_schemes_js__WEBPACK_IMPORTED_MODULE_0__.GENERATOR_TYPES.find(item => item.id === generatorId);
+  if (!generator) {
+    return [];
+  }
+  if (generatorId === 'bath') {
+    const schemeIds = hasTank ? generator.schemesWithTank : generator.schemesNoTank;
+    return schemeIds.map(id => _data_chimney_schemes_js__WEBPACK_IMPORTED_MODULE_0__.CHIMNEY_SCHEMES[id]).filter(Boolean);
+  }
+  return generator.schemes.map(id => _data_chimney_schemes_js__WEBPACK_IMPORTED_MODULE_0__.CHIMNEY_SCHEMES[id]).filter(Boolean);
+};
+const calculateBillOfMaterials = ({
+  schemeId,
+  height,
+  floors,
+  hasTank
+}) => {
+  const scheme = _data_chimney_schemes_js__WEBPACK_IMPORTED_MODULE_0__.CHIMNEY_SCHEMES[schemeId];
+  if (!scheme) {
+    return [];
+  }
+  const ctx = {
+    height,
+    floors,
+    hasTank
+  };
+  return scheme.elements.map(element => ({
+    name: element.name,
+    quantity: resolveQuantity(element.calc, ctx)
+  }));
+};
+const getGeneratorLabel = (generatorId, hasTank) => {
+  const generator = _data_chimney_schemes_js__WEBPACK_IMPORTED_MODULE_0__.GENERATOR_TYPES.find(item => item.id === generatorId);
+  if (!generator) {
+    return '—';
+  }
+  if (generatorId === 'bath') {
+    return hasTank ? 'Печь для бани — с баком' : 'Печь для бани — без бака';
+  }
+  return generator.title;
+};
+
+/***/ },
+
+/***/ "./src/js/components/chimney-configurator-print.js"
+/*!*********************************************************!*\
+  !*** ./src/js/components/chimney-configurator-print.js ***!
+  \*********************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   printChimneyResult: () => (/* binding */ printChimneyResult)
+/* harmony export */ });
+const DISCLAIMER_PARAGRAPHS = ['Данный подбор дымоходной системы является предварительным и носит ориентировочный характер.', 'Для точного подбора состава системы, уточнения количества элементов и согласования монтажного решения обратитесь к менеджерам ЖарGO.', 'Мы поможем подобрать дымоход любой сложности и конфигурации.'];
+const resolveAssetUrl = path => {
+  if (!path || path.startsWith('http')) {
+    return path;
+  }
+  return new URL(path, `${window.location.origin}/`).href;
+};
+const getSiteLabel = () => {
+  const host = window.location.host || '';
+  if (!host || host.startsWith('localhost') || host.startsWith('127.0.0.1')) {
+    return 'жарго.рф';
+  }
+  return host;
+};
+const getItemNote = (name, index) => {
+  if (index === 0) {
+    return 'Первый элемент от печи';
+  }
+  if (name === 'ППУ') {
+    return 'Проходной узел';
+  }
+  return '';
+};
+const buildPrintStyles = () => {
+  const fontRegular = resolveAssetUrl('fonts/GolosTextRegular.woff2');
+  const fontMedium = resolveAssetUrl('fonts/GolosTextMedium.woff2');
+  return `
+    @font-face {
+      font-family: 'Golos Text';
+      src: url('${fontRegular}') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Golos Text';
+      src: url('${fontMedium}') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: #363636;
+      font-family: 'Golos Text', Arial, sans-serif;
+      background: #fff;
+    }
+
+    .pdf {
+      display: flex;
+      flex-direction: column;
+      width: 1160px;
+      min-height: 1641px;
+      margin: 0 auto;
+      padding: 10px;
+      box-sizing: border-box;
+      background: #fff;
+    }
+
+    .pdf__header {
+      padding: 0 0 10px;
+      border-radius: 0 0 20px 20px;
+      min-height: 132px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .pdf__header-inner {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      width: 100%;
+      min-height: 122px;
+      padding: 0 0 2px;
+      box-sizing: border-box;
+    }
+
+    .pdf__logo {
+      flex-shrink: 0;
+      width: 120px;
+      height: 120px;
+    }
+
+    .pdf__logo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .pdf__tagline {
+      margin: 0;
+      width: 690px;
+      max-width: 690px;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .pdf__site {
+      margin-left: auto;
+      flex-shrink: 0;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .pdf__body {
+      flex: 1;
+      padding: 39px 10px 0;
+    }
+
+    .pdf__section-head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      gap: 40px;
+    }
+
+    .pdf__section-head__line {
+      flex: 1 1 0;
+      min-width: 0;
+      height: 1px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .pdf__section-head__line--left {
+      background: linear-gradient(90deg, rgb(237 116 7 / 0) 0%, #ed7407 100%);
+    }
+
+    .pdf__section-head__line--right {
+      background: linear-gradient(270deg, rgb(237 116 7 / 0) 0%, #ed7407 100%);
+    }
+
+    .pdf__section-head__title {
+      flex: 0 1 auto;
+      margin: 0;
+      max-width: 534px;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 1.2;
+      text-align: center;
+      text-transform: uppercase;
+      color: #363636;
+    }
+
+    .pdf__content {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .pdf__scheme {
+      flex-shrink: 0;
+      width: 375px;
+    }
+
+    .pdf__scheme img {
+      display: block;
+      width: 375px;
+      height: auto;
+      max-height: 450px;
+      object-fit: contain;
+    }
+
+    .pdf__result {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .pdf__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .pdf__chip {
+      border-radius: 1000px;
+      padding: 5px 10px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #585858;
+      background-color: #f4f4f4;
+    }
+
+    .pdf__lists {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .pdf__list-block {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pdf__item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-radius: 4px;
+      padding: 8px 20px;
+      min-height: 66px;
+      background-color: #f4f4f4;
+    }
+
+    .pdf__item-num {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 29px;
+      height: 29px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1;
+      color: #fff;
+      background-color: #ed7407;
+    }
+
+    .pdf__item-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 5px;
+      min-width: 0;
+    }
+
+    .pdf__item-name {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.4;
+      color: #363636;
+    }
+
+    .pdf__item-note {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #585858;
+    }
+
+    .pdf__item-qty {
+      flex-shrink: 0;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.4;
+      color: #ed7407;
+      white-space: nowrap;
+    }
+
+    .pdf__notes {
+      margin: 0;
+      color: #585858;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .pdf__notes p {
+      margin: 0 0 15px;
+    }
+
+    .pdf__notes p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pdf__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: auto;
+      padding: 10px 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      font-size: 20px;
+      line-height: 1.2;
+      box-sizing: border-box;
+    }
+
+    .pdf__footer-legal {
+      flex: 0 0 auto;
+      margin: 0;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .pdf__footer-aside {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex: 0 0 auto;
+      margin-left: auto;
+    }
+
+    .pdf__footer-contact {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .pdf__footer-icon {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+    }
+
+    .pdf__footer-icon path {
+      stroke: #ed7407;
+    }
+
+    @page {
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        margin: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .pdf {
+        width: 1160px;
+        min-height: 1641px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+    }
+  `;
+};
+const buildItemHtml = (item, index) => {
+  const note = getItemNote(item.name, index);
+  const noteHtml = note ? `<span class="pdf__item-note">${note}</span>` : '';
+  return `
+    <li class="pdf__item">
+      <span class="pdf__item-num">${index + 1}</span>
+      <span class="pdf__item-body">
+        <span class="pdf__item-name">${item.name}</span>
+        ${noteHtml}
+      </span>
+      <span class="pdf__item-qty">${item.quantity} шт</span>
+    </li>
+  `;
+};
+const buildListHtml = items => {
+  const midpoint = Math.ceil(items.length / 2);
+  const blocks = [items.slice(0, midpoint), items.slice(midpoint)];
+  return blocks.map((blockItems, blockIndex) => {
+    const offset = blockIndex === 0 ? 0 : midpoint;
+    return `
+      <ol class="pdf__list-block">
+        ${blockItems.map((item, index) => buildItemHtml(item, offset + index)).join('')}
+      </ol>
+    `;
+  }).join('');
+};
+const buildPrintHtml = ({
+  schemeTitle,
+  chips,
+  items,
+  schemeId
+}) => {
+  const logoUrl = resolveAssetUrl('img/logo-pdf.svg');
+  const siteLabel = getSiteLabel();
+  const schemeImageUrl = resolveAssetUrl(`img/chimneys/scheme-${schemeId}.svg`);
+  const chipsHtml = chips.map(chip => `<span class="pdf__chip">${chip}</span>`).join('');
+  const notesHtml = DISCLAIMER_PARAGRAPHS.map(text => `<p>${text}</p>`).join('');
+  const phoneIcon = `
+    <svg class="pdf__footer-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="#ed7407" stroke-width="1.25"/>
+    </svg>
+  `;
+  const calendarIcon = `
+    <svg class="pdf__footer-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" stroke="#ed7407" stroke-width="1.25" stroke-linecap="round"/>
+    </svg>
+  `;
+  return `<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Конфигуратор дымохода — результат</title>
+  <style>${buildPrintStyles()}</style>
+</head>
+<body>
+  <div class="pdf">
+    <header class="pdf__header">
+      <div class="pdf__header-inner">
+        <div class="pdf__logo">
+          <img src="${logoUrl}" alt="ЖарGO" width="120" height="120">
+        </div>
+        <h1 class="pdf__tagline">Инженерные решения для&nbsp;бани, дома и&nbsp;огня</h1>
+        <div class="pdf__site">${siteLabel}</div>
+      </div>
+    </header>
+
+    <main class="pdf__body">
+      <div class="pdf__section-head">
+        <span class="pdf__section-head__line pdf__section-head__line--left" aria-hidden="true"></span>
+        <h2 class="pdf__section-head__title">${schemeTitle}</h2>
+        <span class="pdf__section-head__line pdf__section-head__line--right" aria-hidden="true"></span>
+      </div>
+
+      <div class="pdf__content">
+        <div class="pdf__scheme">
+          <img src="${schemeImageUrl}" alt="" width="375" height="450">
+        </div>
+        <div class="pdf__result">
+          <div class="pdf__chips">${chipsHtml}</div>
+          <div class="pdf__lists">${buildListHtml(items)}</div>
+        </div>
+      </div>
+
+      <div class="pdf__notes">${notesHtml}</div>
+    </main>
+
+    <footer class="pdf__footer">
+      <p class="pdf__footer-legal">ООО «ДымоходСервис»&nbsp;&nbsp;ИНН&nbsp;5257131935&nbsp;&nbsp;ОГРН&nbsp;1125257006731</p>
+      <div class="pdf__footer-aside">
+        <div class="pdf__footer-contact">
+          ${phoneIcon}
+          <span>8 (800) 500-54-42</span>
+        </div>
+        <div class="pdf__footer-contact">
+          ${calendarIcon}
+          <span>Пн-Пт с 9:00 до 18:00</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>`;
+};
+const waitForImages = doc => {
+  const images = Array.from(doc.images || []);
+  if (images.length === 0) {
+    return Promise.resolve();
+  }
+  return Promise.all(images.map(img => {
+    if (img.complete) {
+      return Promise.resolve();
+    }
+    return new Promise(resolve => {
+      img.addEventListener('load', resolve, {
+        once: true
+      });
+      img.addEventListener('error', resolve, {
+        once: true
+      });
+    });
+  }));
+};
+const waitForFonts = doc => {
+  if (doc.fonts?.ready) {
+    return doc.fonts.ready.catch(() => {});
+  }
+  return Promise.resolve();
+};
+const removePrintFrame = frame => {
+  frame?.parentNode?.removeChild(frame);
+};
+const printChimneyResult = ({
+  schemeTitle,
+  chips,
+  items,
+  schemeId
+}) => {
+  removePrintFrame(document.getElementById('chimney-print-frame'));
+  const frame = document.createElement('iframe');
+  frame.id = 'chimney-print-frame';
+  frame.setAttribute('aria-hidden', 'true');
+  frame.style.cssText = 'position:fixed;left:-9999px;top:0;width:1160px;height:1700px;border:0;';
+  document.body.appendChild(frame);
+  const printWindow = frame.contentWindow;
+  const printDocument = printWindow.document;
+  printDocument.open();
+  printDocument.write(buildPrintHtml({
+    schemeTitle,
+    chips,
+    items,
+    schemeId
+  }));
+  printDocument.close();
+  const startPrint = () => {
+    Promise.all([waitForImages(printDocument), waitForFonts(printDocument)]).then(() => {
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          printWindow.focus();
+          printWindow.print();
+          printWindow.addEventListener('afterprint', () => {
+            removePrintFrame(frame);
+          }, {
+            once: true
+          });
+          setTimeout(() => {
+            removePrintFrame(frame);
+          }, 30000);
+        }, 250);
+      });
+    });
+  };
+  if (printDocument.readyState === 'complete') {
+    startPrint();
+  } else {
+    printWindow.addEventListener('load', startPrint, {
+      once: true
+    });
+  }
+};
+
+/***/ },
+
+/***/ "./src/js/components/chimney-configurator.js"
+/*!***************************************************!*\
+  !*** ./src/js/components/chimney-configurator.js ***!
+  \***************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _data_chimney_schemes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/chimney-schemes.js */ "./src/js/data/chimney-schemes.js");
+/* harmony import */ var _chimney_configurator_calc_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chimney-configurator-calc.js */ "./src/js/components/chimney-configurator-calc.js");
+/* harmony import */ var _chimney_configurator_print_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chimney-configurator-print.js */ "./src/js/components/chimney-configurator-print.js");
+
+
+
+const parseDecimal = value => {
+  const normalized = String(value).trim().replace(',', '.');
+  if (!normalized) {
+    return null;
+  }
+  const num = Number.parseFloat(normalized);
+  return Number.isFinite(num) ? num : null;
+};
+const parseInteger = value => {
+  const normalized = String(value).trim();
+  if (!normalized) {
+    return null;
+  }
+  const num = Number.parseInt(normalized, 10);
+  return Number.isFinite(num) ? num : null;
+};
+const isHeightValid = value => {
+  const num = parseDecimal(value);
+  if (num === null || num < 1 || num > 20) {
+    return false;
+  }
+  return Math.abs(num * 2 - Math.round(num * 2)) < 0.001;
+};
+const isFloorsValid = value => {
+  const num = parseInteger(value);
+  return num !== null && num >= 0 && num <= 5;
+};
+const getCheckedValue = (root, name) => {
+  return root.querySelector(`input[name="${name}"]:checked`)?.value ?? null;
+};
+const getGeneratorTitle = generatorId => {
+  return _data_chimney_schemes_js__WEBPACK_IMPORTED_MODULE_0__.GENERATOR_TYPES.find(item => item.id === generatorId)?.title ?? '—';
+};
+const getSchemeContextLabel = (generatorId, hasTank) => {
+  const title = getGeneratorTitle(generatorId);
+  if (generatorId === 'bath') {
+    return `${title} — ${hasTank ? 'с баком' : 'без бака'}`;
+  }
+  return title;
+};
+const getItemNote = (name, index) => {
+  if (index === 0) {
+    return 'Первый элемент от печи';
+  }
+  if (name === 'ППУ') {
+    return 'Проходной узел';
+  }
+  return '';
+};
+const collectAnswers = root => {
+  const generator = getCheckedValue(root, 'chimney-generator');
+  const hasTank = getCheckedValue(root, 'chimney-tank') === 'yes';
+  const schemeId = Number.parseInt(getCheckedValue(root, 'chimney-scheme') ?? '', 10);
+  const height = parseDecimal(root.querySelector('[name="chimney-height"]')?.value);
+  const floors = parseInteger(root.querySelector('[name="chimney-floors"]')?.value) ?? 0;
+  return {
+    generator,
+    hasTank,
+    schemeId,
+    height,
+    floors
+  };
+};
+const renderSchemeCards = (container, schemes, selectedId) => {
+  container.innerHTML = schemes.map(scheme => {
+    const checked = scheme.id === selectedId ? 'checked' : '';
+    return `
+      <label class="chimney-scheme-card">
+        <input class="visually-hidden chimney-scheme-card__input" type="radio" name="chimney-scheme" value="${scheme.id}" ${checked}>
+        <span class="chimney-scheme-card__box">
+          <span class="chimney-scheme-card__head">
+            <span class="chimney-scheme-card__control" aria-hidden="true"></span>
+            <span class="chimney-scheme-card__text-wrap">
+              <span class="chimney-scheme-card__num">Схема ${scheme.id}</span>
+              <span class="chimney-scheme-card__title">${scheme.cardTitle ?? scheme.title}</span>
+            </span>
+          </span>
+          <span class="chimney-scheme-card__pic">
+            <img class="chimney-scheme-card__img" src="img/chimneys/scheme-${scheme.id}.svg" width="100" height="120" alt="" aria-hidden="true">
+          </span>
+        </span>
+      </label>
+    `;
+  }).join('');
+};
+const renderResultChips = (container, answers) => {
+  const scheme = _data_chimney_schemes_js__WEBPACK_IMPORTED_MODULE_0__.CHIMNEY_SCHEMES[answers.schemeId];
+  const chips = [getGeneratorTitle(answers.generator)];
+  if (answers.generator === 'bath') {
+    chips.push(`Бак: ${answers.hasTank ? 'да' : 'нет'}`);
+  }
+  if (scheme) {
+    chips.push(`Схема ${scheme.id}`);
+  }
+  chips.push(`Высота: ${answers.height} м`);
+  chips.push(`Перекрытий: ${answers.floors}`);
+  container.innerHTML = chips.map(chip => {
+    return `<span class="chimney-result__chip">${chip}</span>`;
+  }).join('');
+  return chips;
+};
+const renderResultScheme = (schemeEl, answers) => {
+  if (!schemeEl) {
+    return '';
+  }
+  const scheme = _data_chimney_schemes_js__WEBPACK_IMPORTED_MODULE_0__.CHIMNEY_SCHEMES[answers.schemeId];
+  if (!scheme) {
+    schemeEl.hidden = true;
+    schemeEl.textContent = '';
+    return '';
+  }
+  const label = `Схема ${scheme.id} - ${scheme.cardTitle ?? scheme.title}`;
+  schemeEl.textContent = label;
+  schemeEl.hidden = false;
+  return label;
+};
+const buildResultItemHtml = (item, index) => {
+  const note = getItemNote(item.name, index);
+  const noteHtml = note ? `<span class="chimney-result__note">${note}</span>` : '';
+  return `
+    <li class="chimney-result__item">
+      <span class="chimney-result__num">${index + 1}</span>
+      <span class="chimney-result__body">
+        <span class="chimney-result__name">${item.name}</span>
+        ${noteHtml}
+      </span>
+      <span class="chimney-result__qty">${item.quantity} шт</span>
+    </li>
+  `;
+};
+const renderResultList = (listCols, items) => {
+  const midpoint = Math.ceil(items.length / 2);
+  const columns = [items.slice(0, midpoint), items.slice(midpoint)];
+  listCols.forEach((listEl, columnIndex) => {
+    if (!listEl) {
+      return;
+    }
+    const columnItems = columns[columnIndex] ?? [];
+    const offset = columnIndex === 0 ? 0 : midpoint;
+    listEl.innerHTML = columnItems.map((item, index) => {
+      return buildResultItemHtml(item, offset + index);
+    }).join('');
+  });
+};
+const initChimneyConfigurator = () => {
+  const root = document.querySelector('[data-chimney-configurator]');
+  if (!root) {
+    return;
+  }
+  const introEl = root.querySelector('[data-chimney-intro]');
+  const flowEl = root.querySelector('[data-chimney-flow]');
+  const stepperEl = root.querySelector('[data-chimney-stepper]');
+  const formSteps = Array.from(root.querySelectorAll('[data-chimney-form-step]'));
+  const resultPanelEl = root.querySelector('[data-chimney-result-panel]');
+  const schemesContainer = root.querySelector('[data-chimney-schemes]');
+  const schemeDescEl = root.querySelector('[data-chimney-scheme-desc]');
+  const tankGroupEl = root.querySelector('[data-chimney-tank-group]');
+  const resultChipsEl = root.querySelector('[data-chimney-result-chips]');
+  const resultSchemeEl = root.querySelector('[data-chimney-result-scheme]');
+  const resultListCols = Array.from(root.querySelectorAll('[data-chimney-result-list-col]'));
+  const startBtn = root.querySelector('[data-chimney-start]');
+  const prevBtn = root.querySelector('[data-chimney-prev]');
+  const nextBtn = root.querySelector('[data-chimney-next]');
+  const againBtn = root.querySelector('[data-chimney-again]');
+  const printBtn = root.querySelector('[data-chimney-print]');
+  const actionsEl = root.querySelector('[data-chimney-actions]');
+  const openers = document.querySelectorAll('[data-chimney-configurator-open]');
+  const generatorInputs = root.querySelectorAll('input[name="chimney-generator"]');
+  const tankInputs = root.querySelectorAll('input[name="chimney-tank"]');
+  const paramInputs = root.querySelectorAll('[name="chimney-height"], [name="chimney-floors"]');
+  let showingIntro = true;
+  let stepIndex = 0;
+  let showingResult = false;
+  let lastResult = null;
+  const isBathSelected = () => getCheckedValue(root, 'chimney-generator') === 'bath';
+  const hasTankSelected = () => getCheckedValue(root, 'chimney-tank') === 'yes';
+  const updateSchemeDescription = () => {
+    if (!schemeDescEl) {
+      return;
+    }
+    const generator = getCheckedValue(root, 'chimney-generator');
+    if (!generator) {
+      schemeDescEl.textContent = 'Выберите подходящую схему вывода дымохода';
+      return;
+    }
+    const context = getSchemeContextLabel(generator, hasTankSelected());
+    schemeDescEl.textContent = `Выберите подходящую схему вывода дымохода (${context})`;
+  };
+  const applyTankVisibility = () => {
+    if (!tankGroupEl) {
+      return;
+    }
+    const showTank = isBathSelected();
+    tankGroupEl.hidden = !showTank;
+    if (!showTank) {
+      root.querySelector('input[name="chimney-tank"][value="no"]').checked = true;
+    }
+    updateSchemeDescription();
+  };
+  const refreshSchemeCards = (preserveSelection = true) => {
+    const generator = getCheckedValue(root, 'chimney-generator');
+    if (!generator || !schemesContainer) {
+      return;
+    }
+    const schemes = (0,_chimney_configurator_calc_js__WEBPACK_IMPORTED_MODULE_1__.getAvailableSchemes)(generator, hasTankSelected());
+    const currentSchemeId = preserveSelection ? Number.parseInt(getCheckedValue(root, 'chimney-scheme') ?? '', 10) : null;
+    const validIds = schemes.map(scheme => scheme.id);
+    const selectedId = validIds.includes(currentSchemeId) ? currentSchemeId : null;
+    renderSchemeCards(schemesContainer, schemes, selectedId);
+    updateSchemeDescription();
+  };
+  const isStepValid = () => {
+    if (stepIndex === 0) {
+      return Boolean(getCheckedValue(root, 'chimney-generator'));
+    }
+    if (stepIndex === 1) {
+      return Boolean(getCheckedValue(root, 'chimney-scheme'));
+    }
+    if (stepIndex === 2) {
+      const heightRaw = root.querySelector('[name="chimney-height"]')?.value ?? '';
+      const floorsRaw = root.querySelector('[name="chimney-floors"]')?.value ?? '';
+      return isHeightValid(heightRaw) && isFloorsValid(floorsRaw);
+    }
+    return true;
+  };
+  const setPhase = phase => {
+    if (stepperEl) {
+      stepperEl.setAttribute('data-phase', String(phase));
+    }
+  };
+  const showIntroView = () => {
+    showingIntro = true;
+    showingResult = false;
+    stepIndex = 0;
+    introEl?.removeAttribute('hidden');
+    flowEl?.setAttribute('hidden', '');
+    if (resultPanelEl) {
+      resultPanelEl.hidden = true;
+      resultPanelEl.classList.remove('quiz__step--active');
+    }
+    formSteps.forEach((el, i) => {
+      el.classList.toggle('quiz__step--active', i === 0);
+    });
+    setPhase(0);
+  };
+  const showFlowView = () => {
+    showingIntro = false;
+    introEl?.setAttribute('hidden', '');
+    flowEl?.removeAttribute('hidden');
+  };
+  const renderFormSteps = () => {
+    formSteps.forEach((el, i) => {
+      el.classList.toggle('quiz__step--active', i === stepIndex && !showingResult);
+    });
+    if (resultPanelEl) {
+      resultPanelEl.hidden = true;
+      resultPanelEl.classList.remove('quiz__step--active');
+    }
+    setPhase(stepIndex);
+    applyTankVisibility();
+    if (stepIndex === 1) {
+      refreshSchemeCards();
+    }
+  };
+  const runCalculation = () => {
+    const answers = collectAnswers(root);
+    const items = (0,_chimney_configurator_calc_js__WEBPACK_IMPORTED_MODULE_1__.calculateBillOfMaterials)({
+      schemeId: answers.schemeId,
+      height: answers.height,
+      floors: answers.floors,
+      hasTank: answers.hasTank
+    });
+    return {
+      answers,
+      items
+    };
+  };
+  const renderResultView = () => {
+    showingResult = true;
+    formSteps.forEach(el => {
+      el.classList.remove('quiz__step--active');
+    });
+    const {
+      answers,
+      items
+    } = runCalculation();
+    lastResult = {
+      answers,
+      items,
+      chips: []
+    };
+    if (resultChipsEl) {
+      const chips = renderResultChips(resultChipsEl, answers);
+      const schemeLabel = renderResultScheme(resultSchemeEl, answers);
+      lastResult.chips = schemeLabel ? [schemeLabel, ...chips] : chips;
+    }
+    renderResultList(resultListCols, items);
+    if (resultPanelEl) {
+      resultPanelEl.hidden = false;
+      resultPanelEl.classList.add('quiz__step--active');
+    }
+    setPhase(3);
+  };
+  const renderActions = () => {
+    if (!prevBtn || !nextBtn || !againBtn) {
+      return;
+    }
+    if (showingIntro) {
+      return;
+    }
+    if (showingResult) {
+      prevBtn.disabled = false;
+      prevBtn.textContent = '← Назад';
+      nextBtn.hidden = true;
+      againBtn.hidden = false;
+      if (printBtn) {
+        printBtn.hidden = false;
+      }
+      actionsEl?.classList.add('quiz__actions--result-success');
+      return;
+    }
+    actionsEl?.classList.remove('quiz__actions--result-success');
+    if (printBtn) {
+      printBtn.hidden = true;
+    }
+    nextBtn.hidden = false;
+    againBtn.hidden = true;
+    prevBtn.disabled = stepIndex === 0;
+    if (stepIndex === 2) {
+      nextBtn.textContent = 'Смотреть список →';
+    } else {
+      nextBtn.textContent = 'Далее →';
+    }
+    nextBtn.disabled = !isStepValid();
+    nextBtn.classList.toggle('quiz__nav--accent', isStepValid());
+  };
+  const render = () => {
+    if (showingIntro) {
+      showIntroView();
+      renderActions();
+      return;
+    }
+    showFlowView();
+    if (showingResult) {
+      renderResultView();
+    } else {
+      renderFormSteps();
+    }
+    renderActions();
+  };
+  const goNext = () => {
+    if (showingIntro || showingResult) {
+      return;
+    }
+    if (!isStepValid()) {
+      return;
+    }
+    if (stepIndex < 2) {
+      stepIndex += 1;
+      render();
+      return;
+    }
+    showingResult = true;
+    render();
+  };
+  const goPrev = () => {
+    if (showingIntro) {
+      return;
+    }
+    if (showingResult) {
+      showingResult = false;
+      stepIndex = 2;
+      render();
+      return;
+    }
+    if (stepIndex > 0) {
+      stepIndex -= 1;
+      render();
+    }
+  };
+  const resetDefaults = () => {
+    root.querySelectorAll('input[name="chimney-generator"]').forEach(input => {
+      input.checked = false;
+    });
+    root.querySelector('input[name="chimney-tank"][value="no"]').checked = true;
+    root.querySelector('[name="chimney-height"]').value = '';
+    root.querySelector('[name="chimney-floors"]').value = '';
+    if (schemesContainer) {
+      schemesContainer.innerHTML = '';
+    }
+    applyTankVisibility();
+  };
+  const restartFromScratch = () => {
+    resetDefaults();
+    showingResult = false;
+    lastResult = null;
+    showIntroView();
+    renderActions();
+    flowEl?.closest('.graph-modal__content')?.scrollTo(0, 0);
+  };
+  const printResult = () => {
+    if (!lastResult) {
+      return;
+    }
+    (0,_chimney_configurator_print_js__WEBPACK_IMPORTED_MODULE_2__.printChimneyResult)({
+      schemeTitle: lastResult.chips[0] ?? 'Список элементов',
+      chips: lastResult.chips.slice(1),
+      items: lastResult.items,
+      schemeId: lastResult.answers.schemeId
+    });
+  };
+  startBtn?.addEventListener('click', () => {
+    showingIntro = false;
+    showingResult = false;
+    stepIndex = 0;
+    render();
+    flowEl?.closest('.graph-modal__content')?.scrollTo(0, 0);
+  });
+  nextBtn?.addEventListener('click', goNext);
+  prevBtn?.addEventListener('click', goPrev);
+  againBtn?.addEventListener('click', restartFromScratch);
+  printBtn?.addEventListener('click', printResult);
+  openers.forEach(opener => {
+    opener.addEventListener('click', () => {
+      restartFromScratch();
+    });
+  });
+  generatorInputs.forEach(input => {
+    input.addEventListener('change', () => {
+      applyTankVisibility();
+      if (stepIndex === 1) {
+        refreshSchemeCards(false);
+      }
+      if (!showingIntro && !showingResult) {
+        renderActions();
+      }
+    });
+  });
+  tankInputs.forEach(input => {
+    input.addEventListener('change', () => {
+      if (stepIndex === 1) {
+        refreshSchemeCards(false);
+      }
+      updateSchemeDescription();
+      if (!showingIntro && !showingResult) {
+        renderActions();
+      }
+    });
+  });
+  root.addEventListener('change', event => {
+    if (event.target.matches('input[name="chimney-scheme"]') && !showingIntro && !showingResult) {
+      renderActions();
+    }
+  });
+  paramInputs.forEach(input => {
+    input.addEventListener('input', () => {
+      if (!showingIntro && !showingResult && stepIndex === 2) {
+        renderActions();
+      }
+    });
+  });
+  applyTankVisibility();
+  render();
+};
+initChimneyConfigurator();
 
 /***/ },
 
@@ -2076,9 +3185,11 @@ const matchStoves = (volume, filters, stoves) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   QUIZ_LABELS: () => (/* binding */ QUIZ_LABELS),
+/* harmony export */   getQuizModelDescription: () => (/* binding */ getQuizModelDescription),
 /* harmony export */   printQuizResult: () => (/* binding */ printQuizResult)
 /* harmony export */ });
-const LABELS = {
+const QUIZ_LABELS = {
   wall: {
     vagon: 'Вагонка / утеплённые',
     breven: 'Брёвна / толстый брус'
@@ -2109,15 +3220,19 @@ const resolveAssetUrl = path => {
   return new URL(path, `${window.location.origin}/`).href;
 };
 const getSiteLabel = () => {
-  return window.location.host || 'жарго.рф';
+  const host = window.location.host || '';
+  if (!host || host.startsWith('localhost') || host.startsWith('127.0.0.1')) {
+    return 'жарго.рф';
+  }
+  return host;
 };
-const formatDimensions = answers => {
-  return `${answers.length} × ${answers.width} × ${answers.height} м`;
+const formatDimensions = (answers, volume) => {
+  return `${answers.length}×${answers.width}×${answers.height} м (${volume} м³)`;
 };
 const formatUninsulated = answers => {
   return answers.uninsulatedArea > 0 ? `${answers.uninsulatedArea} м²` : '0 м²';
 };
-const getModelDescription = model => {
+const getQuizModelDescription = model => {
   if (model.description) {
     return model.description;
   }
@@ -2136,7 +3251,7 @@ const buildParamRow = (label, value) => {
 };
 const buildModelsHtml = models => {
   return models.map(model => {
-    const description = getModelDescription(model);
+    const description = getQuizModelDescription(model);
     const details = model.details ?? '';
     return `
       <article class="model-row">
@@ -2182,18 +3297,32 @@ const buildPrintStyles = () => {
     }
 
     .pdf {
+      display: flex;
+      flex-direction: column;
       width: 1160px;
       min-height: 1641px;
       margin: 0 auto;
+      padding: 10px;
+      box-sizing: border-box;
       background: #fff;
     }
 
     .pdf__header {
+      padding: 0 0 10px;
+      border-radius: 0 0 20px 20px;
+      min-height: 132px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .pdf__header-inner {
       display: flex;
       align-items: center;
       gap: 40px;
-      padding: 0 20px 12px;
-      border-radius: 0 0 20px 20px;
+      width: 100%;
+      min-height: 122px;
+      padding: 0 0 2px;
+      box-sizing: border-box;
     }
 
     .pdf__logo {
@@ -2210,8 +3339,8 @@ const buildPrintStyles = () => {
     }
 
     .pdf__tagline {
-      flex: 1;
       margin: 0;
+      width: 690px;
       max-width: 690px;
       font-weight: 500;
       font-size: 40px;
@@ -2220,49 +3349,65 @@ const buildPrintStyles = () => {
     }
 
     .pdf__site {
+      margin-left: auto;
       flex-shrink: 0;
       font-weight: 500;
       font-size: 25px;
       line-height: 1.2;
-      text-transform: uppercase;
       white-space: nowrap;
     }
 
     .pdf__body {
-      padding: 39px 20px 100px;
+      flex: 1;
+      padding: 39px 0 0;
     }
 
-    .pdf__section-title {
+    .pdf__section-head {
       display: flex;
       align-items: center;
-      gap: 40px;
+      justify-content: center;
       margin-bottom: 30px;
+      gap: 40px;
     }
 
-    .pdf__section-title-line {
-      flex: 1;
+    .pdf__section-head__line {
+      flex: 1 1 0;
+      min-width: 0;
       height: 1px;
-      background: linear-gradient(90deg, #fff 0%, #ed7407 100%);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
-    .pdf__section-title-line--right {
-      background: linear-gradient(270deg, #fff 0%, #ed7407 100%);
+    .pdf__section-head__line--left {
+      background: linear-gradient(90deg, rgb(237 116 7 / 0) 0%, #ed7407 100%);
     }
 
-    .pdf__section-title-text {
+    .pdf__section-head__line--right {
+      background: linear-gradient(270deg, rgb(237 116 7 / 0) 0%, #ed7407 100%);
+    }
+
+    .pdf__section-head__title {
+      flex: 0 0 auto;
       margin: 0;
       font-weight: 500;
       font-size: 30px;
       line-height: 1.2;
-      text-transform: uppercase;
+      text-align: center;
+      color: #363636;
       white-space: nowrap;
+    }
+
+    .pdf__result {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 60px;
     }
 
     .pdf__params {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 25px;
-      margin-bottom: 15px;
       font-size: 16px;
       line-height: 1.4;
     }
@@ -2275,9 +3420,9 @@ const buildPrintStyles = () => {
 
     .param-row {
       display: flex;
+      flex-wrap: wrap;
       gap: 5px;
       align-items: baseline;
-      white-space: nowrap;
     }
 
     .param-row__label {
@@ -2292,11 +3437,13 @@ const buildPrintStyles = () => {
 
     .pdf__divider {
       height: 1px;
-      margin: 15px 0;
+      margin: 0;
       background: rgba(218, 218, 218, 0.4);
     }
 
     .pdf__volume {
+      display: flex;
+      gap: 10px;
       margin: 0;
       font-weight: 500;
       font-size: 16px;
@@ -2308,7 +3455,7 @@ const buildPrintStyles = () => {
     }
 
     .pdf__subtitle {
-      margin: 0 0 15px;
+      margin: 0;
       font-weight: 500;
       font-size: 16px;
       line-height: 1.4;
@@ -2319,7 +3466,6 @@ const buildPrintStyles = () => {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      margin-bottom: 60px;
     }
 
     .model-row {
@@ -2330,7 +3476,6 @@ const buildPrintStyles = () => {
 
     .model-row__image {
       flex-shrink: 0;
-      padding: 10px;
       border-radius: 10px;
     }
 
@@ -2358,7 +3503,6 @@ const buildPrintStyles = () => {
       font-weight: 500;
       font-size: 20px;
       line-height: 1.2;
-      text-transform: uppercase;
     }
 
     .model-row__desc {
@@ -2396,19 +3540,29 @@ const buildPrintStyles = () => {
     .pdf__footer {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 30px;
+      justify-content: space-between;
+      gap: 20px;
       margin-top: auto;
-      padding: 10px;
+      padding: 10px 0;
       border-top: 1px solid rgba(0, 0, 0, 0.2);
       font-size: 20px;
       line-height: 1.2;
+      box-sizing: border-box;
     }
 
     .pdf__footer-legal {
-      flex: 1;
+      flex: 0 0 auto;
       margin: 0;
       font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .pdf__footer-aside {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex: 0 0 auto;
+      margin-left: auto;
     }
 
     .pdf__footer-contact {
@@ -2422,12 +3576,29 @@ const buildPrintStyles = () => {
       flex-shrink: 0;
       width: 30px;
       height: 30px;
-      color: #ed7407;
+    }
+
+    .pdf__footer-icon path {
+      stroke: #ed7407;
+    }
+
+    @page {
+      margin: 0;
     }
 
     @media print {
-      body { margin: 0; }
-      .pdf { width: auto; min-height: auto; }
+      body {
+        margin: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .pdf {
+        width: 1160px;
+        min-height: 1641px;
+        margin: 0 auto;
+        padding: 10px;
+      }
     }
   `;
 };
@@ -2436,19 +3607,19 @@ const buildPrintHtml = ({
   volume,
   models
 }) => {
-  const logoUrl = resolveAssetUrl('img/logo.svg');
+  const logoUrl = resolveAssetUrl('img/logo-pdf.svg');
   const siteLabel = getSiteLabel();
-  const leftParams = [buildParamRow('Размеры:', formatDimensions(answers)), buildParamRow('Материал стен:', LABELS.wall[answers.wallMaterial] ?? '—'), buildParamRow('Топка:', LABELS.firebox[answers.firebox] ?? '—'), buildParamRow('Неутеплённые поверхности:', formatUninsulated(answers))].join('');
-  const rightParams = [buildParamRow('Тип парной:', LABELS.saunaType[answers.saunaType] ?? '—'), buildParamRow('Материал печи:', LABELS.material[answers.material] ?? '—'), buildParamRow('Дверца:', LABELS.door[answers.door] ?? '—')].join('');
+  const leftParams = [buildParamRow('Размеры:', formatDimensions(answers, volume)), buildParamRow('Материал стен:', QUIZ_LABELS.wall[answers.wallMaterial] ?? '—'), buildParamRow('Топка:', QUIZ_LABELS.firebox[answers.firebox] ?? '—'), buildParamRow('Неутеплённые поверхности:', formatUninsulated(answers))].join('');
+  const rightParams = [buildParamRow('Тип парной:', QUIZ_LABELS.saunaType[answers.saunaType] ?? '—'), buildParamRow('Материал печи:', QUIZ_LABELS.material[answers.material] ?? '—'), buildParamRow('Дверца:', QUIZ_LABELS.door[answers.door] ?? '—')].join('');
   const notesHtml = DISCLAIMER_PARAGRAPHS.map(text => `<p>${text}</p>`).join('');
   const phoneIcon = `
     <svg class="pdf__footer-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.25"/>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="#ed7407" stroke-width="1.25"/>
     </svg>
   `;
   const calendarIcon = `
     <svg class="pdf__footer-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+      <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" stroke="#ed7407" stroke-width="1.25" stroke-linecap="round"/>
     </svg>
   `;
   return `<!DOCTYPE html>
@@ -2461,50 +3632,56 @@ const buildPrintHtml = ({
 <body>
   <div class="pdf">
     <header class="pdf__header">
-      <div class="pdf__logo">
-        <img src="${logoUrl}" alt="ЖарGO">
+      <div class="pdf__header-inner">
+        <div class="pdf__logo">
+          <img src="${logoUrl}" alt="ЖарGO" width="120" height="120">
+        </div>
+        <h1 class="pdf__tagline">Инженерные решения для&nbsp;бани, дома и&nbsp;огня</h1>
+        <div class="pdf__site">${siteLabel}</div>
       </div>
-      <h1 class="pdf__tagline">Инженерные решения для&nbsp;бани, дома и&nbsp;огня</h1>
-      <div class="pdf__site">${siteLabel}</div>
     </header>
 
     <main class="pdf__body">
-      <div class="pdf__section-title">
-        <span class="pdf__section-title-line" aria-hidden="true"></span>
-        <h2 class="pdf__section-title-text">Результат</h2>
-        <span class="pdf__section-title-line pdf__section-title-line--right" aria-hidden="true"></span>
+      <div class="pdf__section-head">
+        <span class="pdf__section-head__line pdf__section-head__line--left" aria-hidden="true"></span>
+        <h2 class="pdf__section-head__title">Результат</h2>
+        <span class="pdf__section-head__line pdf__section-head__line--right" aria-hidden="true"></span>
       </div>
 
-      <div class="pdf__params">
-        <div class="pdf__params-col">${leftParams}</div>
-        <div class="pdf__params-col">${rightParams}</div>
+      <div class="pdf__result">
+        <div class="pdf__params">
+          <div class="pdf__params-col">${leftParams}</div>
+          <div class="pdf__params-col">${rightParams}</div>
+        </div>
+
+        <div class="pdf__divider" aria-hidden="true"></div>
+
+        <p class="pdf__volume">
+          <span>Расчетный объем:</span>
+          <span class="pdf__volume-value">${volume} м³</span>
+        </p>
+
+        <div class="pdf__divider" aria-hidden="true"></div>
+
+        <p class="pdf__subtitle">Подходящие печи ЖарGO</p>
+
+        <div class="pdf__models">${buildModelsHtml(models)}</div>
       </div>
-
-      <div class="pdf__divider" aria-hidden="true"></div>
-
-      <p class="pdf__volume">
-        Расчетный объем:
-        <span class="pdf__volume-value">${volume} м<sup>3</sup></span>
-      </p>
-
-      <div class="pdf__divider" aria-hidden="true"></div>
-
-      <p class="pdf__subtitle">Подходящие печи ЖарGO</p>
-
-      <div class="pdf__models">${buildModelsHtml(models)}</div>
 
       <div class="pdf__notes">${notesHtml}</div>
     </main>
 
     <footer class="pdf__footer">
-      <p class="pdf__footer-legal">ООО «ДымоходСервис»&nbsp;&nbsp;ИНН 5257131935&nbsp;&nbsp;ОГРН 1125257006731</p>
-      <div class="pdf__footer-contact">
-        ${phoneIcon}
-        <span>8 (800) 500-54-42</span>
-      </div>
-      <div class="pdf__footer-contact">
-        ${calendarIcon}
-        <span>Пн-Пт с 9:00 до 18:00</span>
+      <p class="pdf__footer-legal">ООО «ДымоходСервис»&nbsp;&nbsp;ИНН&nbsp;5257131935&nbsp;&nbsp;ОГРН&nbsp;1125257006731</p>
+      <div class="pdf__footer-aside">
+        <div class="pdf__footer-contact">
+          ${phoneIcon}
+          <span>8 (800) 500-54-42</span>
+        </div>
+        <div class="pdf__footer-contact">
+          ${calendarIcon}
+          <span>Пн-Пт с 9:00 до 18:00</span>
+        </div>
       </div>
     </footer>
   </div>
@@ -2636,20 +3813,48 @@ const collectAnswers = quiz => {
     material: getCheckedValue(quiz, 'quiz-material')
   };
 };
+const formatResultDimensions = (answers, volume) => {
+  return `${answers.length}×${answers.width}×${answers.height} м (${volume} м³)`;
+};
+const formatResultUninsulated = answers => {
+  return answers.uninsulatedArea > 0 ? `${answers.uninsulatedArea} м²` : '0 м²';
+};
+const renderResultSummary = (summaryEl, answers, volume) => {
+  if (!summaryEl) {
+    return;
+  }
+  const rows = [['Размеры:', formatResultDimensions(answers, volume)], ['Материал стен:', _quiz_print_js__WEBPACK_IMPORTED_MODULE_2__.QUIZ_LABELS.wall[answers.wallMaterial] ?? '—'], ['Топка:', _quiz_print_js__WEBPACK_IMPORTED_MODULE_2__.QUIZ_LABELS.firebox[answers.firebox] ?? '—'], ['Неутеплённые поверхности:', formatResultUninsulated(answers)], ['Тип парной:', _quiz_print_js__WEBPACK_IMPORTED_MODULE_2__.QUIZ_LABELS.saunaType[answers.saunaType] ?? '—']];
+  const buildRow = ([label, value]) => `
+    <p class="quiz-result-summary__row">
+      <span class="quiz-result-summary__label">${label}</span>
+      <span class="quiz-result-summary__value">${value}</span>
+    </p>
+  `;
+  summaryEl.innerHTML = `
+    <div class="quiz-result-summary__col">
+      ${rows.slice(0, 3).map(buildRow).join('')}
+    </div>
+    <div class="quiz-result-summary__col">
+      ${rows.slice(3).map(buildRow).join('')}
+    </div>
+  `;
+};
 const renderResultCards = (listEl, models) => {
   listEl.innerHTML = models.map((model, index) => {
-    const badge = index === 0 ? '<span class="quiz-result-card__badge">Рекомендуем</span>' : '';
+    const isFeatured = index === 0;
+    const badge = isFeatured ? '<span class="quiz-result-card__badge">Рекомендуем</span>' : '';
+    const description = (0,_quiz_print_js__WEBPACK_IMPORTED_MODULE_2__.getQuizModelDescription)(model);
     return `
-      <li>
-        <article class="quiz-result-card">
+      <li class="quiz-result-card${isFeatured ? ' quiz-result-card--featured' : ''}">
+        ${badge}
+        <article class="quiz-result-card__inner">
           <a class="quiz-result-card__link" href="${model.url}">
-            ${badge}
             <picture class="quiz-result-card__pic">
               <source srcset="${model.imageWebp}" type="image/webp">
-              <img src="${model.image}" width="120" height="100" alt="">
+              <img class="quiz-result-card__img" src="${model.image}" width="215" height="150" alt="">
             </picture>
-            <span class="quiz-result-card__title">Печь для бани «${model.title}»</span>
-            <span class="quiz-result-card__more">Подробнее&nbsp;&rarr;</span>
+            <span class="quiz-result-card__title">${model.title}</span>
+            <span class="quiz-result-card__desc">${description}</span>
           </a>
         </article>
       </li>
@@ -2668,6 +3873,7 @@ const initQuiz = () => {
   const resultSuccessEl = quiz.querySelector('[data-quiz-result-panel="success"]');
   const resultEmptyEl = quiz.querySelector('[data-quiz-result-panel="empty"]');
   const resultListEl = quiz.querySelector('[data-quiz-result-list]');
+  const resultSummaryEl = quiz.querySelector('[data-quiz-result-summary]');
   const resultVolumeEl = quiz.querySelector('[data-quiz-result-volume]');
   const startBtn = quiz.querySelector('[data-quiz-start]');
   const prevBtn = quiz.querySelector('[data-quiz-prev]');
@@ -2778,6 +3984,9 @@ const initQuiz = () => {
       volume,
       models
     } : null;
+    if (hasResults) {
+      renderResultSummary(resultSummaryEl, answers, volume);
+    }
     if (resultVolumeEl) {
       resultVolumeEl.textContent = `${volume} м³`;
     }
@@ -2944,6 +4153,327 @@ const initQuiz = () => {
   render();
 };
 initQuiz();
+
+/***/ },
+
+/***/ "./src/js/data/chimney-schemes.js"
+/*!****************************************!*\
+  !*** ./src/js/data/chimney-schemes.js ***!
+  \****************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CHIMNEY_SCHEMES: () => (/* binding */ CHIMNEY_SCHEMES),
+/* harmony export */   GENERATOR_TYPES: () => (/* binding */ GENERATOR_TYPES)
+/* harmony export */ });
+/**
+ * Схемы монтажа и состав элементов для конфигуратора дымохода.
+ * Формулы расчёта — по ТЗ «Конфигуратор дымохода».
+ */
+const GENERATOR_TYPES = [{
+  id: 'fireplace',
+  title: 'Камин',
+  schemes: [1, 2, 5, 6, 7]
+}, {
+  id: 'bath',
+  title: 'Печь для бани',
+  schemesNoTank: [1, 2, 6, 7],
+  schemesWithTank: [3, 4]
+}, {
+  id: 'heating',
+  title: 'Отопительная печь',
+  schemes: [1, 2, 5, 6, 7]
+}, {
+  id: 'boiler',
+  title: 'Котёл',
+  schemes: [1, 2, 5, 6, 7]
+}];
+const CHIMNEY_SCHEMES = {
+  1: {
+    id: 1,
+    title: 'Прямой через кровлю',
+    cardTitle: 'Прямой через кровлю',
+    description: 'Вертикальный дымоход по одной оси без смещений',
+    elements: [{
+      name: 'Труба одностенная 0.5 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'Шибер',
+      calc: 'fixed:1'
+    }, {
+      name: 'Старт-сэндвич',
+      calc: 'fixed:1'
+    }, {
+      name: 'Труба сэндвич 1 м',
+      calc: 'sandwich'
+    }, {
+      name: 'ППУ',
+      calc: 'ppu'
+    }, {
+      name: 'Хомуты',
+      calc: 'clamps:1'
+    }, {
+      name: 'Мастер-флэш',
+      calc: 'fixed:1'
+    }, {
+      name: 'Оголовок / дефлектор',
+      calc: 'fixed:1'
+    }]
+  },
+  2: {
+    id: 2,
+    title: 'Через кровлю со смещением',
+    cardTitle: 'Через кровлю со смещением',
+    description: 'Смещение оси через два колена 45°',
+    elements: [{
+      name: 'Труба одностенная 0.5 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'Шибер',
+      calc: 'fixed:1'
+    }, {
+      name: 'Старт-сэндвич',
+      calc: 'fixed:1'
+    }, {
+      name: 'Труба сэндвич 1 м',
+      calc: 'sandwich'
+    }, {
+      name: 'Колено 45°',
+      calc: 'fixed:2'
+    }, {
+      name: 'Труба сэндвич 0.5 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'ППУ',
+      calc: 'ppu'
+    }, {
+      name: 'Хомуты',
+      calc: 'clamps:2'
+    }, {
+      name: 'Кронштейны настенные',
+      calc: 'brackets_roof'
+    }, {
+      name: 'Мастер-флэш',
+      calc: 'fixed:1'
+    }, {
+      name: 'Оголовок / дефлектор',
+      calc: 'fixed:1'
+    }]
+  },
+  3: {
+    id: 3,
+    title: 'Прямой через кровлю (с баком)',
+    cardTitle: 'Прямой с баком',
+    description: 'Вертикальный дымоход с баком на трубе',
+    elements: [{
+      name: 'Бак на трубе 1 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'Шибер',
+      calc: 'fixed:1'
+    }, {
+      name: 'Старт-сэндвич',
+      calc: 'fixed:1'
+    }, {
+      name: 'Труба сэндвич 1 м',
+      calc: 'sandwich_tank'
+    }, {
+      name: 'ППУ',
+      calc: 'ppu'
+    }, {
+      name: 'Хомуты',
+      calc: 'clamps:3'
+    }, {
+      name: 'Мастер-флэш',
+      calc: 'fixed:1'
+    }, {
+      name: 'Оголовок / дефлектор',
+      calc: 'fixed:1'
+    }]
+  },
+  4: {
+    id: 4,
+    title: 'Через кровлю со смещением (с баком)',
+    cardTitle: 'Со смещением с баком',
+    description: 'Бак на трубе + смещение оси через колена 45°',
+    elements: [{
+      name: 'Бак на трубе 1 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'Шибер',
+      calc: 'fixed:1'
+    }, {
+      name: 'Старт-сэндвич',
+      calc: 'fixed:1'
+    }, {
+      name: 'Труба сэндвич 1 м',
+      calc: 'sandwich_tank'
+    }, {
+      name: 'Колено 45°',
+      calc: 'fixed:2'
+    }, {
+      name: 'Труба сэндвич 0.5 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'ППУ',
+      calc: 'ppu'
+    }, {
+      name: 'Хомуты',
+      calc: 'clamps:4'
+    }, {
+      name: 'Кронштейны настенные',
+      calc: 'brackets_roof'
+    }, {
+      name: 'Мастер-флэш',
+      calc: 'fixed:1'
+    }, {
+      name: 'Оголовок / дефлектор',
+      calc: 'fixed:1'
+    }]
+  },
+  5: {
+    id: 5,
+    title: 'Подключение сзади → через кровлю',
+    cardTitle: 'Сзади → через кровлю',
+    description: 'Горизонтальный участок от заднего патрубка до тройника',
+    elements: [{
+      name: 'Труба одностенная 0.25 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'Консоль (комплект)',
+      calc: 'fixed:1'
+    }, {
+      name: 'Монтажная площадка',
+      calc: 'fixed:1'
+    }, {
+      name: 'Тройник 90° одностенный',
+      calc: 'fixed:1'
+    }, {
+      name: 'Конденсатосборник',
+      calc: 'fixed:1'
+    }, {
+      name: 'Шибер',
+      calc: 'fixed:1'
+    }, {
+      name: 'Труба одностенная 0.5 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'Старт-сэндвич',
+      calc: 'fixed:1'
+    }, {
+      name: 'Труба сэндвич 1 м',
+      calc: 'sandwich'
+    }, {
+      name: 'ППУ',
+      calc: 'ppu'
+    }, {
+      name: 'Хомуты',
+      calc: 'clamps:5'
+    }, {
+      name: 'Кронштейны настенные',
+      calc: 'brackets_roof'
+    }, {
+      name: 'Мастер-флэш',
+      calc: 'fixed:1'
+    }, {
+      name: 'Оголовок / дефлектор',
+      calc: 'fixed:1'
+    }]
+  },
+  6: {
+    id: 6,
+    title: 'Через стену → наружная труба',
+    cardTitle: 'Через стену',
+    description: 'Горизонтальный проход через стену, подъём по фасаду',
+    elements: [{
+      name: 'Труба одностенная 0.25 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'Шибер',
+      calc: 'fixed:1'
+    }, {
+      name: 'Старт-сэндвич',
+      calc: 'fixed:1'
+    }, {
+      name: 'Труба сэндвич 1 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'Консоль (комплект)',
+      calc: 'fixed:1'
+    }, {
+      name: 'Монтажная площадка',
+      calc: 'fixed:1'
+    }, {
+      name: 'Тройник сэндвич',
+      calc: 'fixed:1'
+    }, {
+      name: 'Конденсатосборник',
+      calc: 'fixed:1'
+    }, {
+      name: 'Труба сэндвич 1 м',
+      calc: 'sandwich'
+    }, {
+      name: 'Хомуты',
+      calc: 'clamps:6'
+    }, {
+      name: 'Кронштейны настенные',
+      calc: 'brackets_wall'
+    }, {
+      name: 'Оголовок / дефлектор',
+      calc: 'fixed:1'
+    }]
+  },
+  7: {
+    id: 7,
+    title: 'Через стену с обходом свеса',
+    cardTitle: 'Через стену со свесом',
+    description: 'Вывод через стену с обходом карнизного свеса',
+    elements: [{
+      name: 'Труба одностенная 0.25 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'Шибер',
+      calc: 'fixed:1'
+    }, {
+      name: 'Старт-сэндвич',
+      calc: 'fixed:1'
+    }, {
+      name: 'Труба сэндвич 1 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'Консоль (комплект)',
+      calc: 'fixed:1'
+    }, {
+      name: 'Монтажная площадка',
+      calc: 'fixed:1'
+    }, {
+      name: 'Тройник сэндвич',
+      calc: 'fixed:1'
+    }, {
+      name: 'Конденсатосборник',
+      calc: 'fixed:1'
+    }, {
+      name: 'Труба сэндвич 1 м',
+      calc: 'sandwich'
+    }, {
+      name: 'Колено 45°',
+      calc: 'fixed:2'
+    }, {
+      name: 'Труба сэндвич 0.5 м',
+      calc: 'fixed:1'
+    }, {
+      name: 'Хомуты',
+      calc: 'clamps:7'
+    }, {
+      name: 'Кронштейны настенные',
+      calc: 'brackets_wall'
+    }, {
+      name: 'Оголовок / дефлектор',
+      calc: 'fixed:1'
+    }]
+  }
+};
 
 /***/ },
 
@@ -13916,4 +15446,3 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map
