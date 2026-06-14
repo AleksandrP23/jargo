@@ -3549,6 +3549,9 @@ a {
   flex-direction: column;
   gap: 10px;
 }
+.quiz-fields__group[hidden] {
+  display: none !important;
+}
 .quiz-fields__group--narrow {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
@@ -3822,8 +3825,11 @@ a {
 }
 .chimney-scheme-card__img {
   display: block;
-  width: 100px;
+  width: auto;
+  max-width: 108px;
   height: 120px;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 .chimney-scheme-card__input:focus-visible + .chimney-scheme-card__box {
   outline: 2px solid rgba(237, 116, 7, 0.45);
@@ -16622,4 +16628,4 @@ body.price-toolbar--discount .price-toolbar__label--muted {
     -ms-flex-pack: start;
     justify-content: flex-start;
   }
-}
+}/*# sourceMappingURL=main.css.map */

@@ -1234,22 +1234,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _data_chimney_schemes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/chimney-schemes.js */ "./src/js/data/chimney-schemes.js");
 
+
+/**
+ * Расчёт количества элементов конфигуратора дымохода.
+ *
+ * Переменные:
+ *   H — высота дымохода (м), ввод пользователя
+ *   P — количество перекрытий (шт.), ввод пользователя
+ *   ceil(x) — округление вверх до целого
+ *
+ * Формулы (ТЗ §4):
+ *   Труба сэндвич 1 м (без бака)     → ceil(H)
+ *   Труба сэндвич 1 м (с баком)       → ceil(H − 1)
+ *   ППУ                              → P
+ *   Хомуты — схемы 1, 3, 5         → ceil(H) или ceil(H−1) + 2
+ *   Хомуты — схемы 2, 4              → ceil(H) или ceil(H−1) + 5
+ *   Хомуты — схема 6                 → ceil(H) + 6
+ *   Хомуты — схема 7                 → ceil(H) + 9
+ *   Кронштейны — через кровлю 2, 4, 5 → max(0, ceil(H / 1.5) − 1)
+ *   Кронштейны — через стену 6, 7    → ceil(H / 1.5)
+ */
+
 const ceil = value => Math.ceil(value);
+
+/** ceil(H) без бака | ceil(H − 1) с баком */
 const getSandwichCount = (height, hasTank) => {
   return hasTank ? ceil(height - 1) : ceil(height);
 };
 const CALC_HANDLERS = {
+  /** Труба сэндвич 1 м — вертикальный участок без бака */
   sandwich: ctx => getSandwichCount(ctx.height, false),
+  /** Труба сэндвич 1 м — вертикальный участок с баком (бак занимает 1 м) */
   sandwich_tank: ctx => getSandwichCount(ctx.height, true),
+  /** ППУ — один на каждое перекрытие */
   ppu: ctx => ctx.floors,
+  /** Кронштейны — схемы 2, 4, 5 (через кровлю / подключение сзади) */
   brackets_roof: ctx => Math.max(0, ceil(ctx.height / 1.5) - 1),
+  /** Кронштейны — схемы 6, 7 (через стену) */
   brackets_wall: ctx => ceil(ctx.height / 1.5),
+  /** Хомуты — схемы 1, 3, 5: сэндвич-трубы + 2 (старт + финиш) */
   'clamps:1': ctx => getSandwichCount(ctx.height, false) + 2,
-  'clamps:2': ctx => getSandwichCount(ctx.height, false) + 5,
   'clamps:3': ctx => getSandwichCount(ctx.height, true) + 2,
+  /** Хомуты — схемы 2, 4: сэндвич-трубы + 5 (старт + финиш + колена и доп. труба) */
+  'clamps:2': ctx => getSandwichCount(ctx.height, false) + 5,
   'clamps:4': ctx => getSandwichCount(ctx.height, true) + 5,
-  'clamps:5': ctx => ceil(ctx.height) + 2,
+  /** Хомуты — схема 6: ceil(H) + 6 */
   'clamps:6': ctx => ceil(ctx.height) + 6,
+  /** Хомуты — схема 7: ceil(H) + 9 */
   'clamps:7': ctx => ceil(ctx.height) + 9
 };
 const resolveQuantity = (calcKey, ctx) => {
@@ -1318,10 +1349,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const DISCLAIMER_PARAGRAPHS = ['Данный подбор дымоходной системы является предварительным и носит ориентировочный характер.', 'Для точного подбора состава системы, уточнения количества элементов и согласования монтажного решения обратитесь к менеджерам ЖарGO.', 'Мы поможем подобрать дымоход любой сложности и конфигурации.'];
 const resolveAssetUrl = path => {
-  if (!path || path.startsWith('http')) {
+  if (!path || path.startsWith('http://') || path.startsWith('https://')) {
     return path;
   }
-  return new URL(path, `${window.location.origin}/`).href;
+  const baseUrl = document.querySelector('base')?.href ?? window.location.href;
+  return new URL(path, baseUrl).href;
 };
 const getSiteLabel = () => {
   const host = window.location.host || '';
@@ -1679,8 +1711,9 @@ const buildItemHtml = (item, index) => {
   `;
 };
 const buildListHtml = items => {
-  const midpoint = Math.ceil(items.length / 2);
-  const blocks = [items.slice(0, midpoint), items.slice(midpoint)];
+  const visibleItems = items.filter(item => item.quantity > 0);
+  const midpoint = Math.ceil(visibleItems.length / 2);
+  const blocks = [visibleItems.slice(0, midpoint), visibleItems.slice(midpoint)];
   return blocks.map((blockItems, blockIndex) => {
     const offset = blockIndex === 0 ? 0 : midpoint;
     return `
@@ -1883,8 +1916,12 @@ const isHeightValid = value => {
   return Math.abs(num * 2 - Math.round(num * 2)) < 0.001;
 };
 const isFloorsValid = value => {
-  const num = parseInteger(value);
-  return num !== null && num >= 0 && num <= 5;
+  const normalized = String(value).trim();
+  if (!/^\d+$/.test(normalized)) {
+    return false;
+  }
+  const num = Number.parseInt(normalized, 10);
+  return num >= 0 && num <= 5;
 };
 const getCheckedValue = (root, name) => {
   return root.querySelector(`input[name="${name}"]:checked`)?.value ?? null;
@@ -1898,15 +1935,6 @@ const getSchemeContextLabel = (generatorId, hasTank) => {
     return `${title} — ${hasTank ? 'с баком' : 'без бака'}`;
   }
   return title;
-};
-const getItemNote = (name, index) => {
-  if (index === 0) {
-    return 'Первый элемент от печи';
-  }
-  if (name === 'ППУ') {
-    return 'Проходной узел';
-  }
-  return '';
 };
 const collectAnswers = root => {
   const generator = getCheckedValue(root, 'chimney-generator');
@@ -1975,6 +2003,15 @@ const renderResultScheme = (schemeEl, answers) => {
   schemeEl.hidden = false;
   return label;
 };
+const getItemNote = (name, index) => {
+  if (index === 0) {
+    return 'Первый элемент от печи';
+  }
+  if (name === 'ППУ') {
+    return 'Проходной узел';
+  }
+  return '';
+};
 const buildResultItemHtml = (item, index) => {
   const note = getItemNote(item.name, index);
   const noteHtml = note ? `<span class="chimney-result__note">${note}</span>` : '';
@@ -1990,8 +2027,9 @@ const buildResultItemHtml = (item, index) => {
   `;
 };
 const renderResultList = (listCols, items) => {
-  const midpoint = Math.ceil(items.length / 2);
-  const columns = [items.slice(0, midpoint), items.slice(midpoint)];
+  const visibleItems = items.filter(item => item.quantity > 0);
+  const midpoint = Math.ceil(visibleItems.length / 2);
+  const columns = [visibleItems.slice(0, midpoint), visibleItems.slice(midpoint)];
   listCols.forEach((listEl, columnIndex) => {
     if (!listEl) {
       return;
@@ -2315,6 +2353,9 @@ const initChimneyConfigurator = () => {
   });
   paramInputs.forEach(input => {
     input.addEventListener('input', () => {
+      if (input.name === 'chimney-floors') {
+        input.value = input.value.replace(/\D/g, '').slice(0, 1);
+      }
       if (!showingIntro && !showingResult && stepIndex === 2) {
         renderActions();
       }
@@ -3214,10 +3255,11 @@ const QUIZ_LABELS = {
 const DISCLAIMER_PARAGRAPHS = ['Калькулятор подбора помогает определить расчётный объём парной и подобрать подходящие модели печей ЖарGO.', 'Рекомендации носят предварительный характер. Для уточнения комплектации, монтажа и дымохода обратитесь к специалисту.', 'Актуальные цены, наличие и технические характеристики уточняйте у менеджера или на официальном сайте.'];
 const DEFAULT_MODEL_DESCRIPTION = 'Универсальная сталь. Подходит для обоих типов парной.';
 const resolveAssetUrl = path => {
-  if (!path || path.startsWith('http')) {
+  if (!path || path.startsWith('http://') || path.startsWith('https://')) {
     return path;
   }
-  return new URL(path, `${window.location.origin}/`).href;
+  const baseUrl = document.querySelector('base')?.href ?? window.location.href;
+  return new URL(path, baseUrl).href;
 };
 const getSiteLabel = () => {
   const host = window.location.host || '';
@@ -4170,6 +4212,15 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Схемы монтажа и состав элементов для конфигуратора дымохода.
  * Формулы расчёта — по ТЗ «Конфигуратор дымохода».
+ *
+ * §6 Матрица доступности:
+ *   1 — камин, баня (без бака), отоп. печь, котёл
+ *   2 — камин, баня (без бака), отоп. печь, котёл
+ *   3 — баня (с баком)
+ *   4 — баня (с баком)
+ *   5 — камин, отоп. печь, котёл
+ *   6 — камин, баня (без бака), отоп. печь, котёл
+ *   7 — камин, баня (без бака), отоп. печь, котёл
  */
 const GENERATOR_TYPES = [{
   id: 'fireplace',
@@ -4336,7 +4387,7 @@ const CHIMNEY_SCHEMES = {
     id: 5,
     title: 'Подключение сзади → через кровлю',
     cardTitle: 'Сзади → через кровлю',
-    description: 'Горизонтальный участок от заднего патрубка до тройника',
+    description: 'Горизонтальный участок от заднего патрубка до тройника с переходом в вертикаль',
     elements: [{
       name: 'Труба одностенная 0.25 м',
       calc: 'fixed:1'
@@ -4369,7 +4420,7 @@ const CHIMNEY_SCHEMES = {
       calc: 'ppu'
     }, {
       name: 'Хомуты',
-      calc: 'clamps:5'
+      calc: 'clamps:1'
     }, {
       name: 'Кронштейны настенные',
       calc: 'brackets_roof'
@@ -15446,3 +15497,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
+//# sourceMappingURL=main.js.map
