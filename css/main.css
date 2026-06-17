@@ -386,6 +386,9 @@ a {
   z-index: 50;
   width: 100%;
 }
+.header--menu-open {
+  z-index: 1001;
+}
 .header__inner {
   position: relative;
   margin-right: calc(0px - var(--container-offset));
@@ -397,7 +400,7 @@ a {
 }
 @media (max-width: 1024px) {
   .header__drop {
-    display: contents;
+    display: block;
   }
 }
 .header__top {
@@ -693,7 +696,7 @@ a {
 .header .menu__panel .menu__panel-touch {
   display: none;
 }
-.header--menu-open .menu__panel-desktop {
+.header--menu-open .menu__panel .menu__panel-desktop {
   display: block;
 }
 @media (max-width: 1300px) {
@@ -768,18 +771,15 @@ a {
   .header .menu__panel .menu__panel-desktop {
     display: none;
   }
-  .header .menu__panel-touch {
-    display: none;
+  .header--menu-open .menu__panel .menu__panel-touch {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
     min-height: 100%;
-  }
-  .header--menu-open .menu__panel-touch {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
   .header--scrolled .header__inner {
     margin-right: calc(0px - var(--container-offset));
@@ -1679,6 +1679,10 @@ a {
   border-top: none;
   border-bottom: none;
   background-color: rgba(237, 116, 7, 0.1);
+}
+
+.graph-modal:not(.is-open) {
+  pointer-events: none;
 }
 
 .hero {

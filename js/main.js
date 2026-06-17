@@ -4753,6 +4753,7 @@ __webpack_require__.r(__webpack_exports__);
       syncBurgers(isOpen);
       if (isOpen) {
         (0,_components_header_search_js__WEBPACK_IMPORTED_MODULE_3__.closeHeaderSearch)();
+        window.graphModal?.close?.();
         header?.classList.add('header--menu-open');
         setPanelHidden(false);
         (0,_functions_disable_scroll_js__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
