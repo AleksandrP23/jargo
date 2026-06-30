@@ -203,132 +203,6 @@ class GraphModal {
 
 /***/ },
 
-/***/ "./node_modules/graph-tabs/src/graph-tabs.js"
-/*!***************************************************!*\
-  !*** ./node_modules/graph-tabs/src/graph-tabs.js ***!
-  \***************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ GraphTabs)
-/* harmony export */ });
-class GraphTabs {
-  constructor(selector, options) {
-    let defaultOptions = {
-      isChanged: () => {}
-    }
-    this.options = Object.assign(defaultOptions, options);
-    this.selector = selector;
-    this.tabs = document.querySelector(`[data-tabs="${selector}"]`);
-    if (this.tabs) {
-      this.tabList = this.tabs.querySelector('.tabs__nav');
-      this.tabsBtns = this.tabList.querySelectorAll('.tabs__nav-btn');
-      this.tabsPanels = this.tabs.querySelectorAll('.tabs__panel');
-    } else {
-      console.error('Селектор data-tabs не существует!');
-      return;
-    }
-
-    this.check();
-    this.init();
-    this.events();
-  }
-
-  check() {
-    if (document.querySelectorAll(`[data-tabs="${this.selector}"]`).length > 1) {
-      console.error('Количество элементов с одинаковым data-tabs больше одного!');
-      return;
-    }
-
-    if (this.tabsBtns.length !== this.tabsPanels.length) {
-      console.error('Количество кнопок и элементов табов не совпадает!');
-      return;
-    }
-  }
-
-  init() {
-    this.tabList.setAttribute('role', 'tablist');
-
-    this.tabsBtns.forEach((el, i) => {
-      el.setAttribute('role', 'tab');
-      el.setAttribute('tabindex', '-1');
-      el.setAttribute('id', `${this.selector}${i + 1}`);
-      el.classList.remove('tabs__nav-btn--active');
-    });
-
-    this.tabsPanels.forEach((el, i) => {
-      el.setAttribute('role', 'tabpanel');
-      el.setAttribute('tabindex', '-1');
-      el.setAttribute('aria-labelledby', this.tabsBtns[i].id);
-      el.classList.remove('tabs__panel--active');
-    });
-
-    this.tabsBtns[0].classList.add('tabs__nav-btn--active');
-    this.tabsBtns[0].removeAttribute('tabindex');
-    this.tabsBtns[0].setAttribute('aria-selected', 'true');
-    this.tabsPanels[0].classList.add('tabs__panel--active');
-  }
-
-  events() {
-    this.tabsBtns.forEach((el, i) => {
-      el.addEventListener('click', (e) => {
-        let currentTab = this.tabList.querySelector('[aria-selected]');
-
-        if (e.currentTarget !== currentTab) {
-          this.switchTabs(e.currentTarget, currentTab);
-        }
-      });
-
-      el.addEventListener('keydown', (e) => {
-        let index = Array.prototype.indexOf.call(this.tabsBtns, e.currentTarget);
-
-        let dir = null;
-
-        if (e.which === 37) {
-          dir = index - 1;
-        } else if (e.which === 39) {
-          dir = index + 1;
-        } else if (e.which === 40) {
-          dir = 'down';
-        } else {
-          dir = null;
-        }
-
-        if (dir !== null) {
-          if (dir === 'down') {
-            this.tabsPanels[i].focus();
-          } else if (this.tabsBtns[dir]) {
-            this.switchTabs(this.tabsBtns[dir], e.currentTarget);
-          }
-        }
-      });
-    });
-  }
-
-  switchTabs(newTab, oldTab = this.tabs.querySelector('[aria-selected]')) {
-    newTab.focus();
-    newTab.removeAttribute('tabindex');
-    newTab.setAttribute('aria-selected', 'true');
-
-    oldTab.removeAttribute('aria-selected');
-    oldTab.setAttribute('tabindex', '-1');
-
-    let index = Array.prototype.indexOf.call(this.tabsBtns, newTab);
-    let oldIndex = Array.prototype.indexOf.call(this.tabsBtns, oldTab);
-
-    this.tabsPanels[oldIndex].classList.remove('tabs__panel--active');
-    this.tabsPanels[index].classList.add('tabs__panel--active');
-
-    this.tabsBtns[oldIndex].classList.remove('tabs__nav-btn--active');
-    this.tabsBtns[index].classList.add('tabs__nav-btn--active');
-
-    this.options.isChanged(this);
-  }
-}
-
-/***/ },
-
 /***/ "./src/js/_components.js"
 /*!*******************************!*\
   !*** ./src/js/_components.js ***!
@@ -340,19 +214,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_menu_drawer_drill_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/menu-drawer-drill.js */ "./src/js/components/menu-drawer-drill.js");
 /* harmony import */ var graph_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graph-modal */ "./node_modules/graph-modal/src/graph-modal.js");
 /* harmony import */ var _components_header_scroll_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/header-scroll.js */ "./src/js/components/header-scroll.js");
-/* harmony import */ var _components_production_tabs_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/production-tabs.js */ "./src/js/components/production-tabs.js");
-/* harmony import */ var _components_quiz_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/quiz.js */ "./src/js/components/quiz.js");
-/* harmony import */ var _components_chimney_configurator_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/chimney-configurator.js */ "./src/js/components/chimney-configurator.js");
-/* harmony import */ var _components_lazy_video_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/lazy-video.js */ "./src/js/components/lazy-video.js");
-/* harmony import */ var _components_article_toc_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/article-toc.js */ "./src/js/components/article-toc.js");
-/* harmony import */ var _components_article_gallery_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/article-gallery.js */ "./src/js/components/article-gallery.js");
-/* harmony import */ var _components_article_showcase_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/article-showcase.js */ "./src/js/components/article-showcase.js");
-/* harmony import */ var _components_chimneys_hero_slider_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/chimneys-hero-slider.js */ "./src/js/components/chimneys-hero-slider.js");
-/* harmony import */ var _components_product_rotate_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/product-rotate.js */ "./src/js/components/product-rotate.js");
-/* harmony import */ var _components_article_tooltips_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/article-tooltips.js */ "./src/js/components/article-tooltips.js");
-/* harmony import */ var _components_article_maps_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/article-maps.js */ "./src/js/components/article-maps.js");
-/* harmony import */ var _components_catalog_toolbar_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/catalog-toolbar.js */ "./src/js/components/catalog-toolbar.js");
-/* harmony import */ var _components_price_page_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/price-page.js */ "./src/js/components/price-page.js");
+/* harmony import */ var _components_quiz_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/quiz.js */ "./src/js/components/quiz.js");
+/* harmony import */ var _components_chimney_configurator_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/chimney-configurator.js */ "./src/js/components/chimney-configurator.js");
+/* harmony import */ var _components_lazy_video_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/lazy-video.js */ "./src/js/components/lazy-video.js");
+/* harmony import */ var _components_article_toc_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/article-toc.js */ "./src/js/components/article-toc.js");
+/* harmony import */ var _components_article_gallery_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/article-gallery.js */ "./src/js/components/article-gallery.js");
+/* harmony import */ var _components_article_showcase_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/article-showcase.js */ "./src/js/components/article-showcase.js");
+/* harmony import */ var _components_chimneys_hero_slider_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/chimneys-hero-slider.js */ "./src/js/components/chimneys-hero-slider.js");
+/* harmony import */ var _components_product_rotate_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/product-rotate.js */ "./src/js/components/product-rotate.js");
+/* harmony import */ var _components_article_tooltips_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/article-tooltips.js */ "./src/js/components/article-tooltips.js");
+/* harmony import */ var _components_article_maps_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/article-maps.js */ "./src/js/components/article-maps.js");
+/* harmony import */ var _components_catalog_toolbar_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/catalog-toolbar.js */ "./src/js/components/catalog-toolbar.js");
+/* harmony import */ var _components_price_page_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/price-page.js */ "./src/js/components/price-page.js");
+/* harmony import */ var _components_price_table_order_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/price-table-order.js */ "./src/js/components/price-table-order.js");
 /* harmony import */ var _components_materials_videos_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/materials-videos.js */ "./src/js/components/materials-videos.js");
 /* harmony import */ var _components_checkout_stepper_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/checkout-stepper.js */ "./src/js/components/checkout-stepper.js");
 /* harmony import */ var _components_cabinet_password_toggle_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/cabinet-password-toggle.js */ "./src/js/components/cabinet-password-toggle.js");
@@ -384,7 +258,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_components_catalog_toolbar_js__WEBPACK_IMPORTED_MODULE_15__["default"])();
+(0,_components_catalog_toolbar_js__WEBPACK_IMPORTED_MODULE_14__["default"])();
 (0,_components_checkout_stepper_js__WEBPACK_IMPORTED_MODULE_18__["default"])();
 (0,_components_cabinet_password_toggle_js__WEBPACK_IMPORTED_MODULE_19__["default"])();
 (0,_components_cabinet_order_cards_js__WEBPACK_IMPORTED_MODULE_20__["default"])();
@@ -3019,6 +2893,142 @@ initPricePage();
 
 /***/ },
 
+/***/ "./src/js/components/price-table-order.js"
+/*!************************************************!*\
+  !*** ./src/js/components/price-table-order.js ***!
+  \************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+function initPriceOrderStepper(root) {
+  const input = root.querySelector('.price-order-stepper__input');
+  const minusBtn = root.querySelector('.price-order-stepper__btn--minus');
+  const plusBtn = root.querySelector('.price-order-stepper__btn--plus');
+  if (!input || !minusBtn || !plusBtn) {
+    return;
+  }
+  const min = Number(input.min) || 1;
+  const max = input.max === '' ? Infinity : Number(input.max);
+  const step = Number(input.step) || 1;
+  const syncButtons = () => {
+    const value = Number(input.value);
+    minusBtn.disabled = Number.isNaN(value) || value <= min;
+    plusBtn.disabled = Number.isNaN(value) || value >= max;
+  };
+  minusBtn.addEventListener('click', () => {
+    const next = Math.max(min, Number(input.value) - step);
+    input.value = String(next);
+    syncButtons();
+  });
+  plusBtn.addEventListener('click', () => {
+    const next = Math.min(max, Number(input.value) + step);
+    input.value = String(next);
+    syncButtons();
+  });
+  input.addEventListener('input', syncButtons);
+  input.addEventListener('change', syncButtons);
+  syncButtons();
+}
+function positionPriceOrderPopover(popover, trigger) {
+  const triggerRect = trigger.getBoundingClientRect();
+  const popoverRect = popover.getBoundingClientRect();
+  const gap = 8;
+  let top = triggerRect.bottom + gap;
+  let left = triggerRect.left + triggerRect.width / 2 - popoverRect.width / 2;
+  left = Math.max(8, Math.min(left, window.innerWidth - popoverRect.width - 8));
+  if (top + popoverRect.height > window.innerHeight - 8) {
+    top = triggerRect.top - popoverRect.height - gap;
+  }
+  popover.style.top = `${Math.max(8, top)}px`;
+  popover.style.left = `${left}px`;
+}
+function initPriceTableOrder() {
+  const cells = document.querySelectorAll('[data-price-cell-order]');
+  if (!cells.length) {
+    return;
+  }
+  const popovers = new Map();
+  let activeCell = null;
+  let activePopover = null;
+  let activeTrigger = null;
+  const closePopover = () => {
+    if (!activePopover) {
+      return;
+    }
+    activePopover.hidden = true;
+    activePopover.style.removeProperty('top');
+    activePopover.style.removeProperty('left');
+    activeTrigger?.setAttribute('aria-expanded', 'false');
+    activeCell = null;
+    activePopover = null;
+    activeTrigger = null;
+  };
+  const openPopover = (cell, trigger) => {
+    closePopover();
+    const popover = popovers.get(cell);
+    if (!popover || !trigger) {
+      return;
+    }
+    activeCell = cell;
+    activePopover = popover;
+    activeTrigger = trigger;
+    trigger.setAttribute('aria-expanded', 'true');
+    popover.hidden = false;
+    requestAnimationFrame(() => {
+      positionPriceOrderPopover(popover, trigger);
+    });
+  };
+  const togglePopover = (cell, trigger) => {
+    if (activeCell === cell && activePopover && !activePopover.hidden) {
+      closePopover();
+      return;
+    }
+    openPopover(cell, trigger);
+  };
+  cells.forEach(cell => {
+    const popover = cell.querySelector('[data-price-order-popover]');
+    const trigger = cell.querySelector('[data-price-order-trigger]');
+    const stepper = cell.querySelector('[data-price-order-stepper]');
+    if (popover) {
+      document.body.appendChild(popover);
+      popovers.set(cell, popover);
+    }
+    if (stepper) {
+      initPriceOrderStepper(stepper);
+    }
+    trigger?.addEventListener('click', event => {
+      event.stopPropagation();
+      togglePopover(cell, trigger);
+    });
+    popover?.querySelector('.price-order-popover__submit')?.addEventListener('click', () => {
+      closePopover();
+    });
+  });
+  document.addEventListener('click', event => {
+    if (!event.target.closest('[data-price-order-popover]') && !event.target.closest('[data-price-order-trigger]')) {
+      closePopover();
+    }
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closePopover();
+    }
+  });
+  window.addEventListener('resize', () => {
+    if (activePopover && activeTrigger && !activePopover.hidden) {
+      positionPriceOrderPopover(activePopover, activeTrigger);
+    }
+  });
+  document.addEventListener('scroll', () => {
+    if (activePopover) {
+      closePopover();
+    }
+  }, true);
+}
+initPriceTableOrder();
+
+/***/ },
+
 /***/ "./src/js/components/product-rotate.js"
 /*!*********************************************!*\
   !*** ./src/js/components/product-rotate.js ***!
@@ -3120,26 +3130,6 @@ const initProductRotate = () => {
   document.querySelectorAll('[data-product-rotate]').forEach(initProductRotateRoot);
 };
 initProductRotate();
-
-/***/ },
-
-/***/ "./src/js/components/production-tabs.js"
-/*!**********************************************!*\
-  !*** ./src/js/components/production-tabs.js ***!
-  \**********************************************/
-(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var graph_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-tabs */ "./node_modules/graph-tabs/src/graph-tabs.js");
-
-const initProductionTabs = () => {
-  const tabsEl = document.querySelector('[data-tabs="production-tabs"]');
-  if (!tabsEl) {
-    return;
-  }
-  new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('production-tabs');
-};
-initProductionTabs();
 
 /***/ },
 

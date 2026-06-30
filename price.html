@@ -66,29 +66,30 @@
             </li>
           </ul>
           <ul class="header__tools list-reset">
-            <li>
-              <button class="btn-reset" type="button" aria-label="Поиск" aria-expanded="false" aria-controls="header-search-panel" data-header-search-toggle>
-                <svg class="icon icon--search" width="20" height="20" aria-hidden="true">
-                  <use href="img/sprite.svg#Magnifer"></use>
-                </svg>
-                <span>Поиск</span>
-              </button>
-            </li>
-            <li>
-              <button class="btn-reset" type="button" aria-label="Войти" data-graph-path="auth">
-                <svg class="icon icon--login" width="20" height="20" aria-hidden="true">
-                  <use href="img/sprite.svg#sing"></use>
-                </svg>
-                <span>Войти</span>
-              </button>
-            </li>
-          </ul>
+  <li>
+    <button class="btn-reset" type="button" aria-label="Поиск" aria-expanded="false" aria-controls="header-search-panel" data-header-search-toggle>
+      <svg class="icon icon--search" width="20" height="20" aria-hidden="true">
+        <use href="img/sprite.svg#Magnifer"></use>
+      </svg>
+      <span>Поиск</span>
+    </button>
+  </li>
+  <li>
+    <button class="btn-reset" type="button" aria-label="Войти" data-graph-path="auth">
+      <svg class="icon icon--login" width="20" height="20" aria-hidden="true">
+        <use href="img/sprite.svg#sing"></use>
+      </svg>
+      <span>Войти</span>
+    </button>
+  </li>
+</ul>
+
           <button class="burger burger--top btn-reset" type="button" aria-label="Открыть меню" aria-expanded="false" data-burger>
             <span class="burger__line"></span>
           </button>
         </div>
       </div>
-      <div id="header-search-panel" class="header-search" role="search" hidden data-header-search>
+            <div id="header-search-panel" class="header-search" role="search" hidden data-header-search>
         <div class="header-search__shell">
           <form class="header-search__form" action="#" method="get">
             <label class="visually-hidden" for="header-search-input">Поиск по сайту</label>
@@ -107,7 +108,7 @@
         <span></span>
       </div>
       <div class="header__drop">
-        <div class="header__bottom header__bottom--desktop">
+                <div class="header__bottom header__bottom--desktop">
           <nav class="menu" data-menu>
             <ul class="menu__list list-reset">
               <li><a data-menu-item href="#">Решения для бани</a></li>
@@ -125,6 +126,7 @@
             <span class="burger__line"></span>
           </button>
         </div>
+
         <div class="menu__panel" data-menu-panel aria-hidden="true">
           <div class="menu__panel-desktop">
             <div class="menu__mega">
@@ -391,6 +393,7 @@
         </div>
       </div>
       <span class="header__overlay" data-menu-overlay></span>
+
     </div>
   </div>
 </header>
@@ -738,7 +741,34 @@
         <tr>
           <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
           <td class="price-table__cell-price">132 ₽</td>
-          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price price-table__cell-price--order">
+            <div class="price-table__cell-order" data-price-cell-order>
+  <span class="price-table__cell-value">198 ₽</span>
+  <button class="price-table__order-trigger btn-reset" type="button" aria-label="Добавить в заявку" aria-expanded="false" data-price-order-trigger>
+    <svg class="price-table__order-icon icon" width="12" height="12" aria-hidden="true">
+      <use href="img/sprite.svg#price-order-bag"></use>
+    </svg>
+  </button>
+  <div class="price-order-popover" data-price-order-popover hidden>
+    <div class="price-order-popover__inner">
+      <p class="price-order-popover__label">введите количество</p>
+      <div class="price-order-popover__controls">
+        <div class="price-order-stepper" data-price-order-stepper>
+          <button class="price-order-stepper__btn price-order-stepper__btn--minus btn-reset" type="button" aria-label="Уменьшить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--minus" aria-hidden="true"></span>
+          </button>
+          <input class="price-order-stepper__input" type="number" value="10" min="1" inputmode="numeric" aria-label="Количество">
+          <button class="price-order-stepper__btn price-order-stepper__btn--plus btn-reset" type="button" aria-label="Увеличить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--plus" aria-hidden="true"></span>
+          </button>
+        </div>
+        <button class="price-order-popover__submit btn-reset" type="button">В заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
@@ -757,7 +787,34 @@
         <tr>
           <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
           <td class="price-table__cell-price">132 ₽</td>
-          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price price-table__cell-price--order">
+            <div class="price-table__cell-order" data-price-cell-order>
+  <span class="price-table__cell-value">198 ₽</span>
+  <button class="price-table__order-trigger btn-reset" type="button" aria-label="Добавить в заявку" aria-expanded="false" data-price-order-trigger>
+    <svg class="price-table__order-icon icon" width="12" height="12" aria-hidden="true">
+      <use href="img/sprite.svg#price-order-bag"></use>
+    </svg>
+  </button>
+  <div class="price-order-popover" data-price-order-popover hidden>
+    <div class="price-order-popover__inner">
+      <p class="price-order-popover__label">введите количество</p>
+      <div class="price-order-popover__controls">
+        <div class="price-order-stepper" data-price-order-stepper>
+          <button class="price-order-stepper__btn price-order-stepper__btn--minus btn-reset" type="button" aria-label="Уменьшить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--minus" aria-hidden="true"></span>
+          </button>
+          <input class="price-order-stepper__input" type="number" value="10" min="1" inputmode="numeric" aria-label="Количество">
+          <button class="price-order-stepper__btn price-order-stepper__btn--plus btn-reset" type="button" aria-label="Увеличить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--plus" aria-hidden="true"></span>
+          </button>
+        </div>
+        <button class="price-order-popover__submit btn-reset" type="button">В заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
@@ -776,7 +833,34 @@
         <tr class="price-table__row--hidden" data-price-collapsed-row>
           <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
           <td class="price-table__cell-price">132 ₽</td>
-          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price price-table__cell-price--order">
+            <div class="price-table__cell-order" data-price-cell-order>
+  <span class="price-table__cell-value">198 ₽</span>
+  <button class="price-table__order-trigger btn-reset" type="button" aria-label="Добавить в заявку" aria-expanded="false" data-price-order-trigger>
+    <svg class="price-table__order-icon icon" width="12" height="12" aria-hidden="true">
+      <use href="img/sprite.svg#price-order-bag"></use>
+    </svg>
+  </button>
+  <div class="price-order-popover" data-price-order-popover hidden>
+    <div class="price-order-popover__inner">
+      <p class="price-order-popover__label">введите количество</p>
+      <div class="price-order-popover__controls">
+        <div class="price-order-stepper" data-price-order-stepper>
+          <button class="price-order-stepper__btn price-order-stepper__btn--minus btn-reset" type="button" aria-label="Уменьшить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--minus" aria-hidden="true"></span>
+          </button>
+          <input class="price-order-stepper__input" type="number" value="10" min="1" inputmode="numeric" aria-label="Количество">
+          <button class="price-order-stepper__btn price-order-stepper__btn--plus btn-reset" type="button" aria-label="Увеличить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--plus" aria-hidden="true"></span>
+          </button>
+        </div>
+        <button class="price-order-popover__submit btn-reset" type="button">В заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
@@ -892,7 +976,34 @@
         <tr>
           <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
           <td class="price-table__cell-price">132 ₽</td>
-          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price price-table__cell-price--order">
+            <div class="price-table__cell-order" data-price-cell-order>
+  <span class="price-table__cell-value">198 ₽</span>
+  <button class="price-table__order-trigger btn-reset" type="button" aria-label="Добавить в заявку" aria-expanded="false" data-price-order-trigger>
+    <svg class="price-table__order-icon icon" width="12" height="12" aria-hidden="true">
+      <use href="img/sprite.svg#price-order-bag"></use>
+    </svg>
+  </button>
+  <div class="price-order-popover" data-price-order-popover hidden>
+    <div class="price-order-popover__inner">
+      <p class="price-order-popover__label">введите количество</p>
+      <div class="price-order-popover__controls">
+        <div class="price-order-stepper" data-price-order-stepper>
+          <button class="price-order-stepper__btn price-order-stepper__btn--minus btn-reset" type="button" aria-label="Уменьшить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--minus" aria-hidden="true"></span>
+          </button>
+          <input class="price-order-stepper__input" type="number" value="10" min="1" inputmode="numeric" aria-label="Количество">
+          <button class="price-order-stepper__btn price-order-stepper__btn--plus btn-reset" type="button" aria-label="Увеличить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--plus" aria-hidden="true"></span>
+          </button>
+        </div>
+        <button class="price-order-popover__submit btn-reset" type="button">В заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
@@ -911,7 +1022,34 @@
         <tr>
           <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
           <td class="price-table__cell-price">132 ₽</td>
-          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price price-table__cell-price--order">
+            <div class="price-table__cell-order" data-price-cell-order>
+  <span class="price-table__cell-value">198 ₽</span>
+  <button class="price-table__order-trigger btn-reset" type="button" aria-label="Добавить в заявку" aria-expanded="false" data-price-order-trigger>
+    <svg class="price-table__order-icon icon" width="12" height="12" aria-hidden="true">
+      <use href="img/sprite.svg#price-order-bag"></use>
+    </svg>
+  </button>
+  <div class="price-order-popover" data-price-order-popover hidden>
+    <div class="price-order-popover__inner">
+      <p class="price-order-popover__label">введите количество</p>
+      <div class="price-order-popover__controls">
+        <div class="price-order-stepper" data-price-order-stepper>
+          <button class="price-order-stepper__btn price-order-stepper__btn--minus btn-reset" type="button" aria-label="Уменьшить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--minus" aria-hidden="true"></span>
+          </button>
+          <input class="price-order-stepper__input" type="number" value="10" min="1" inputmode="numeric" aria-label="Количество">
+          <button class="price-order-stepper__btn price-order-stepper__btn--plus btn-reset" type="button" aria-label="Увеличить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--plus" aria-hidden="true"></span>
+          </button>
+        </div>
+        <button class="price-order-popover__submit btn-reset" type="button">В заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
@@ -930,7 +1068,34 @@
         <tr class="price-table__row--hidden" data-price-collapsed-row>
           <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
           <td class="price-table__cell-price">132 ₽</td>
-          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price price-table__cell-price--order">
+            <div class="price-table__cell-order" data-price-cell-order>
+  <span class="price-table__cell-value">198 ₽</span>
+  <button class="price-table__order-trigger btn-reset" type="button" aria-label="Добавить в заявку" aria-expanded="false" data-price-order-trigger>
+    <svg class="price-table__order-icon icon" width="12" height="12" aria-hidden="true">
+      <use href="img/sprite.svg#price-order-bag"></use>
+    </svg>
+  </button>
+  <div class="price-order-popover" data-price-order-popover hidden>
+    <div class="price-order-popover__inner">
+      <p class="price-order-popover__label">введите количество</p>
+      <div class="price-order-popover__controls">
+        <div class="price-order-stepper" data-price-order-stepper>
+          <button class="price-order-stepper__btn price-order-stepper__btn--minus btn-reset" type="button" aria-label="Уменьшить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--minus" aria-hidden="true"></span>
+          </button>
+          <input class="price-order-stepper__input" type="number" value="10" min="1" inputmode="numeric" aria-label="Количество">
+          <button class="price-order-stepper__btn price-order-stepper__btn--plus btn-reset" type="button" aria-label="Увеличить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--plus" aria-hidden="true"></span>
+          </button>
+        </div>
+        <button class="price-order-popover__submit btn-reset" type="button">В заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
@@ -1046,7 +1211,34 @@
         <tr>
           <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
           <td class="price-table__cell-price">132 ₽</td>
-          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price price-table__cell-price--order">
+            <div class="price-table__cell-order" data-price-cell-order>
+  <span class="price-table__cell-value">198 ₽</span>
+  <button class="price-table__order-trigger btn-reset" type="button" aria-label="Добавить в заявку" aria-expanded="false" data-price-order-trigger>
+    <svg class="price-table__order-icon icon" width="12" height="12" aria-hidden="true">
+      <use href="img/sprite.svg#price-order-bag"></use>
+    </svg>
+  </button>
+  <div class="price-order-popover" data-price-order-popover hidden>
+    <div class="price-order-popover__inner">
+      <p class="price-order-popover__label">введите количество</p>
+      <div class="price-order-popover__controls">
+        <div class="price-order-stepper" data-price-order-stepper>
+          <button class="price-order-stepper__btn price-order-stepper__btn--minus btn-reset" type="button" aria-label="Уменьшить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--minus" aria-hidden="true"></span>
+          </button>
+          <input class="price-order-stepper__input" type="number" value="10" min="1" inputmode="numeric" aria-label="Количество">
+          <button class="price-order-stepper__btn price-order-stepper__btn--plus btn-reset" type="button" aria-label="Увеличить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--plus" aria-hidden="true"></span>
+          </button>
+        </div>
+        <button class="price-order-popover__submit btn-reset" type="button">В заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
@@ -1065,7 +1257,34 @@
         <tr>
           <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
           <td class="price-table__cell-price">132 ₽</td>
-          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price price-table__cell-price--order">
+            <div class="price-table__cell-order" data-price-cell-order>
+  <span class="price-table__cell-value">198 ₽</span>
+  <button class="price-table__order-trigger btn-reset" type="button" aria-label="Добавить в заявку" aria-expanded="false" data-price-order-trigger>
+    <svg class="price-table__order-icon icon" width="12" height="12" aria-hidden="true">
+      <use href="img/sprite.svg#price-order-bag"></use>
+    </svg>
+  </button>
+  <div class="price-order-popover" data-price-order-popover hidden>
+    <div class="price-order-popover__inner">
+      <p class="price-order-popover__label">введите количество</p>
+      <div class="price-order-popover__controls">
+        <div class="price-order-stepper" data-price-order-stepper>
+          <button class="price-order-stepper__btn price-order-stepper__btn--minus btn-reset" type="button" aria-label="Уменьшить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--minus" aria-hidden="true"></span>
+          </button>
+          <input class="price-order-stepper__input" type="number" value="10" min="1" inputmode="numeric" aria-label="Количество">
+          <button class="price-order-stepper__btn price-order-stepper__btn--plus btn-reset" type="button" aria-label="Увеличить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--plus" aria-hidden="true"></span>
+          </button>
+        </div>
+        <button class="price-order-popover__submit btn-reset" type="button">В заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
@@ -1084,7 +1303,34 @@
         <tr class="price-table__row--hidden" data-price-collapsed-row>
           <th class="price-table__name" scope="row">Адаптер ММ (430/0,5 мм)</th>
           <td class="price-table__cell-price">132 ₽</td>
-          <td class="price-table__cell-price">198 ₽</td>
+          <td class="price-table__cell-price price-table__cell-price--order">
+            <div class="price-table__cell-order" data-price-cell-order>
+  <span class="price-table__cell-value">198 ₽</span>
+  <button class="price-table__order-trigger btn-reset" type="button" aria-label="Добавить в заявку" aria-expanded="false" data-price-order-trigger>
+    <svg class="price-table__order-icon icon" width="12" height="12" aria-hidden="true">
+      <use href="img/sprite.svg#price-order-bag"></use>
+    </svg>
+  </button>
+  <div class="price-order-popover" data-price-order-popover hidden>
+    <div class="price-order-popover__inner">
+      <p class="price-order-popover__label">введите количество</p>
+      <div class="price-order-popover__controls">
+        <div class="price-order-stepper" data-price-order-stepper>
+          <button class="price-order-stepper__btn price-order-stepper__btn--minus btn-reset" type="button" aria-label="Уменьшить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--minus" aria-hidden="true"></span>
+          </button>
+          <input class="price-order-stepper__input" type="number" value="10" min="1" inputmode="numeric" aria-label="Количество">
+          <button class="price-order-stepper__btn price-order-stepper__btn--plus btn-reset" type="button" aria-label="Увеличить">
+            <span class="price-order-stepper__icon price-order-stepper__icon--plus" aria-hidden="true"></span>
+          </button>
+        </div>
+        <button class="price-order-popover__submit btn-reset" type="button">В заявку</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
           <td class="price-table__cell-price">198 ₽</td>
