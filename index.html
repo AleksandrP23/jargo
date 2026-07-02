@@ -546,14 +546,7 @@
           </ul>
         </div>
       </div>
-      <div class="production__gallery" aria-hidden="true">
-        <picture>
-          <source media="(max-width: 480px)" srcset="img/production/production-mob.webp" type="image/webp">
-          <source media="(max-width: 480px)" srcset="img/production/production-mob.png">
-          <source srcset="img/production/production-1.webp" type="image/webp">
-          <img src="img/production/production-1.png" width="200" height="279" alt="">
-        </picture>
-      </div>
+      <div class="production__gallery" aria-hidden="true"></div>
     </div>
     <button class="production__price btn-reset" type="button" data-quiz-open data-graph-path="quiz">
       Получить оптовый прайс
@@ -570,20 +563,22 @@
     </div>
     <div class="academy__grid">
       <article class="academy-video">
-        <button
-          class="academy-video__preview btn-reset"
-          type="button"
-          data-video-modal
-          data-graph-path="video"
-          data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-          aria-label="Открыть видео"
-        >
-          <picture>
-            <source srcset="img/home/academy-video-preview.webp" type="image/webp">
-            <img src="img/home/academy-video-preview.png" width="788" height="500" alt="">
-          </picture>
-          <span class="academy-video__play" aria-hidden="true"></span>
-        </button>
+        <div class="academy-video__player">
+          <button
+            class="academy-video__preview btn-reset"
+            type="button"
+            data-video-inline
+            data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+            aria-label="Воспроизвести видео"
+          >
+            <picture>
+              <source srcset="img/home/academy-video-preview.webp" type="image/webp">
+              <img src="img/home/academy-video-preview.png" width="788" height="500" alt="">
+            </picture>
+            <span class="academy-video__play" aria-hidden="true"></span>
+          </button>
+          <div class="academy-video__embed" hidden data-video-embed></div>
+        </div>
         <div class="academy-video__meta">
           <h3>Название видео</h3>
           <span>5 мин</span>
