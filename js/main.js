@@ -2167,8 +2167,9 @@ const initChimneyConfigurator = () => {
     resetDefaults();
     showingResult = false;
     lastResult = null;
-    showIntroView();
-    renderActions();
+    showingIntro = false;
+    stepIndex = 0;
+    render();
     flowEl?.closest('.graph-modal__content')?.scrollTo(0, 0);
   };
   const printResult = () => {
